@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example 150</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .img-container {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .img-container img {
+            width: 100%;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Hình ảnh cạnh nhau</h2>
+    <div class="clearfix">
+        <div class="img-container">
+            <img src="../assets/img/hinh_anh.gif" alt="image">
+        </div>
+        <div class="img-container">
+            <img src="../assets/img/hinh_anh.gif" alt="image">
+        </div>
+        <div class="img-container">
+            <img src="../assets/img/hinh_anh.gif" alt="image">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example 212</title>
+    <style>
+.container {
+    display: flex;
+    height: 150px;
+}
+
+.align-items-stretch {
+    align-items: stretch;
+    background-color: red;
+}
+
+.align-items-flex-start {
+    align-items: flex-start;
+    background-color: green;
+}
+
+.align-items-flex-end {
+    align-items: flex-end;
+    background-color: blue;
+}
+
+.align-items-center {
+    align-items: center;
+    background-color: yellow;
+}
+
+.align-items-baseline {
+    align-items: baseline;
+    background-color: purple;
+}
+
+.container > .item {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    width: 100px;
+    text-align: center;
+} 
+    </style>
+</head>
+<body>
+    <div class="container align-items-stretch">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    
+    <div class="container align-items-flex-start">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    
+    <div class="container align-items-flex-end">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    
+    <div class="container align-items-center">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    
+    <div class="container align-items-baseline">
+        <div class="item" style="font-size: 30px;">Item 1</div>
+        <div class="item" style="font-size: 20px;">Item 2</div>
+        <div class="item" style="font-size: 10px;">Item 3</div>
+    </div>
+</body>
+</html>

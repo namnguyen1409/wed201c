@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example 86</title>
+</head>
+<body>
+    <form oninput="updateColor()">
+        <label for="red">Red</label>
+        <input type="range" id="red" name="red" min="0" max="255" value="0"><br>
+        <label for="green">Green</label>
+        <input type="range" id="green" name="green" min="0" max="255" value="0"><br>
+        <label for="blue">Blue</label>
+        <input type="range" id="blue" name="blue" min="0" max="255" value="0"><br>
+        <output id="result" style="border-width: 2px; border-style: solid; display:block; width: 50%; margin: auto;" name="result">#000000</output>
+    </form>
+    
+    <script>
+    function updateColor() {
+        const red = parseInt(document.getElementById('red').value).toString(16).padStart(2, '0');
+        const green = parseInt(document.getElementById('green').value).toString(16).padStart(2, '0');
+        const blue = parseInt(document.getElementById('blue').value).toString(16).padStart(2, '0');
+        const color = `#${red}${green}${blue}`;
+        document.getElementById('result').style.borderColor = color;
+        document.getElementById('result').innerText = color;
+    }
+    </script>
+</body>
+</html>

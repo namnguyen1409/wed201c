@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example 177</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 20%;
+            height: 100%;
+            position: fixed;
+            background-color: #333;
+        }
+
+        li a.active {
+            background-color: #4CAF50;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #888;
+            color: black;
+        }
+
+        main {
+            margin-left: 20%;
+            padding: 1px 16px;
+        }
+
+        section {
+            margin-top: 50px;
+            padding: 16px;
+            background-color: #f1f1f1;
+            height: 1000px;
+        }
+
+        section h1 {
+            margin-top: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        section p {
+            font-family: 'Times New Roman', serif;
+            color: #111;
+        }
+        /* smooth scrool */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="#html">HTML</a></li>
+        <li><a href="#css">CSS</a></li>
+        <li><a href="#bt">Booststrap</a></li>
+        <li><a href="#js">JavaScript</a></li>
+    </ul>
+    <main>
+        <section id="html">
+            <h1>HTML</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sed reiciendis, pariatur dicta animi
+                deleniti optio voluptatum numquam, nihil distinctio modi commodi voluptate! Molestias, rem blanditiis.
+                Debitis id dolorem quidem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem omnis nostrum rem architecto aut
+                repudiandae, provident dolorum suscipit quis repellendus necessitatibus in dolore. Ratione quo
+                recusandae excepturi unde aliquam?</p>
+        </section>
+        <section id="css">
+            <h1>CSS</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto mollitia dolores nulla impedit. Minus
+                veniam mollitia perspiciatis aliquid amet consequuntur quia. Fugit beatae quam voluptas ipsum, modi est
+                molestias quasi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero at repellat ipsam accusantium,
+                consectetur ratione sapiente eos ab, ipsa aliquam minus? Odio quod ullam itaque aut explicabo possimus
+                temporibus! Accusantium.</p>
+        </section>
+        <section id="bt">
+            <h1>Booststrap</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt qui eius culpa vitae explicabo,
+                incidunt voluptatibus amet voluptate recusandae ea quae et perspiciatis dicta, voluptates natus ex.
+                Numquam, reiciendis possimus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro hic dicta perspiciatis impedit
+                quibusdam dignissimos amet aspernatur provident modi? Unde illum impedit, itaque in cum modi fugit dolor
+                soluta.</p>
+        </section>
+        <section id="js">
+            <h1>JavaScript</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam corrupti, magnam tenetur suscipit
+                voluptate modi asperiores doloribus dignissimos, odit ad repellendus, itaque sit. Dolorem, excepturi
+                laboriosam veritatis itaque ab reprehenderit?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos blanditiis magnam architecto debitis nisi
+                minus placeat nihil, fugiat totam ducimus inventore rem ad voluptatibus id exercitationem maxime quod
+                sit laborum?</p>
+        </section>
+    </main>
+</body>
+<Script>
+var a = document.getElementsByTagName('a');
+for (var i = 0; i < a.length; i++) {
+    a[i].addEventListener('click', function() {
+        var current = document.querySelector('.active');
+        if (current) {
+            current.classList.remove('active');
+        }
+        this.classList.add('active');
+    });
+}
+
+</Script>
+</html>

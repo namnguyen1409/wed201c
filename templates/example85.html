@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example 85</title>
+</head>
+<body>
+    <form oninput="result.value='rgba(' + red.value + ',' + green.value + ',' + blue.value + ',' + alpha.value + ')'; result.style.borderColor = 'rgba(' + red.value + ',' + green.value + ',' + blue.value + ',' + alpha.value + ')';">
+        <lable for="red">Red</lable>
+        <input type="range" id="red" name="red" min="0" max="255" value="0"><br>
+        <lable for="green">Green</lable>
+        <input type="range" id="green" name="green" min="0" max="255" value="0"><br>
+        <lable for="blue">Blue</lable>
+        <input type="range" id="blue" name="blue" min="0" max="255" value="0"><br>
+        <lable for="alpha">Alpha</lable>
+        <input type="range" id="alpha" name="alpha" min="0" max="1" step="0.1" value="1"><br>
+        <output style="border-width: 2px; border-style: solid; display:block; width: 50%; margin: auto;" name="result">rgba(0, 0, 0, 1)</output>
+    </form>
+</body>
+</html>

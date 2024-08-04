@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example 202</title>
+    <style>
+@keyframes changeColor {
+    0% {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+    20% {
+        background-color: orange;
+        width: 120px;
+        height: 120px;
+    }
+    40% {
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+    }
+    60% {
+        background-color: green;
+        width: 120px;
+        height: 120px;
+    }
+    80% {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        background-color: purple;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: changeColor 5s linear infinite alternate;
+}
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

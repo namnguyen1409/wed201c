@@ -1,0 +1,2870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Giới thiệu về HTML - CSS - JavaScript</title>
+    <link href="./assets/css/prism.min.css" rel="stylesheet" />
+    <script src="./assets/js/prism.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Thêm thư viện Normalize.css -->
+    <link class="icon" rel="icon" href="./assets/img/null.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1>giới thiệu về html - css - javaScript (Phần 3)</h1>
+    </header>
+    <div class="forPhone">
+        Trang web này không hỗ trợ hiển thị trên điện thoại. Vui lòng truy cập trên máy tính hoặc máy tính bảng.
+    </div>
+    <main class="main">
+        <section id="intro">
+            <h2>
+                CSS nâng cao
+            </h2>
+            <p>
+                Trong phần này, chúng ta sẽ tìm hiểu về các kỹ thuật CSS nâng cao như: Bo góc, viền bằng hình ảnh, hình
+                nền nâng cao, hiệu ứng chuyển màu (gradient), bóng đổ (shadow), hiệu ứng văn bản, nhúng phông, 2D
+                transform, 3D transform, transition, animation, v.v.
+            </p>
+        </section>
+
+        <section class="learning">
+            <section>
+                <h3>Bo góc với CSS</h3>
+                <p>
+                    Để bo góc cho một phần tử HTML, bạn sử dụng thuộc tính border-radius. Ví dụ, để bo góc thành hình
+                    tròn, bạn sử dụng giá trị 50% cho thuộc tính border-radius.
+                </p>
+                <pre><code class="language-css">.border-radius {
+    background-color: red;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+                </code></pre>
+                <pre><code class="language-html">&lt;div class="border-radius"&gt;&lt;/div&gt;</code></pre>
+
+                <iframe class="example" src="./templates/example184.html" frameborder="0"></iframe>
+
+                <section>
+                    <h4>
+                        Chỉ định cho từng góc
+                    </h4>
+                    <p>
+                        Bạn có thể chỉ định cho từng góc bằng cách sử dụng giá trị px hoặc %.
+                    </p>
+                    <strong>Với 4 giá trị của thuộc tính <code>border-radius</code></strong>
+                    <p>
+                        <code
+                            class="language-css">border-radius: (top-left) (top-right) (bottom-right) (bottom-left);</code>
+                    </p>
+                    <strong>Với 3 giá trị của thuộc tính <code>border-radius</code></strong>
+                    <p>
+                        <code
+                            class="language-css">border-radius: (top-left) (top-right bottom-left) (bottom-right);</code>
+                    </p>
+                    <strong>Với 2 giá trị của thuộc tính <code>border-radius</code></strong>
+                    <p>
+                        <code
+                            class="language-css">border-radius: (top-left top-right) (bottom-left bottom-right);</code>
+                    </p>
+                    <strong>Với 1 giá trị của thuộc tính <code>border-radius</code></strong>
+                    <p>
+                        <code class="language-css">border-radius: (all);</code>
+                    </p>
+
+                    <pre><code class="language-css">.border-radius-4 {
+    background-color: red;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px 50px 70px 90px;
+    float: left;
+}
+.border-radius-3 {
+    background-color: red;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px 50px 70px;
+    float: left;
+}
+.border-radius-2 {
+    background-color: red;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px 50px;
+    float: left;
+}
+.border-radius-1 {
+    background-color: red;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    float: left;
+}
+                    </code></pre>
+                    <pre><code class="language-html">&lt;div class="border-radius-4"&gt;&lt;/div&gt;
+&lt;div class="border-radius-3"&gt;&lt;/div&gt;
+&lt;div class="border-radius-2"&gt;&lt;/div&gt;
+&lt;div class="border-radius-1"&gt;&lt;/div&gt;</code></pre>
+
+                    <iframe class="example" src="./templates/example185.html" frameborder="0"></iframe>
+
+                </section>
+            </section>
+
+            <section>
+                <h3>
+                    Viền bằng hình ảnh
+                </h3>
+                <p>
+                    Để tạo viền bằng hình ảnh, bạn sử dụng thuộc tính <code class="language-css">border-image</code> với
+                    giá trị là url của hình ảnh.
+                </p>
+
+                <pre><code class="language-css">.border-image {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url('border.png') 193 round;
+}
+                </code></pre>
+                <pre><code class="language-html">&lt;div class="border-image"&gt;&lt;/div&gt;</code></pre>
+
+                <iframe class="example" src="./templates/example186.html" frameborder="0"></iframe>
+                <mark class="yellow">
+                    <b>Với:</b>
+                    <ul>
+                        <li>url('border.png'): đường dẫn đến ảnh</li>
+                        <li>193: nơi cắt ảnh</li>
+                        <li>round: kiểu xử lý</li>
+                    </ul>
+                </mark>
+                <mark class="green">
+                    <b>Mẹo:</b> nơi cắt ảnh có thể tính bằng cách lấy chiều rộng ảnh chia 3.
+                </mark>
+
+                <strong>Ngoài kiểu round còn có kiêu stretch</strong>
+                <pre><code class="language-css">.border-image {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url('border.png') 193 stretch;
+} </code></pre>
+                <pre><code class="language-html">&lt;div class="border-image"&gt;&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example187.html" frameborder="0"></iframe>
+
+            </section>
+
+            <section>
+                <h3>
+                    Hình nền nâng cao
+                </h3>
+                <section>
+                    <h4>
+                        Nhiều hình nền cho một phần tử
+                    </h4>
+                    <p>
+                        Để thêm nhiều hình nền cho một phần tử, bạn sử dụng thuộc tính <code
+                            class="language-css">background-image</code> nhiều lần.
+                    </p>
+                    <pre><code class="language-css">.background-image {
+    color: brown;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    height: 300px;
+    background-image: url('hinh-anh.png'), url('pattern.jpg');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: bottom right, top left;
+} </code></pre>
+                    <pre><code class="language-html">&lt;div class="background-image"&gt;&lt;/div&gt;</code></pre>
+                    <iframe class="example" src="./templates/example188.html" frameborder="0"></iframe>
+                </section>
+                <section>
+                    <h4>
+                        Đặt kích thước cho hình nền
+                    </h4>
+                    <p>
+                        Để đặt kích thước cho hình nền, bạn sử dụng thuộc tính <code
+                            class="language-css">background-size</code>.
+                    </p>
+                    <p>
+                        thuộc tính <code class="language-css">background-size</code> có các giá trị:
+                    <ul>
+                        <li>auto: kích thước mặc định của hình ảnh</li>
+                        <li>w(%/px) h(%/px): kích thước chiều rộng và chiều cao hình ảnh</li>
+                        <li>cover: hình ảnh sẽ bao phủ toàn bộ phần tử</li>
+                        <li>contain: hình ảnh sẽ được hiển thị đầy đủ trong phần tử</li>
+                    </ul>
+                    </p>
+                    <pre><code class="language-css">.background-size-auto {
+    border: 1px solid black;
+    width: 100%;
+    height: 300px;
+    background-image: url('hinh-anh.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.background-size-cover {
+    border: 1px solid black;
+    width: 100%;
+    height: 300px;
+    background-image: url('hinh-anh.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.background-size-contain {
+    border: 1px solid black;
+    width: 100%;
+    height: 300px;
+    background-image: url('hinh-anh.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
+.background-size-xy {
+    border: 1px solid black;
+    width: 100%;
+    height: 300px;
+    background-image: url('hinh-anh.png');
+    background-repeat: no-repeat;
+    background-size: 100px 200px;
+} </code></pre>
+                    <pre><code class="language-html">&lt;div class="background-size-auto"&gt;&lt;/div&gt;
+&lt;div class="background-size-cover"&gt;&lt;/div&gt;
+&lt;div class="background-size-contain"&gt;&lt;/div&gt;
+&lt;div class="background-size-xy"&gt;&lt;/div&gt;</code></pre>
+                    <iframe class="example" src="./templates/example189.html" frameborder="0"></iframe>
+
+                </section>
+
+                <section>
+                    <h4>Hình nền kích thước đầy đủ</h4>
+
+                    <p>Với những yêu cầu sau:</p>
+                    <ul>
+                        <li>Lấp đầy toàn bộ trang bằng hình ảnh</li>
+                        <li>Thu phóng ảnh linh hoạt</li>
+                        <li>Hình ảnh nằm chính giữa màn hình</li>
+                        <li>Không tạo ra thanh cuộn</li>
+                    </ul>
+                    <p>
+                        Bạn có thể thêm mã css sau:
+                    </p>
+                    <pre><code class="language-css">html {
+    background: url('hinh-anh.jpg') no-repeat center center fixed;
+    background-size: cover;
+} </code></pre>
+
+                    <a
+                        href="javascript:window.open('./templates/example190.html','mypopuptitle','width=600,height=400')">click</a>
+                    <iframe class="example" src="./templates/example190.html" frameborder="0"></iframe>
+
+
+                    <p>Bạn cũng có thể áp dụng cho một thẻ div chứa nội dung và đặt vào bất cứ đâu trong trang web mà
+                        bạn thích</p>
+                    <pre><code class="language-css">body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 300px;
+    background: url('hinh-anh.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.container .text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+} </code></pre>
+                    <pre><code class="language-html">&lt;div class="container"&gt;
+    &lt;div class="text"&gt;Lấp đầy trang với nền hình ảnh&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil velit in quibusdam deserunt quis distinctio hic harum amet magni soluta, incidunt, quod quae optio mollitia ipsa vero saepe molestias repudiandae!
+&lt;/p&gt;
+</code></pre>
+                    <iframe class="example" src="./templates/example191.html" frameborder="0"></iframe>
+                </section>
+
+                <section>
+                    <h4>
+                        CSS background-origin
+                    </h4>
+                    <p>
+                        Thuộc tính <code class="language-css">background-origin</code> xác định điểm bắt đầu của hình
+                        nền.
+                    </p>
+                    <p>
+                        Thuộc tính <code class="language-css">background-origin</code> có các giá trị:
+                    <ul>
+                        <li>padding-box: hình nền bắt đầu từ phần padding</li>
+                        <li>border-box: hình nền bắt đầu từ phần border</li>
+                        <li>content-box: hình nền bắt đầu từ phần content</li>
+                    </ul>
+                    </p>
+                    <pre><code class="language-css">.background-origin-padding-box {
+    border: 10px solid black;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-image: url('hinh-anh.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: padding-box;
+    margin: 10px;
+}
+.background-origin-border-box {
+    border: 10px solid black;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-image: url('hinh-anh.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+    margin: 10px;
+}
+
+.background-origin-content-box {
+    border: 10px solid black;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-image: url('hinh-anh.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+    margin: 10px;
+} </code></pre>
+                    <pre><code class="language-html">&lt;div class="background-origin-padding-box"&gt;&lt;/div&gt;
+&lt;div class="background-origin-border-box"&gt;&lt;/div&gt;
+&lt;div class="background-origin-content-box"&gt;&lt;/div&gt;
+</code></pre>
+                    <iframe class="example" src="./templates/example192.html" frameborder="0"></iframe>
+                </section>
+                <section>
+                    <h4>
+                        CSS background-clip
+                    </h4>
+                    <p>
+                        Thuộc tính <code class="language-css">background-clip</code> xác định phần nào của phần tử sẽ
+                        hiển thị hình nền.
+                    </p>
+                    <p>
+                        Thuộc tính <code class="language-css">background-clip</code> có các giá trị:
+                    <ul>
+                        <li>border-box: hình nền sẽ hiển thị dưới phần border</li>
+                        <li>padding-box: hình nền sẽ hiển thị dưới phần padding</li>
+                        <li>content-box: hình nền sẽ hiển thị dưới phần content</li>
+                    </ul>
+                    </p>
+                    <pre><code class="language-css">.background-clip-border-box {
+    border: 10px solid black;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-image: url('hinh-anh.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    margin: 10px;
+}
+.background-clip-padding-box {
+    border: 10px solid black;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-image: url('hinh-anh.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: padding-box;
+    margin: 10px;
+}
+
+.background-clip-content-box {
+    border: 10px solid black;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-image: url('hinh-anh.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    margin: 10px;
+} </code></pre>
+                    <pre><code class="language-html">&lt;div class="background-clip-border-box"&gt;&lt;/div&gt;
+&lt;div class="background-clip-padding-box"&gt;&lt;/div&gt;
+&lt;div class="background-clip-content-box"&gt;&lt;/div&gt;</code></pre>
+                    <iframe class="example" src="./templates/example193.html" frameborder="0"></iframe>
+                </section>
+            </section>
+
+            <section>
+                <h3>
+                    Từ khóa màu sắc
+                </h3>
+                <p>
+                    Trong CSS, bạn có thể sử dụng một vài từ khóa như sau.
+                </p>
+                <div class="example">
+                    <table style="width: 100%;">
+                        <tr>
+                            <th>Từ khóa</th>
+                            <th>Mô tả</th>
+                        </tr>
+                        <tr>
+                            <td>transparent</td>
+                            <td>Màu trong suốt</td>
+                        </tr>
+                        <tr>
+                            <td>currentColor</td>
+                            <td>Màu của thuộc tính color đã được khai báo trước đó</td>
+                        </tr>
+                        <tr>
+                            <td>inherit</td>
+                            <td>Thừa hưởng màu từ phần tử cha</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </section>
+
+            <section>
+                <h3>
+                    Hiệu ứng chuyển màu (Gradient)
+                </h3>
+                <p>
+                    Gradient là hiệu ứng chuyển màu từ một màu này sang một màu khác. Trong CSS, bạn có thể tạo gradient
+                    bằng cách sử dụng thuộc tính <code class="language-css">background-image</code> với giá trị là <code
+                        class="language-css">linear-gradient()</code> hoặc <code
+                        class="language-css">radial-gradient()</code>.
+                </p>
+                <section>
+                    <h4>
+                        Linear Gradient
+                    </h4>
+                    <p>
+                        Linear Gradient là hiệu ứng chuyển màu theo chiều ngang hoặc chiều dọc.
+                    </p>
+                    <p>Cú pháp:</p>
+                    <pre><code class="language-css">background-image: linear-gradient(hướng, màu 1, màu 2, ....);</code></pre>
+                    <pre><code class="language-css">.linear-gradient {
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(to right, red, yellow);
+} </code></pre>
+                    <pre><code class="language-html">&lt;div class="linear-gradient"&gt;&lt;/div&gt;</code></pre>
+                    <iframe class="example" src="./templates/example194.html" frameborder="0"></iframe>
+                    <mark class="yellow">
+                        <b>Các hướng có thể là:</b>
+                        <ul>
+                            <li>
+                                to top: từ dưới lên trên
+                            </li>
+                            <li>
+                                to right: từ trái qua phải
+                            </li>
+                            <li>
+                                to bottom: từ trên xuống dưới
+                            </li>
+                            <li>
+                                to left: từ phải qua trái
+                            </li>
+                            <li>
+                                to top right: từ góc dưới bên trái lên góc trên bên phải
+                            </li>
+                            <li>
+                                to top left: từ góc dưới bên phải lên góc trên bên trái
+                            </li>
+                            <li>
+                                to bottom right: từ góc trên bên trái xuống góc dưới bên phải
+                            </li>
+                            <li>
+                                to bottom left: từ góc trên bên phải xuống góc dưới bên trái
+                            </li>
+                            <li>
+                                ?deg: góc độ (0deg là từ trái qua phải, 90deg là từ trên xuống dưới)
+                            </li>
+                        </ul>
+                    </mark>
+                    <mark class="green">
+                        <b>Mẹo:</b> Bạn có thể thêm bao nhiêu màu tùy thích.
+                        <p><strong>Ví dụ:</strong></p>
+                        <pre><code class="language-css">.linear-gradient {
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, purple);
+}</code></pre>
+                        <pre><code class="language-html">&lt;div class="linear-gradient"&gt;&lt;/div&gt;</code></pre>
+                        <iframe class="example" src="./templates/example195.html" frameborder="0"></iframe>
+                    </mark>
+                    <mark class="blue">
+                        <b>Mở rộng:</b>
+                        <ul>
+                            <li>Bạn còn có thể dùng giá trị màu RGBA trong gradient. </li>
+                            <li>ngoài việc thêm mã màu, bạn có thể thêm % ngay sau mã màu đó nếu muốn tăng giảm tỉ lệ
+                                màu.</li>
+                            <li>nếu muốn lặp lại chuyển màu bạn có thể dùng
+                                <code>background-image: repeating-linear-gradient</code>
+                            </li>
+                        </ul>
+                    </mark>
+                </section>
+                <section>
+                    <h4>
+                        Radial Gradient
+                    </h4>
+                    <p>
+                        Radial Gradient là hiệu ứng chuyển màu theo hình tròn.
+                    </p>
+                    <pre><code class="language-css">.radial-gradient {
+    width: 100%;
+    height: 300px;
+    background-image: radial-gradient(circle, red, yellow);
+} </code></pre>
+                    <pre><code class="language-html">&lt;div class="radial-gradient"&gt;&lt;/div&gt;</code></pre>
+                    <iframe class="example" src="./templates/example196.html" frameborder="0"></iframe>
+                </section>
+
+                <section>
+                    <h4>
+                        conic-gradient
+                    </h4>
+                    <p>
+                        conic-gradient là hiệu ứng chuyển màu theo hình tròn.
+                    </p>
+                    <pre><code class="language-css">.conic-gradient {
+    width: 100%;
+    height: 300px;
+    background-image: conic-gradient(red, yellow, green, blue, purple);
+} </code></pre>
+                    <pre><code class="language-html">&lt;div class="conic-gradient"&gt;&lt;/div&gt;</code></pre>
+                    <iframe class="example" src="./templates/example197.html" frameborder="0"></iframe>
+                    <mark class="yellow">
+                        <b>chú ý:</b> bạn có thể thêm số độ vào sau màu để chỉ định góc kết thúc của màu đó.
+                    </mark>
+                </section>
+            </section>
+
+            <section>
+                <h3>
+                    Bóng đổ (Shadow)
+                </h3>
+                <p>
+                    Bóng đổ là hiệu ứng tạo ra bóng cho phần tử. Trong CSS, bạn có thể tạo bóng đổ bằng cách sử dụng
+                    thuộc tính <code class="language-css">box-shadow</code> hoặc <code
+                        class="language-css">text-shadow</code> cho văn bản.
+                </p>
+                <section>
+                    <h3>
+                        text-shadow
+                    </h3>
+                    <p>
+                        Thuộc tính <code class="language-css">text-shadow</code> tạo bóng đổ cho văn bản.
+                    </p>
+                    <div class="example">
+                        <table style="width: 100%;">
+                            <tr>
+                                <th>Code</th>
+                                <th>Mô tả</th>
+                                <th style="width: 30%;">Kết quả</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">h2{
+    text-shadow: 2px 2px;
+}</code></pre>
+                                </td>
+                                <td>Đổ bóng với màu giống màu chữ, sang phải 2px, xuống dưới 2px</td>
+                                <td>
+                                    <h2 style="text-shadow: 2px 2px;">Đây là văn bản mẫu</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">h2{
+    text-shadow: 2px 2px red;
+}</code></pre>
+                                </td>
+                                <td>
+                                    Đổ bóng với màu đỏ, sang phải 2px, xuống dưới 2px
+                                </td>
+                                <td>
+                                    <h2 style="text-shadow: 2px 2px red;">Đây là văn bản mẫu</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">h2{
+    text-shadow: 2px 2px 5px red;
+}</code></pre>
+                                </td>
+                                <td>
+                                    Đổ bóng với màu đỏ, sang phải 2px, xuống dưới 2px, mờ 5px
+                                </td>
+                                <td>
+                                    <h2 style="text-shadow: 2px 2px 5px red;">Đây là văn bản mẫu</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">h2{
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}</code></pre>
+                                </td>
+                                <td>
+                                    Đổ bóng với màu đen, sang phải 2px, xuống dưới 2px, mờ 4px
+                                </td>
+                                <td>
+                                    <h2 style="color: white; text-shadow: 2px 2px 4px #000;">Đây là văn bản mẫu</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">h2{
+    text-shadow: 0 0 3px yellow;
+}</code></pre>
+                                </td>
+                                <td>
+                                    Đổ bóng với màu đỏ, không di chuyển, mờ 3px (hiệu ứng sáng neon)
+                                </td>
+                                <td>
+                                    <h2 style="text-shadow: 0 0 3px yellow;">Đây là văn bản mẫu</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">h2{
+    text-shadow: 0 0 3px yellow, 
+                 0 0 5px red;
+}</code></pre>
+                                </td>
+                                <td>
+                                    Đổ bóng với màu đỏ, không di chuyển, mờ 3px + đổ bóng với màu
+                                    đỏ, không di chuyển, mờ 5px
+                                </td>
+                                <td>
+                                    <h2 style="text-shadow: 0 0 3px yellow, 0 0 5px red;">Đây là văn bản mẫu</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">h2{
+    text-shadow: 1 1 2px black, 
+                0 0 5px red, 
+                0 0 7px blue;
+}</code></pre>
+                                </td>
+                                <td>
+                                    Đổ bóng với màu đen, sang phải 1px, xuống dưới 1px, mờ 2px + đổ bóng với màu
+                                    đỏ, không di chuyển, mờ 5px + đổ bóng với màu xanh, không di chuyển, mờ 7px
+                                </td>
+                                <td>
+                                    <h2 style="text-shadow: 1px 1px 2px black, 0 0 5px red, 0 0 7px blue;">Đây là văn
+                                        bản mẫu</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">h2{
+    color: white;
+    text-shadow: -1px 0 black,
+                 0 1px black,
+                 1px 0 black,
+                0 -1px black;
+}</code></pre>
+                                </td>
+                                <td>
+                                    Đổ bóng với màu đen, sang trái 1px, lên trên 1px, sang phải 1px, xuống dưới 1px
+                                    (hiệu ứng viền chữ)
+                                </td>
+                                <td>
+                                    <h2
+                                        style="color: white; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+                                        Đây
+                                        là văn bản mẫu</h2>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>
+                        box-shadow
+                    </h3>
+                    <p>
+                        Thuộc tính <code class="language-css">box-shadow</code> tạo bóng đổ cho phần tử.
+                    </p>
+                    <div class="example">
+                        <table style="width: 100%;">
+                            <tr>
+                                <th>Code</th>
+                                <th>Mô tả</th>
+                                <th style="width: 30%;">Kết quả</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">div {
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    background-color: red;
+    box-shadow: 10px 10px;
+}</code></pre>
+                                </td>
+                                <td>Đổ bóng với màu đen, sang phải 10px, xuống dưới 10px</td>
+                                <td>
+                                    <div
+                                        style="width: 80%; height: 80px; margin: auto; background-color: red; box-shadow: 10px 10px;">
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">div {
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    background-color: red;
+    box-shadow: 10px 10px lightblue;
+}</code></pre>
+                                </td>
+                                <td>Đổ bóng với màu xanh, sang phải 10px, xuống dưới 10px</td>
+                                <td>
+                                    <div
+                                        style="width: 80%; height: 80px; margin: auto; background-color: red; box-shadow: 10px 10px lightblue;">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">div {
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    background-color: red;
+    box-shadow: 10px 10px 5px lightblue;
+}</code></pre>
+                                </td>
+                                <td>Đổ bóng với màu xanh, sang phải 10px, xuống dưới 10px, mờ 5px</td>
+                                <td>
+                                    <div
+                                        style="width: 80%; height: 80px; margin: auto; background-color: red; box-shadow: 10px 10px 5px lightblue;">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">div {
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    background-color: red;
+    box-shadow: 10px 10px 5px 12px lightblue;
+}</code></pre>
+                                </td>
+                                <td>Đổ bóng với màu xanh, sang phải 10px, xuống dưới 10px, mờ 5px, độ rộng 12px</td>
+                                <td>
+                                    <div
+                                        style="width: 80%; height: 80px; margin: auto; background-color: red; box-shadow: 10px 10px 5px 12px lightblue;">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">div {
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    background-color: red;
+    box-shadow: 10px 10px 5px lightblue inset;
+}</code></pre>
+                                </td>
+                                <td>Đổ bóng với màu xanh, sang phải 10px, xuống dưới 10px, mờ 5px, bên trong</td>
+                                <td>
+                                    <div
+                                        style="width: 80%; height: 80px; margin: auto; background-color: red; box-shadow: 10px 10px 5px lightblue inset;">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="language-css">div {
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    background-color: red;
+    box-shadow: 5px 5px blue,
+                10px 10px red,
+                15px 15px green;
+}</code></pre>
+                                </td>
+                                <td>Đổ bóng với màu xanh, sang phải 5px, xuống dưới 5px + đổ bóng với màu đỏ, sang phải
+                                    10px, xuống dưới 10px + đổ bóng với màu xanh, sang phải 15px, xuống dưới 15px</td>
+                                <td>
+                                    <div
+                                        style="width: 80%; height: 80px; margin: auto; background-color: red; box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;">
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </table>
+                </section>
+            </section>
+
+            <section>
+                <h3>
+                    Hiệu ứng chữ (Text Effect)
+                </h3>
+                <strong>Quan sát bảng dưới đây để biết thêm chi tiết</strong>
+                <div class="example" style="overflow-x: auto;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <th>thuộc tính</th>
+                            <th>giá trị</th>
+                            <th>Mã nguồn</th>
+                            <th>Mô tả</th>
+                            <th>Kết quả</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><code class="language-css">text-overflow</code></td>
+                            <td><code class="language-css">clip</code></td>
+                            <td>
+                                <pre><code class="language-css">p{
+    white-space: nowrap; /* không ngắt dòng */
+    width: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: clip;
+}</code></pre>
+                            </td>
+                            <td>
+                                Đoạn vượt quá kích thước sẽ bị cắt bớt
+                            </td>
+                            <td>
+                                <p
+                                    style="white-space: nowrap; width: 200px; border: 1px solid black; overflow: hidden; text-overflow: clip;">
+                                    Đây là một đoạn văn dài dùng để test </p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><code class="language-css">ellipsis</code></td>
+                            <td>
+                                <pre><code class="language-css">p{
+    white-space: nowrap; /* không ngắt dòng */
+    width: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}</code></pre>
+                            </td>
+                            <td>
+                                Đoạn vượt quá kích thước sẽ được thêm dấu 3 chấm
+                            </td>
+                            <td>
+                                <p
+                                    style="white-space: nowrap; width: 200px; border: 1px solid black; overflow: hidden; text-overflow: ellipsis;">
+                                    Đây là một đoạn văn dài dùng để test </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="language-css">word-wrap</code>
+                            </td>
+                            <td>
+                                <code class="language-css">break-word</code>
+                            </td>
+                            <td>
+                                <pre><code class="language-css">p{
+    width: 200px;
+    border: 1px solid black;
+    word-wrap: break-word;
+}</code></pre>
+                            </td>
+                            <td>
+                                Tự động ngắt từ khi vượt quá kích thước
+                            </td>
+                            <td>
+                                <p style="width: 200px; border: 1px solid black; word-wrap: break-word;">Đây là một đoạn
+                                    văn dài dùng để test condaylamotturatdaidaihoncachieudaicuathep</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">
+                                <code class="language-css">word-break</code>
+                            </td>
+                            <td>
+                                <code class="language-css">break-all</code>
+                            </td>
+                            <td>
+                                <pre><code class="language-css">p{
+    width: 200px;
+    border: 1px solid black;
+    word-break: break-all;
+}</code></pre>
+                            </td>
+                            <td>
+                                Tự động ngắt từ khi vượt quá kích thước
+                            </td>
+                            <td>
+                                <p style="width: 200px; border: 1px solid black; word-break: break-all;">Đây là một đoạn
+                                    văn dài dùng để test dòng này sẽ ngắt tại bất cứ vị trí nào của kí tự</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="language-css">keep-all</code>
+                            </td>
+                            <td>
+                                <pre><code class="language-css">p{
+    width: 200px;
+    border: 1px solid black;
+    word-break: keep-all;
+}</code></pre>
+                            </td>
+                            <td>
+                                Giữ nguyên từ khi vượt quá kích thước
+                            </td>
+                            <td>
+                                <p style="width: 200px; border: 1px solid black; word-break: keep-all;">Đây là một đoạn
+                                    văn dài dùng để test dòng-này-sẽ-được-ngắt-tại-dấu-gạch-nối</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">
+                                <code class="language-css">writing-mode</code>
+                            </td>
+                            <td>
+                                <code class="language-css">vertical-rl</code>
+                            </td>
+                            <td>
+                                <pre><code class="language-css">p{
+    writing-mode: vertical-rl;
+}</code></pre>
+                            </td>
+                            <td>
+                                Hiển thị văn bản theo chiều dọc từ phải qua trái
+                            </td>
+                            <td>
+                                <p style="writing-mode: vertical-rl;">Đây là một đoạn test</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="language-css">horizontal-bt</code>
+                            </td>
+                            <td>
+                                <pre><code class="language-css">p{
+    writing-mode: horizontal-bt;
+}</code></pre>
+                            </td>
+                            <td>
+                                Hiển thị văn bản theo chiều ngang (mặc định)
+                            </td>
+                            <td>
+                                <p style="writing-mode: horizontal-bt;">Đây là một đoạn test</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h3>
+                    CSS Web Fonts
+                </h3>
+                <p>
+                    Trong CSS, bạn có thể sử dụng font chữ từ nhiều nguồn khác nhau như Google Fonts, Adobe Fonts, hoặc
+                    tải lên trang web của bạn.
+                </p>
+                <mark class="yellow">
+                    <b>Chú ý:</b> Bạn cần chú ý đến bản quyền khi sử dụng font chữ từ các nguồn khác nhau. Trong hướng
+                    dẫn này, không hướng dẫn cách sử dụng font chữ từ các nguồn khác nhau. Bạn có thể tìm hiểu thêm tại
+                    các trang web chính thức của họ.
+                </mark>
+                <strong>Nhúng font của bạn vào trang web với <code>@font-face</code></strong>
+                <pre><code class="language-css">@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}</code></pre>
+                <p>
+                    Sau đó, bạn có thể sử dụng font chữ này trong trang web của bạn.
+                </p>
+                <pre><code class="language-css">p {
+    font-family: myFirstFont;
+}</code></pre>
+                <strong>Các thuộc tính dùng trong <code>@font-face</code></strong>
+                <div class="example">
+                    <table>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Giá trị</th>
+                            <th>Mô tả</th>
+                        </tr>
+                        <tr>
+                            <td>font-family</td>
+                            <td>tên phông</td>
+                            <td>Định nghĩa tên font sẽ được gọi sau này</td>
+                        </tr>
+                        <tr>
+                            <td>src</td>
+                            <td>url('font.woff')</td>
+                            <td>Đường dẫn đến file font</td>
+                        </tr>
+                        <tr>
+                            <td>font-style</td>
+                            <td>normal, italic, oblique</td>
+                            <td>Chọn kiểu chữ</td>
+                        </tr>
+                        <tr>
+                            <td>font-weight</td>
+                            <td>normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900</td>
+                            <td>Chọn độ đậm của chữ</td>
+                        </tr>
+                        <tr>
+                            <td>font-stretch</td>
+                            <td>normal, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded,
+                                expanded, extra-expanded, ultra-expanded</td>
+                            <td>Chọn độ dài của chữ</td>
+                        </tr>
+                        <tr>
+                            <td>unicode-range</td>
+                            <td>U+0-10FFFF</td>
+                            <td>Chọn phạm vi ký tự</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </section>
+
+            <section>
+                <h3>
+                    CSS 2D & 3D Transforms
+                </h3>
+
+                <p>
+                    Trong CSS, bạn có thể thay đổi hình dạng, kích thước, và vị trí của phần tử bằng cách sử dụng các
+                    transform.
+                </p>
+                <strong>
+                    Hãy thử các thuộc tính transform dưới đây
+                </strong>
+                <div class="example">
+                    <table style="width: 100%;">
+                        <tr>
+                            <th style="width: 20%;">
+                                Thuộc tính
+                            </th>
+                            <th style="width: 20%;">
+                                Giá trị
+                            </th>
+                            <th style="width: 20%;">
+                                Mã nguồn
+                            </th>
+                            <th style="width: 20%;">
+                                Mô tả
+                            </th>
+                            <th style="width: 20%;">
+                                Kết quả
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select title="chọn transform">
+                                    <optgroup label="2D transform">
+                                        <option value="translate"><code class="language-css">translate()</code></option>
+                                        <option value="rotate"><code class="language-css">rotate()</code></option>
+                                        <option value="scale"><code class="language-css">scale()</code></option>
+                                        <option value="scaleX"><code class="language-css">scaleX()</code></option>
+                                        <option value="scaleY"><code class="language-css">scaleY()</code></option>
+                                        <option value="skew"><code class="language-css">skew()</code></option>
+                                        <option value="skewX"><code class="language-css">skewX()</code></option>
+                                        <option value="skewY"><code class="language-css">skewY()</code></option>
+                                        <option value="matrix"><code class="language-css">matrix()</code></option>
+                                    </optgroup>
+                                    <optgroup label="3D transform">
+                                        <option value="rotateX"><code class="language-css">rotateX()</code></option>
+                                        <option value="rotateY"><code class="language-css">rotateY()</code></option>
+                                        <option value="rotateZ"><code class="language-css">rotateZ()</code></option>
+                                    </optgroup>
+
+                                    </sư>
+                            </td>
+                            <td id="inputCSS2and3D">
+                                <input type="text" name="x" id="translatex" placeholder="X - px" value="0"
+                                    onchange="onchange1()">
+                                <input type="text" name="y" id="translatey" placeholder="Y - px" value="0"
+                                    onchange="onchange1()">
+                            </td>
+                            <td id="codeCSS2and3D">
+                                <pre><code class="language-css">div {
+    transform: translate(0, 0);
+}</code></pre>
+                            </td>
+                            <td id="descriptionCSS2and3D">
+                                Dịch chuyển phần tử x-px sang phải và y-px xuống dưới
+                            </td>
+                            <td>
+                                <div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">
+                                    DIV</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <script>
+                    const selectTransform = document.querySelector('select[title="chọn transform"]');
+                    const inputCSS2and3D = document.getElementById('inputCSS2and3D');
+                    const codeCSS2and3D = document.getElementById('codeCSS2and3D');
+                    const descriptionCSS2and3D = document.getElementById('descriptionCSS2and3D');
+                    const resultCSS2and3D = document.getElementById('resultCSS2and3D');
+                    selectTransform.addEventListener('change', function () {
+                        switch (this.value) {
+                            case 'translate':
+                                inputCSS2and3D.innerHTML = `<input type="text" name="x" id="translatex" placeholder="X - px" value="0" onchange="onchange1()">
+                                <input type="text" name="y" id="translatey" placeholder="Y - px" value="0" onchange="onchange1()">`;
+                                codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: translate(0, 0);
+}</code></pre>`;
+                                descriptionCSS2and3D.innerHTML = `Dịch chuyển phần tử x-px sang phải và y-px xuống dưới`;
+                                resultCSS2and3D.innerHTML = `<div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">DIV</div>`;
+                                break;
+                            case 'rotate':
+                                inputCSS2and3D.innerHTML = `<input type="text" pattern="" name="x" id="translatex" placeholder="Góc - deg" value="0" onchange="onchange2()">`;
+                                codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: rotate(0deg);
+}</code></pre>`;
+                                descriptionCSS2and3D.innerHTML = `Xoay phần tử theo góc deg`;
+                                resultCSS2and3D.innerHTML = `<div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">DIV</div>`;
+                                break;
+                            case 'scale':
+                                inputCSS2and3D.innerHTML = `<input type="text" pattern="" name="x" id="translatex" placeholder="X - scale" value="1" onchange="onchange3()">
+                                <input type="text" name="y" id="translatey" placeholder="Y - scale" value="1" onchange="onchange3()">`;
+                                codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: scale(1, 1);
+}</code></pre>`;
+                                descriptionCSS2and3D.innerHTML = `Thay đổi kích thước phần tử theo scale`;
+                                resultCSS2and3D.innerHTML = `<div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">DIV</div>`;
+                                break;
+                            case 'scaleX':
+                                inputCSS2and3D.innerHTML = `<input type="text" pattern="" name="x" id="translatex" placeholder="X - scale" value="1" onchange="onchange4()">`;
+                                codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: scaleX(1);
+}</code></pre>`;
+                                descriptionCSS2and3D.innerHTML = `Thay đổi kích thước phần tử theo scale theo chiều ngang`;
+                                resultCSS2and3D.innerHTML = `<div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">DIV</div>`;
+                                break;
+                            case 'scaleY':
+                                inputCSS2and3D.innerHTML = `<input type="text" pattern="" name="y" id="translatey" placeholder="Y - scale" value="1" onchange="onchange5()">`;
+                                codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: scaleY(1);
+}</code></pre>`;
+                                descriptionCSS2and3D.innerHTML = `Thay đổi kích thước phần tử theo scale theo chiều dọc`;
+                                resultCSS2and3D.innerHTML = `<div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">DIV</div>`;
+                                break;
+                            case 'skew':
+                                inputCSS2and3D.innerHTML = `<input type="text" pattern="" name="x" id="translatex" placeholder="X - deg" value="0" onchange="onchange6()"> 
+                                <input type="text" name="y" id="translatey" placeholder="Y - deg" value="0" onchange="onchange6()">`;
+                                codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: skew(0deg, 0deg);
+}</code></pre>`;
+                                descriptionCSS2and3D.innerHTML = `Nghiêng phần tử theo góc deg`;
+                                resultCSS2and3D.innerHTML = `<div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">DIV</div>`;
+                                break;
+                            case 'skewX':
+                                inputCSS2and3D.innerHTML = `<input type="text" pattern="" name="x" id="translatex" placeholder="X - deg" value="0" onchange="onchange7()">`;
+                                codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: skewX(0deg);
+}</code></pre>`;
+                                descriptionCSS2and3D.innerHTML = `Nghiêng phần tử theo góc deg theo chiều ngang`;
+                                resultCSS2and3D.innerHTML = `<div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">DIV</div>`;
+                                break;
+                            case 'skewY':
+                                inputCSS2and3D.innerHTML = `<input type="text" pattern="" name="y" id="translatey" placeholder="Y - deg" value="0" onchange="onchange8()">`;
+                                codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: skewY(0deg);
+}</code></pre>`;
+                                descriptionCSS2and3D.innerHTML = `Nghiêng phần tử theo góc deg theo chiều dọc`;
+                                resultCSS2and3D.innerHTML = `<div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">DIV</div>`;
+                                break;
+                            case 'matrix':
+                                inputCSS2and3D.innerHTML = `<input type="text" pattern="" name="a" id="translatex" placeholder="a" value="1" onchange="onchange9()">
+                                <input type="text" name="b" id="translatey" placeholder="b" value="0" onchange="onchange9()">
+                                <input type="text" name="c" id="translatey" placeholder="c" value="0">
+                                <input type="text" name="d" id="translatey" placeholder="d" value="1">
+                                <input type="text" name="e" id="translatey" placeholder="e" value="0">
+                                <input type="text" name="f" id="translatey" placeholder="f" value="0">`;
+                                codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}</code></pre>`;
+                                descriptionCSS2and3D.innerHTML = `Thay đổi kích thước, vị trí, và hình dạng phần tử`;
+                                resultCSS2and3D.innerHTML = `<div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">DIV</div>`;
+                                break;
+                            case 'rotateX':
+                                inputCSS2and3D.innerHTML = `<input type="text" pattern="" name="x" id="translatex" placeholder="Góc - deg" value="0" onchange="onchange10()">`;
+                                codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: rotateX(0deg);
+}</code></pre>`;
+                                descriptionCSS2and3D.innerHTML = `Xoay phần tử theo góc deg theo chiều ngang`;
+                                resultCSS2and3D.innerHTML = `<div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">DIV</div>`;
+                                break;
+                            case 'rotateY':
+                                inputCSS2and3D.innerHTML = `<input type="text" pattern="" name="y" id="translatey" placeholder="Góc - deg" value="0" onchange="onchange11()">`;
+                                codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: rotateY(0deg);
+}</code></pre>`;
+                                descriptionCSS2and3D.innerHTML = `Xoay phần tử theo góc deg theo chiều dọc`;
+                                resultCSS2and3D.innerHTML = `<div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">DIV</div>`;
+                                break;
+                            case 'rotateZ':
+                                inputCSS2and3D.innerHTML = `<input type="text" pattern="" name="z" id="translatez" placeholder="Góc - deg" value="0" onchange="onchange12()">`;
+                                codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: rotateZ(0deg);
+}</code></pre>`;
+                                descriptionCSS2and3D.innerHTML = `Xoay phần tử theo góc deg theo chiều sâu`;
+                                resultCSS2and3D.innerHTML = `<div id="resultCSS2and3D" style="width: 100px; height: 100px; background-color: red;">DIV</div>`;
+                                break;
+                            default:
+                                break;
+                        }
+                        Prism.highlightAll();
+                    }
+                    );
+
+                    // onchange1() for any input of translate
+                    function onchange1() {
+                        const x = document.getElementById('translatex').value;
+                        const y = document.getElementById('translatey').value;
+                        resultCSS2and3D.style.transform = `translate(${x}, ${y})`;
+                        codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: translate(${x}, ${y});
+}</code></pre>`;
+                        descriptionCSS2and3D.innerHTML = `Dịch chuyển phần tử ${x} sang phải và ${y} xuống dưới`;
+                        Prism.highlightAll();
+                    }
+                    // onchange2() for any input of rotate
+                    function onchange2() {
+                        const x = document.getElementById('translatex').value;
+                        resultCSS2and3D.style.transform = `rotate(${x}deg)`;
+                        codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: rotate(${x}deg);
+}</code></pre>`;
+                        descriptionCSS2and3D.innerHTML = `Xoay phần tử theo góc ${x}deg`;
+                        Prism.highlightAll();
+                    }
+                    // onchange3() for any input of scale
+                    function onchange3() {
+                        const x = document.getElementById('translatex').value;
+                        const y = document.getElementById('translatey').value;
+                        resultCSS2and3D.style.transform = `scale(${x}, ${y})`;
+                        codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: scale(${x}, ${y});
+}</code></pre>`;
+                        descriptionCSS2and3D.innerHTML = `Thay đổi kích thước phần tử theo scale`;
+                        Prism.highlightAll();
+                    }
+                    // onchange4() for any input of scaleX
+                    function onchange4() {
+                        const x = document.getElementById('translatex').value;
+                        resultCSS2and3D.style.transform = `scaleX(${x})`;
+                        codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: scaleX(${x});
+}</code></pre>`;
+                        descriptionCSS2and3D.innerHTML = `Thay đổi kích thước phần tử theo scale theo chiều ngang`;
+                        Prism.highlightAll();
+                    }
+                    // onchange5() for any input of scaleY
+                    function onchange5() {
+                        const y = document.getElementById('translatey').value;
+                        resultCSS2and3D.style.transform = `scaleY(${y})`;
+                        codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: scaleY(${y});
+}</code></pre>`;
+                        descriptionCSS2and3D.innerHTML = `Thay đổi kích thước phần tử theo scale theo chiều dọc`;
+                        Prism.highlightAll();
+                    }
+                    // onchange6() for any input of skew
+                    function onchange6() {
+                        const x = document.getElementById('translatex').value;
+                        const y = document.getElementById('translatey').value;
+                        resultCSS2and3D.style.transform = `skew(${x}deg, ${y}deg)`;
+                        codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: skew(${x}deg, ${y}deg);
+}</code></pre>`;
+                        descriptionCSS2and3D.innerHTML = `Nghiêng phần tử theo góc ${x}deg và ${y}deg`;
+                        Prism.highlightAll();
+                    }
+                    // onchange7() for any input of skewX
+                    function onchange7() {
+                        const x = document.getElementById('translatex').value;
+                        resultCSS2and3D.style.transform = `skewX(${x}deg)`;
+                        codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: skewX(${x}deg);
+}</code></pre>`;
+                        descriptionCSS2and3D.innerHTML = `Nghiêng phần tử theo góc ${x}deg theo chiều ngang`;
+                        Prism.highlightAll();
+                    }
+                    // onchange8() for any input of skewY
+                    function onchange8() {
+                        const y = document.getElementById('translatey').value;
+                        resultCSS2and3D.style.transform = `skewY(${y}deg)`;
+                        codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: skewY(${y}deg);
+}</code></pre>`;
+                        descriptionCSS2and3D.innerHTML = `Nghiêng phần tử theo góc ${y}deg theo chiều dọc`;
+                        Prism.highlightAll();
+                    }
+                    // onchange9() for any input of matrix
+                    function onchange9() {
+                        const a = document.getElementById('translatex').value;
+                        const b = document.getElementById('translatey').value;
+                        const c = document.getElementById('translatey').value;
+                        const d = document.getElementById('translatey').value;
+                        const e = document.getElementById('translatey').value;
+                        const f = document.getElementById('translatey').value;
+                        resultCSS2and3D.style.transform = `matrix(${a}, ${b}, ${c}, ${d}, ${e}, ${f})`;
+                        codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: matrix(${a}, ${b}, ${c}, ${d}, ${e}, ${f});
+}</code></pre>`;
+                        descriptionCSS2and3D.innerHTML = `Thay đổi kích thước, vị trí, và hình dạng phần tử`;
+
+                        Prism.highlightAll();
+                    }
+
+                    // onchange10() for any input of rotateX
+                    function onchange10() {
+                        const x = document.getElementById('translatex').value;
+                        resultCSS2and3D.style.transform = `rotateX(${x}deg)`;
+                        codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: rotateX(${x}deg);
+}</code></pre>`;
+                        descriptionCSS2and3D.innerHTML = `Xoay phần tử theo góc ${x}deg theo chiều ngang`;
+                        Prism.highlightAll();
+                    }
+                    // onchange11() for any input of rotateY
+                    function onchange11() {
+                        const y = document.getElementById('translatey').value;
+                        resultCSS2and3D.style.transform = `rotateY(${y}deg)`;
+                        codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: rotateY(${y}deg);
+}</code></pre>`;
+                        descriptionCSS2and3D.innerHTML = `Xoay phần tử theo góc ${y}deg theo chiều dọc`;
+                        Prism.highlightAll();
+                    }
+                    // onchange12() for any input of rotateZ
+                    function onchange12() {
+                        const z = document.getElementById('translatez').value;
+                        resultCSS2and3D.style.transform = `rotateZ(${z}deg)`;
+                        codeCSS2and3D.innerHTML = `<pre><code class="language-css">div {
+    transform: rotateZ(${z}deg);
+}</code></pre>`;
+                        descriptionCSS2and3D.innerHTML = `Xoay phần tử theo góc ${z}deg theo chiều sâu`;
+                        Prism.highlightAll();
+                    }
+
+                </script>
+            </section>
+            <section>
+                <h3>
+                    transition trong CSS
+                </h3>
+                <p>
+                    Trong CSS, bạn có thể thay đổi giá trị của một thuộc tính từ giá trị này sang giá trị khác một cách
+                    mượt mà với transition.
+                </p>
+                <strong>
+                    Cú pháp của transition:
+                </strong>
+                <pre><code class="language-css">selector {
+    transition: property duration timing-function delay;
+}</code></pre>
+                <strong>
+                    Các thuộc tính của transition:
+                </strong>
+                <div class="example">
+                    <table>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Giá trị</th>
+                            <th>Mô tả</th>
+                        </tr>
+                        <tr>
+                            <td>property</td>
+                            <td>all, property-name</td>
+                            <td>Chọn thuộc tính sẽ thay đổi, với all là tất cả các thuộc tính(thuộc tính bắt buộc)</td>
+                        </tr>
+                        <tr>
+                            <td>duration</td>
+                            <td>time</td>
+                            <td>Thời gian thay đổi (thuộc tính bắt buộc)</td>
+                        </tr>
+                        <tr>
+                            <td>timing-function</td>
+                            <td>ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier(n,n,n,n)</td>
+                            <td>Chọn kiểu chuyển động với
+                                <ul>
+                                    <li>ease: chậm ở đầu và cuối, nhanh ở giữa</li>
+                                    <li>linear: chuyển động đều</li>
+                                    <li>ease-in: chậm ở đầu</li>
+                                    <li>ease-out: chậm ở cuối</li>
+                                    <li>ease-in-out: chậm ở đầu và cuối</li>
+                                    <li>cubic-bezier(n,n,n,n): tự định nghĩa kiểu chuyển động</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>delay</td>
+                            <td>time</td>
+                            <td>Thời gian trễ trước khi thay đổi</td>
+                        </tr>
+                    </table>
+                </div>
+                <mark class="yellow">
+                    <b>Chú ý:</b> Bạn có thể thay đổi giá trị của thuộc tính transition bằng cách sử dụng pseudo-class
+                    hoặc JavaScript.
+                    <br>
+                    <b>Bổ sung:</b> Bạn có thể thêm nhiều transition cho một phần tử bằng cách sử dụng dấu phẩy.
+                </mark>
+                <strong>
+                    Một vài ví dụ với transition
+                </strong>
+                <p>
+                    thay đổi màu nền của phần tử khi rê chuột vào phần tử
+                </p>
+
+                <pre><code class="language-css">div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: background-color 0.5s ease;
+}
+
+div:hover {
+    background-color: blue;
+}</code></pre>
+                <pre><code class="language-html">&lt;div&gt;Hover me&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example199.html" frameborder="0"></iframe>
+                <p>
+                    thay đổi kích thước của phần tử khi rê chuột vào phần tử
+                </p>
+                <pre><code class="language-css">div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+div:hover {
+    width: 200px;
+    height: 200px;
+}</code></pre>
+                <pre><code class="language-html">&lt;div&gt;Hover me&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example200.html" frameborder="0"></iframe>
+
+
+
+            </section>
+
+            <section>
+                <h3>
+                    Animation trong CSS
+                </h3>
+                <p>
+                    Trong CSS, bạn có thể tạo ra các hiệu ứng chuyển động mượt mà với animation.
+                </p>
+                <strong>
+                    Cú pháp của animation:
+                </strong>
+                <pre><code class="language-css">@keyframes animation-name {
+    from {
+        property: value;
+    }
+    to {
+        property: value;
+    }
+} </code></pre>
+                <b>Hoặc</b>
+                <pre><code class="language-css">@keyframes animation-name {
+    0% {
+        property: value;
+    }
+    ...% {
+        property: value;
+    }
+    100% {
+        property: value;
+    }
+}</code></pre>
+                <pre><code class="language-css">selector {
+    animation: animation-name duration timing-function delay iteration-count direction fill-mode play-state;
+}</code></pre>
+                <strong>
+                    Các thuộc tính của animation:
+                </strong>
+                <div class="example">
+                    <table>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Giá trị</th>
+                            <th>Mô tả</th>
+                        </tr>
+                        <tr>
+                            <td>animation-name</td>
+                            <td>name</td>
+                            <td>Tên của animation (thuộc tính bắt buộc)</td>
+                        </tr>
+                        <tr>
+                            <td>duration</td>
+                            <td>time</td>
+                            <td>Thời gian chuyển động (thuộc tính bắt buộc)</td>
+                        </tr>
+                        <tr>
+                            <td>timing-function</td>
+                            <td>ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier(n,n,n,n)</td>
+                            <td>Chọn kiểu chuyển động với
+                                <ul>
+                                    <li>ease: chậm ở đầu và cuối, nhanh ở giữa</li>
+                                    <li>linear: chuyển động đều</li>
+                                    <li>ease-in: chậm ở đầu</li>
+                                    <li>ease-out: chậm ở cuối</li>
+                                    <li>ease-in-out: chậm ở đầu và cuối</li>
+                                    <li>cubic-bezier(n,n,n,n): tự định nghĩa kiểu chuyển động</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>delay</td>
+                            <td>time</td>
+                            <td>Thời gian trễ trước khi chuyển động</td>
+                        </tr>
+                        <tr>
+                            <td>iteration-count</td>
+                            <td>number, infinite</td>
+                            <td>Số lần lặp lại hoặc infinite</td>
+                        </tr>
+                        <tr>
+                            <td>direction</td>
+                            <td>normal, reverse, alternate, alternate-reverse</td>
+                            <td>Chọn hướng chuyển động
+                                <ul>
+                                    <li>normal: chuyển động theo thứ tự</li>
+                                    <li>reverse: chuyển động ngược lại</li>
+                                    <li>alternate: chuyển động theo thứ tự và ngược lại</li>
+                                    <li>alternate-reverse: chuyển động ngược lại và theo thứ tự</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>fill-mode</td>
+                            <td>none, forwards, backwards, both</td>
+                            <td>Chọn giá trị của thuộc tính khi chuyển động kết thúc
+                                <ul>
+                                    <li>none: không thay đổi</li>
+                                    <li>forwards: giữ giá trị cuối cùng</li>
+                                    <li>backwards: giữ giá trị đầu tiên</li>
+                                    <li>both: giữ cả giá trị đầu tiên và cuối cùng</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>play-state</td>
+                            <td>running, paused</td>
+                            <td>Chọn trạng thái chuyển động
+                                <ul>
+                                    <li>running: chuyển động</li>
+                                    <li>paused: tạm dừng chuyển động</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <strong>
+                    Một vài ví dụ với animation
+                </strong>
+                <p>
+                    xoay phần tử 360 độ, kết hợp đổi màu, và thay đổi kích thước
+                </p>
+                <pre><code class="language-css">@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+    to {
+        transform: rotate(360deg);
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: rotate 2s ease infinite;
+}</code></pre>
+                <pre><code class="language-html">&lt;div&gt;&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example201.html" frameborder="0"></iframe>
+                <p>
+                    thay đổi màu nền của phần tử từ màu đỏ -> cam -> vàng -> lục -> lam -> tím
+                </p>
+                <pre><code class="language-css">@keyframes changeColor {
+    0% {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+    20% {
+        background-color: orange;
+        width: 120px;
+        height: 120px;
+    }
+    40% {
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+    }
+    60% {
+        background-color: green;
+        width: 120px;
+        height: 120px;
+    }
+    80% {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        background-color: purple;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: changeColor 5s linear infinite alternate;
+}</code></pre>
+                <pre><code class="language-html">&lt;div&gt;&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example202.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h3>
+                    resize và outline offset trong CSS
+                </h3>
+                <p>
+                    Trong CSS, bạn có thể thay đổi kích thước của phần tử với resize và thay đổi vị trí của đường viền
+                    với outline offset.
+                </p>
+                <strong>
+                    resize có 4 giá trị:
+                </strong>
+                <ul>
+                    <li>none: không thay đổi kích thước</li>
+                    <li>both: thay đổi kích thước theo chiều ngang và dọc</li>
+                    <li>horizontal: thay đổi kích thước theo chiều ngang</li>
+                    <li>vertical: thay đổi kích thước theo chiều dọc</li>
+                </ul>
+
+                <strong>
+                    ví dụ với resize
+                </strong>
+                <pre><code class="language-css">div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 10px;
+}
+.div-resize-none {
+    resize: none;
+    overflow: auto;
+}
+.div-resize-both {
+    resize: both;
+    overflow: auto;
+}
+.div-resize-horizontal {
+    resize: horizontal;
+    overflow: auto;
+}
+.div-resize-vertical {
+    resize: vertical;
+    overflow: auto;
+}</code></pre>
+
+                <pre><code class="language-html">&lt;div class="div-resize-none"&gt;&lt;/div&gt;
+&lt;div class="div-resize-both"&gt;&lt;/div&gt;
+&lt;div class="div-resize-horizontal"&gt;&lt;/div&gt;
+&lt;div class="div-resize-vertical"&gt;&lt;/div&gt;</code></pre>
+
+                <iframe class="example" src="./templates/example203.html" frameborder="0"></iframe>
+
+                <strong>
+                    outline offset
+                </strong>
+                <p>
+                    outline offset dùng để thay đổi vị trí của đường viền so với phần tử.
+                </p>
+                <strong>
+                    ví dụ với outline offset
+                </strong>
+                <pre><code class="language-css">.div-outline-offset {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 10px;
+    outline: 2px solid blue;
+    outline-offset: 10px;
+    border: 2px solid green;
+}</code></pre>
+                <pre><code class="language-html">&lt;div class="div-outline-offset"&gt;&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example204.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h3>
+                    Biến trong CSS
+                </h3>
+                <p>
+                    Trong CSS, bạn có thể sử dụng biến để lưu trữ giá trị và sử dụng lại giá trị đó ở nhiều nơi khác
+                    nhau.
+                </p>
+                <strong>
+                    Cú pháp của biến trong CSS:
+                </strong>
+                <pre><code class="language-css">:root {
+    --name: value;
+} </code></pre>
+                <pre><code class="language-css">selector {
+    property: var(--name);
+}</code></pre>
+                <strong>
+                    Một vài ví dụ với biến trong CSS
+                </strong>
+                <p>
+                    sử dụng biến để lưu trữ màu nền và kích thước của phần tử
+                </p>
+                <pre><code class="language-css">:root {
+    --background-color: red;
+    --width: 100px;
+    --height: 100px;
+}
+
+div {
+    width: var(--width);
+    height: var(--height);
+    background-color: var(--background-color);
+}</code></pre>
+                <pre><code class="language-html">&lt;div&gt;&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example205.html" frameborder="0"></iframe>
+
+                <section>
+                    <h4>
+                        Ghi đè biến trong CSS
+                    </h4>
+                    <p>
+                        Trong CSS, bạn có thể ghi đè giá trị của biến bằng cách khai báo biến mới với cùng tên (biến cục
+                        bộ).
+                    </p>
+                    <p>
+                        Trong ví dụ ở phần trên, nếu khai váo <code
+                            class="language-css">--background-color: green;</code> trong phần tử <code
+                            class="language-css">div</code>, giá trị của biến <code
+                            class="language-css">--background-color</code> sẽ bị ghi đè.
+                        Kết quả sẽ là màu nền của phần tử sẽ là màu xanh.
+                    </p>
+                </section>
+                <section>
+                    <h4>
+                        Thay đổi giá trị biến trong JavaScript
+                    </h4>
+                    <p>
+                        Trong JavaScript, bạn có thể thay đổi giá trị của biến trong CSS bằng cách sử dụng phương thức
+                        <code class="language-javascript">setProperty</code> của đối tượng <code
+                            class="language-javascript">style</code>.
+                        Ứng dụng cho việc chuyển đổi giao diện sáng, tối...
+                    </p>
+                </section>
+                <section>
+                    <h4>
+                        Thay đổi biến với Media Queries
+                    </h4>
+                    <p>
+                        Trong CSS, bạn có thể thay đổi giá trị của biến với media queries. Điều này giúp bạn tạo ra giao
+                        diện phản hồi. Phù hợp với thiết bị.
+                        Chẳng hạn thiết bị nhỏ hơn sẽ khai báo biến với giá trị nhỏ hơn.
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <h3>
+                    Media Queries trong CSS
+                </h3>
+                <p>
+                    Trong CSS, bạn có thể sử dụng media queries để thay đổi giao diện của trang web dựa trên các điều
+                    kiện như chiều rộng, chiều cao, tỷ lệ màn hình...
+                </p>
+                <strong>
+                    Cú pháp của media queries:
+                </strong>
+                <pre><code class="language-css">@media not|only mediatype and (expressions) {
+    CSS-Code;
+}</code></pre>
+                <strong>
+                    Các thuộc tính của media queries:
+                </strong>
+                <div class="example">
+                    <table>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Giá trị</th>
+                            <th>Mô tả</th>
+                        </tr>
+                        <tr>
+                            <td>not</td>
+                            <td>Không áp dụng cho điều kiện</td>
+                            <td>Không áp dụng cho điều kiện</td>
+                        </tr>
+                        <tr>
+                            <td>only</td>
+                            <td>Chỉ áp dụng cho điều kiện</td>
+                            <td>Chỉ áp dụng cho điều kiện</td>
+                        </tr>
+                        <tr>
+                            <td>mediatype</td>
+                            <td>all, print, screen, speech</td>
+                            <td>Chọn kiểu thiết bị</td>
+                        </tr>
+                        <tr>
+                            <td>expressions</td>
+                            <td>width, height, min-width, max-width, min-height, max-height, orientation, aspect-ratio,
+                                device-width, device-height, device-aspect-ratio, device-pixel-ratio, resolution, scan,
+                                grid</td>
+                            <td>Chọn điều kiện</td>
+                        </tr>
+                    </table>
+                </div>
+                <strong>
+                    Một vài ví dụ với media queries
+                </strong>
+                <p>
+                    ẩn phần tử khi chiều rộng màn hình nhỏ hơn 600px
+                </p>
+                <pre><code class="language-css">@media screen and (max-width: 600px) {
+    div {
+        display: none;
+    }
+}</code></pre>
+                <pre><code class="language-html">&lt;div style="width: 100px; height:100px; background-color: red;"&gt;&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example206.html" frameborder="0"></iframe>
+                <p>
+                    thay đổi màu nền của phần tử khi chiều rộng màn hình nhỏ hơn 600px
+                </p>
+                <pre><code class="language-css">@media screen and (max-width: 600px) {
+    div {
+        background-color: red;
+    }
+}</code></pre>
+                <pre><code class="language-html">&lt;div style="width: 100px; height:100px; border: 1px solid green;"&gt;&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example207.html" frameborder="0"></iframe>
+            </section>
+            <section>
+                <h3>
+                    Flexbox trong CSS
+                </h3>
+                <p>
+                    Trong CSS, bạn có thể sử dụng flexbox để sắp xếp các phần tử con của một phần tử cha một cách linh
+                    hoạt.
+                </p>
+                <strong>
+                    Ví dụ về Flexbox
+                </strong>
+                <pre><code class="language-css">.container {
+    display: flex;
+    background-color: red;
+}
+.container > .item {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    font-size: 20px;
+} </code></pre>
+                <pre><code class="language-html">&lt;div class="container"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example208.html" frameborder="0"></iframe>
+
+                <mark class="yellow">
+                    <b>Trong ví dụ trên: </b> Phần tử cha có class là container sẽ sắp xếp các phần tử con theo chiều
+                    ngang mà không cần sử dụng float, inline-block, table...
+                </mark>
+
+                <section>
+                    <h4>
+                        flex container
+                    </h4>
+                    <p>
+                        Trong CSS, phần tử cha của các phần tử con sử dụng flexbox được gọi là flex container.
+                    </p>
+                    <strong>
+                        Các thuộc tính của flex container bao gồm
+                    </strong>
+                    <ul>
+                        <li>display: flex (bắt buộc)</li>
+                        <li>flex-direction: row, row-reverse, column, column-reverse</li>
+                        <li>flex-wrap: nowrap, wrap, wrap-reverse</li>
+                        <li>flex-flow: flex-direction flex-wrap</li>
+                        <li>justify-content: flex-start, flex-end, center, space-between, space-around</li>
+                        <li>align-items: stretch, flex-start, flex-end, center, baseline</li>
+                        <li>align-content: stretch, flex-start, flex-end, center, space-between, space-around</li>
+                    </ul>
+                    <strong>
+                        <code>flex-direction</code>
+                    </strong>
+                    <p>
+                        flex-direction dùng để xác định hướng sắp xếp các phần tử con của flex container.
+                    </p>
+                    <ul>
+                        <li>row: sắp xếp theo chiều ngang (mặc định)</li>
+                        <li>row-reverse: sắp xếp theo chiều ngang ngược lại</li>
+                        <li>column: sắp xếp theo chiều dọc</li>
+                        <li>column-reverse: sắp xếp theo chiều dọc ngược lại</li>
+                    </ul>
+                    <pre><code class="language-css">.container {
+    display: flex;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+    background-color: red;
+}
+
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+    background-color: green;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+    background-color: blue;
+}
+
+.flex-direction-column-reverse {
+    flex-direction: column-reverse;
+    background-color: yellow;
+} 
+.container > .item {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    font-size: 20px;
+} </code></pre>
+
+                    <pre><code class="language-html">&lt;div class="container flex-direction-row"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container flex-direction-row-reverse"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container flex-direction-column"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container flex-direction-column-reverse"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <iframe class="example" src="./templates/example209.html" frameborder="0"></iframe>
+
+                    <strong>
+                        <code>flex-wrap</code>
+                    </strong>
+                    <p>
+                        flex-wrap dùng để xác định phần tử con của flex container có bị tràn ra ngoài không.
+                    </p>
+                    <ul>
+                        <li>nowrap: không tràn ra ngoài (mặc định)</li>
+                        <li>wrap: tràn ra ngoài</li>
+                        <li>wrap-reverse: tràn ra ngoài ngược lại</li>
+                    </ul>
+                    <pre><code class="language-css">.container {
+    display: flex;
+}
+
+.flex-wrap-nowrap {
+    flex-wrap: nowrap;
+    background-color: red;
+}
+
+.flex-wrap-wrap {
+    flex-wrap: wrap;
+    background-color: green;
+}
+
+.flex-wrap-wrap-reverse {
+    flex-wrap: wrap-reverse;
+    background-color: blue;
+}
+
+.container > .item {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    font-size: 20px;
+} </code></pre>
+
+                    <pre><code class="language-html">&lt;div class="container flex-wrap-nowrap"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+    &lt;div class="item"&gt;Item 4&lt;/div&gt;
+    &lt;div class="item"&gt;Item 5&lt;/div&gt;
+    &lt;div class="item"&gt;Item 6&lt;/div&gt;
+    &lt;div class="item"&gt;Item 7&lt;/div&gt;
+    &lt;div class="item"&gt;Item 8&lt;/div&gt;
+    &lt;div class="item"&gt;Item 9&lt;/div&gt;
+    &lt;div class="item"&gt;Item 10&lt;/div&gt;
+    &lt;div class="item"&gt;Item 11&lt;/div&gt;
+    &lt;div class="item"&gt;Item 12&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container flex-wrap-wrap"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+    &lt;div class="item"&gt;Item 4&lt;/div&gt;
+    &lt;div class="item"&gt;Item 5&lt;/div&gt;
+    &lt;div class="item"&gt;Item 6&lt;/div&gt;
+    &lt;div class="item"&gt;Item 7&lt;/div&gt;
+    &lt;div class="item"&gt;Item 8&lt;/div&gt;
+    &lt;div class="item"&gt;Item 9&lt;/div&gt;
+    &lt;div class="item"&gt;Item 10&lt;/div&gt;
+    &lt;div class="item"&gt;Item 11&lt;/div&gt;
+    &lt;div class="item"&gt;Item 12&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container flex-wrap-wrap-reverse"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+    &lt;div class="item"&gt;Item 4&lt;/div&gt;
+    &lt;div class="item"&gt;Item 5&lt;/div&gt;
+    &lt;div class="item"&gt;Item 6&lt;/div&gt;
+    &lt;div class="item"&gt;Item 7&lt;/div&gt;
+    &lt;div class="item"&gt;Item 8&lt;/div&gt;
+    &lt;div class="item"&gt;Item 9&lt;/div&gt;
+    &lt;div class="item"&gt;Item 10&lt;/div&gt;
+    &lt;div class="item"&gt;Item 11&lt;/div&gt;
+    &lt;div class="item"&gt;Item 12&lt;/div&gt;
+&lt;/div&gt; </code></pre>
+                    <iframe class="example" src="./templates/example210.html" frameborder="0"></iframe>
+
+                    <strong>
+                        <code>flex-flow</code>
+                    </strong>
+                    <p>
+                        flex-flow là thuộc tính rút gọn của flex-direction và flex-wrap. Nó giúp bạn viết ngắn gọn hơn.
+                    </p>
+                    <strong>
+                        <code>justify-content</code>
+                    </strong>
+                    <p>
+                        justify-content dùng để căn chỉnh các phần tử con theo chiều ngang của flex container.
+                    </p>
+                    <ul>
+                        <li>flex-start: căn chỉnh từ bên trái (mặc định)</li>
+                        <li>flex-end: căn chỉnh từ bên phải</li>
+                        <li>center: căn chỉnh ở giữa</li>
+                        <li>space-between: căn chỉnh đều các phần tử con</li>
+                        <li>space-around: căn chỉnh đều các phần tử con với khoảng cách giữa các phần tử con bằng
+                            nhau(khoảng cách từ lề đến phần tử con = 1/2 khoảng cách các phần tử con với nhau)</li>
+                    </ul>
+                    <pre><code class="language-css">.container {
+    display: flex;
+}
+
+.justify-content-flex-start {
+    justify-content: flex-start;
+    background-color: red;
+}
+
+.justify-content-flex-end {
+    justify-content: flex-end;
+    background-color: green;
+}
+
+.justify-content-center {
+    justify-content: center;
+    background-color: blue;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+    background-color: yellow;
+}
+
+.justify-content-space-around {
+    justify-content: space-around;
+    background-color: purple;
+}
+
+.container > .item {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    font-size: 20px;
+} </code></pre>
+
+                    <pre><code class="language-html">&lt;div class="container justify-content-flex-start"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container justify-content-flex-end"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container justify-content-center"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container justify-content-space-between"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container justify-content-space-around"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <iframe class="example" src="./templates/example211.html" frameborder="0"></iframe>
+
+                    <strong>
+                        <code>align-items</code>
+                    </strong>
+                    <p>
+                        align-items dùng để căn chỉnh các phần tử con theo chiều dọc của flex container.
+                    </p>
+                    <ul>
+                        <li>stretch: căn chỉnh kéo dài các mục linh hoạt cho vừa vùng chứa (mặc định)</li>
+                        <li>flex-start: căn chỉnh từ trên xuống</li>
+                        <li>flex-end: căn chỉnh từ dưới lên</li>
+                        <li>center: căn chỉnh ở giữa</li>
+                        <li>baseline: căn chỉnh theo đườg cơ sở (đường kéo dài đi qua điểm giữa các phần tử)</li>
+                    </ul>
+                    <pre><code class="language-css">.container {
+    display: flex;
+    height: 150px;
+}
+
+.align-items-stretch {
+    align-items: stretch;
+    background-color: red;
+}
+
+.align-items-flex-start {
+    align-items: flex-start;
+    background-color: green;
+}
+
+.align-items-flex-end {
+    align-items: flex-end;
+    background-color: blue;
+}
+
+.align-items-center {
+    align-items: center;
+    background-color: yellow;
+}
+
+.align-items-baseline {
+    align-items: baseline;
+    background-color: purple;
+}
+
+.container > .item {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    width: 100px;
+    text-align: center;
+} </code></pre>
+
+                    <pre><code class="language-html">&lt;div class="container align-items-stretch"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container align-items-flex-start"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container align-items-flex-end"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container align-items-center"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container align-items-baseline"&gt;
+    &lt;div class="item" style="font-size: 30px;"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item" style="font-size: 20px;"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item" style="font-size: 10px;"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <iframe class="example" src="./templates/example212.html" frameborder="0"></iframe>
+
+                    <strong>
+                        <code>align-content</code>
+                    </strong>
+                    <p>
+                        align-content dùng để căn chỉnh các dòng của flex container theo chiều dọc.
+                    </p>
+                    <ul>
+                        <li>stretch: căn chỉnh kéo dài các dòng linh hoạt cho vừa vùng chứa (mặc định)</li>
+                        <li>flex-start: căn chỉnh từ trên xuống</li>
+                        <li>flex-end: căn chỉnh từ dưới lên</li>
+                        <li>center: căn chỉnh ở giữa</li>
+                        <li>space-between: căn chỉnh đều các dòng</li>
+                        <li>space-around: căn chỉnh đều các dòng với khoảng cách giữa các dòng bằng nhau(khoảng cách từ
+                            lề đến dòng = 1/2 khoảng cách các dòng với nhau)</li>
+                    </ul>
+                    <pre><code class="language-css">.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 150px;
+}
+
+.align-content-stretch {
+    align-content: stretch;
+    background-color: red;
+}
+
+.align-content-flex-start {
+    align-content: flex-start;
+    background-color: green;
+}
+
+.align-content-flex-end {
+    align-content: flex-end;
+    background-color: blue;
+}
+
+.align-content-center {
+    align-content: center;
+    background-color: yellow;
+}
+
+.align-content-space-between {
+    align-content: space-between;
+    background-color: purple;
+}
+
+.align-content-space-around {
+    align-content: space-around;
+    background-color: orange;
+}
+
+.container > .item {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    width: 100px;
+    text-align: center;
+} </code></pre>
+
+                    <pre><code class="language-html">&lt;div class="container align-content-stretch"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+    &lt;div class="item"&gt;Item 4&lt;/div&gt;
+    &lt;div class="item"&gt;Item 5&lt;/div&gt;
+    &lt;div class="item"&gt;Item 6&lt;/div&gt;
+    &lt;div class="item"&gt;Item 7&lt;/div&gt;
+    &lt;div class="item"&gt;Item 8&lt;/div&gt;
+    &lt;div class="item"&gt;Item 9&lt;/div&gt;
+    &lt;div class="item"&gt;Item 10&lt;/div&gt;
+    &lt;div class="item"&gt;Item 11&lt;/div&gt;
+    &lt;div class="item"&gt;Item 12&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container align-content-flex-start"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+    &lt;div class="item"&gt;Item 4&lt;/div&gt;
+    &lt;div class="item"&gt;Item 5&lt;/div&gt;
+    &lt;div class="item"&gt;Item 6&lt;/div&gt;
+    &lt;div class="item"&gt;Item 7&lt;/div&gt;
+    &lt;div class="item"&gt;Item 8&lt;/div&gt;
+    &lt;div class="item"&gt;Item 9&lt;/div&gt;
+    &lt;div class="item"&gt;Item 10&lt;/div&gt;
+    &lt;div class="item"&gt;Item 11&lt;/div&gt;
+    &lt;div class="item"&gt;Item 12&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container align-content-flex-end"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+    &lt;div class="item"&gt;Item 4&lt;/div&gt;
+    &lt;div class="item"&gt;Item 5&lt;/div&gt;
+    &lt;div class="item"&gt;Item 6&lt;/div&gt;
+    &lt;div class="item"&gt;Item 7&lt;/div&gt;
+    &lt;div class="item"&gt;Item 8&lt;/div&gt;
+    &lt;div class="item"&gt;Item 9&lt;/div&gt;
+    &lt;div class="item"&gt;Item 10&lt;/div&gt;
+    &lt;div class="item"&gt;Item 11&lt;/div&gt;
+    &lt;div class="item"&gt;Item 12&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container align-content-center"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+    &lt;div class="item"&gt;Item 4&lt;/div&gt;
+    &lt;div class="item"&gt;Item 5&lt;/div&gt;
+    &lt;div class="item"&gt;Item 6&lt;/div&gt;
+    &lt;div class="item"&gt;Item 7&lt;/div&gt;
+    &lt;div class="item"&gt;Item 8&lt;/div&gt;
+    &lt;div class="item"&gt;Item 9&lt;/div&gt;
+    &lt;div class="item"&gt;Item 10&lt;/div&gt;
+    &lt;div class="item"&gt;Item 11&lt;/div&gt;
+    &lt;div class="item"&gt;Item 12&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container align-content-space-around"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+    &lt;div class="item"&gt;Item 4&lt;/div&gt;
+    &lt;div class="item"&gt;Item 5&lt;/div&gt;
+    &lt;div class="item"&gt;Item 6&lt;/div&gt;
+    &lt;div class="item"&gt;Item 7&lt;/div&gt;
+    &lt;div class="item"&gt;Item 8&lt;/div&gt;
+    &lt;div class="item"&gt;Item 9&lt;/div&gt;
+    &lt;div class="item"&gt;Item 10&lt;/div&gt;
+    &lt;div class="item"&gt;Item 11&lt;/div&gt;
+    &lt;div class="item"&gt;Item 12&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container align-content-space-between"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+    &lt;div class="item"&gt;Item 4&lt;/div&gt;
+    &lt;div class="item"&gt;Item 5&lt;/div&gt;
+    &lt;div class="item"&gt;Item 6&lt;/div&gt;
+    &lt;div class="item"&gt;Item 7&lt;/div&gt;
+    &lt;div class="item"&gt;Item 8&lt;/div&gt;
+    &lt;div class="item"&gt;Item 9&lt;/div&gt;
+    &lt;div class="item"&gt;Item 10&lt;/div&gt;
+    &lt;div class="item"&gt;Item 11&lt;/div&gt;
+    &lt;div class="item"&gt;Item 12&lt;/div&gt;
+&lt;/div&gt; </code></pre>
+                    <iframe class="example" src="./templates/example213.html" frameborder="0"></iframe>
+
+                    <mark class="green">
+                        <b>Mẹo:</b> Căn phần tử con nằm chinh giữa phần tử cha một cách hoàn hảo. chỉnh thuộc tính
+                        <code>justify-content</code> và <code>align-items</code> thành <code>center</code>.
+                    </mark>
+                </section>
+
+                <section>
+                    <h4>
+                        flex item
+                    </h4>
+                    <p>
+                        Trong CSS, phần tử con của flex container sử dụng flexbox được gọi là flex item.
+                    </p>
+                    <strong>
+                        Các thuộc tính của flex item bao gồm
+                    </strong>
+                    <ul>
+                        <li>order: xác định thứ tự của phần tử con</li>
+                        <li>flex-grow: xác định tỷ lệ mà phần tử con sẽ mở rộng</li>
+                        <li>flex-shrink: xác định tỷ lệ phần trăm mà phần tử con sẽ co lại</li>
+                        <li>flex-basis: xác định kích thước cơ bản của phần tử con</li>
+                        <li>flex: rút gọn của flex-grow, flex-shrink, flex-basis</li>
+                        <li>align-self: xác định căn chỉnh của phần tử con</li>
+                    </ul>
+                    <strong>
+                        <code>order</code>
+                    </strong>
+                    <p>
+                        order dùng để xác định thứ tự của phần tử con trong flex container.
+                    </p>
+                    <pre><code class="language-css">.container {
+    display: flex;
+    background-color: red;
+}
+
+.container > .item {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    font-size: 20px;
+}
+
+</code></pre>
+                    <pre><code class="language-html">&lt;div class="container"&gt;
+    &lt;div class="item" style="order: 3;"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item" style="order: 2;"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item" style="order: 1;"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <iframe class="example" src="./templates/example214.html" frameborder="0"></iframe>
+
+                    <strong>
+                        <code>flex-grow</code>
+                    </strong>
+                    <p>
+                        flex-grow dùng để xác định tỷ lệ mà phần tử con sẽ mở rộng.
+                    </p>
+                    <pre><code class="language-css">.container {
+    display: flex;
+    background-color: red;
+}
+
+.container > .item {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    font-size: 20px;
+} </code></pre>
+                    <pre><code class="language-html">&lt;div class="container"&gt;
+    &lt;div class="item" style="flex-grow: 1;"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item" style="flex-grow: 2;"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item" style="flex-grow: 3;"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <iframe class="example" src="./templates/example215.html" frameborder="0"></iframe>
+                    <mark class="green">
+                        <b>Mẹo:</b> Phần tử con sử dụng flex-grow sẽ mở rộng theo tỷ lệ. Ví dụ: Phần tử con thứ 2 sẽ
+                        mở rộng gấp đôi so với phần tử con thứ 1.
+                    </mark>
+                    <mark class="yellow">
+                        <b>Lưu ý:</b> chúng ta có thể đặt flex-grow là 1 và các phần tử còn lại là mặc định để cho phần tử đó lấp đầy phần còn lại của flex container.
+                    </mark>
+                    <strong>
+                        <code>flex-shrink</code>
+                    </strong>
+                    <p>
+                        flex-shrink dùng để xác định tỷ lệ mà phần tử con sẽ co lại.
+                    </p>
+                    <pre><code class="language-css">.container {
+    display: flex;
+    background-color: red;
+    align-items: stretch;
+}
+
+.container > .item {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    font-size: 20px;
+    width: 100px;
+} </code></pre>
+                    <pre><code class="language-html">&lt;div class="container"&gt;
+    &lt;div class="item"&gt;1&lt;/div&gt;
+    &lt;div class="item" style="flex-shrink: 2;"&gt;2&lt;/div&gt;
+    &lt;div class="item"&gt;3&lt;/div&gt;
+    &lt;div class="item"&gt;4&lt;/div&gt;
+    &lt;div class="item"&gt;5&lt;/div&gt;
+    &lt;div class="item"&gt;6&lt;/div&gt;
+    &lt;div class="item"&gt;7&lt;/div&gt;
+    &lt;div class="item"&gt;8&lt;/div&gt;
+    &lt;div class="item"&gt;9&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <iframe class="example" src="./templates/example216.html" frameborder="0"></iframe>
+                    <mark class="green">
+                        <b>Mẹo:</b> Phần tử con sử dụng flex-shrink sẽ co lại theo tỷ lệ. Ví dụ: Phần tử con thứ 2 sẽ
+                        co lại gấp đôi so với phần tử con thứ 1.
+                    </mark>
+                    <strong>
+                        <code>flex-basis</code>
+                    </strong>
+                    <p>
+                        flex-basis dùng để xác định kích thước cơ bản của phần tử con.
+                    </p>
+                    <pre><code class="language-css">.container {
+    display: flex;
+    background-color: red;
+    align-items: stretch;
+}
+
+.container > .item {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    font-size: 20px;
+    width: 100px;
+} </code></pre>
+                    <pre><code class="language-html">&lt;div class="container"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item" style="flex-basis: 200px;"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+    &lt;div class="item"&gt;Item 4&lt;/div&gt;
+    &lt;div class="item"&gt;Item 5&lt;/div&gt;
+    &lt;div class="item"&gt;Item 6&lt;/div&gt;
+    &lt;div class="item"&gt;Item 7&lt;/div&gt;
+    &lt;div class="item"&gt;Item 8&lt;/div&gt;
+&lt;/div></code></pre>
+                    <iframe class="example" src="./templates/example217.html" frameborder="0"></iframe>
+
+                    <strong>
+                        <code>flex</code>
+                    </strong>
+                    <p>
+                        flex là thuộc tính rút gọn của flex-grow, flex-shrink, flex-basis. Nó giúp bạn viết ngắn gọn hơn.
+                    </p>
+
+                    <strong>
+                        <code>align-self</code>
+                    </strong>
+                    <p>
+                        align-self dùng để căn chỉnh phần tử con trong flex container.
+                    </p>
+                    <pre><code class="language-css">.container {
+    display: flex;
+    background-color: red;
+    align-items: stretch;
+    height: 150px;
+}
+
+.container > .item {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    font-size: 20px;
+    width: 100px;
+} </code></pre>
+                    <pre><code class="language-html">&lt;div class="container"&gt;
+    &lt;div class="item" style="align-self: flex-start;"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item" style="align-self: flex-end;"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item" style="align-self: center;"&gt;Item 3&lt;/div&gt;
+    &lt;div class="item" style="align-self: baseline;"&gt;Item 4&lt;/div&gt;
+    &lt;div class="item" style="align-self: stretch;"&gt;Item 5&lt;/div&gt;
+&lt;/div></code></pre>
+                    <iframe class="example" src="./templates/example218.html" frameborder="0"></iframe>
+                </section>
+            </section>
+
+            <section>
+                <h3>
+                    Grid Layout
+                </h3>
+                <p>
+                    Grid layout là hệ thống bố cục dạng lưới, giúp chúng ta tạo ra các layout phức tạp một cách dễ dàng.
+                </p>
+                <strong>
+                    Ví dụ về grid layout
+                </strong>
+                <pre><code class="language-css">.container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px;
+}
+
+.item {
+    background-color: red;
+    padding: 10px;
+    text-align: center;
+} </code></pre>
+                <pre><code class="language-html">&lt;div class="container"&gt;
+    &lt;div class="item"&gt;1&lt;/div&gt;
+    &lt;div class="item"&gt;2&lt;/div&gt;
+    &lt;div class="item"&gt;3&lt;/div&gt;
+    &lt;div class="item"&gt;4&lt;/div&gt;
+    &lt;div class="item"&gt;5&lt;/div&gt;
+    &lt;div class="item"&gt;6&lt;/div&gt;
+    &lt;div class="item"&gt;7&lt;/div&gt;
+    &lt;div class="item"&gt;8&lt;/div&gt;
+    &lt;div class="item"&gt;9&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example219.html" frameborder="0"></iframe>
+                <section>
+                    <h4>
+                        grid container
+                    </h4>
+                    <p>
+                        Trong CSS, phần tử chứa grid layout được gọi là grid container.
+                    </p>
+                    <strong>
+                        Các thuộc tính của grid container bao gồm
+                    </strong>
+                    <ul>
+                        <li>grid-template-columns: xác định số cột của grid layout</li>
+                        <li>grid-template-rows: xác định số dòng của grid layout</li>
+                        <li>gap: xác định khoảng cách giữa các cột và dòng</li>
+                        <li>justify-items: xác định căn chỉnh theo chiều ngang của các phần tử con</li>
+                        <li>align-items: xác định căn chỉnh theo chiều dọc của các phần tử con</li>
+                        <li>justify-content: xác định căn chỉnh theo chiều ngang của grid container</li>
+                        <li>align-content: xác định căn chỉnh theo chiều dọc của grid container</li>
+                    </ul>
+                    <strong>
+                        <code>grid-template-columns</code>
+                    </strong>
+                    <p><b>Cú pháp</b>:
+                        <code>grid-template-columns: c1, c2, c3 ...;</code>
+                    </p>
+                    <mark class="yellow">
+                        <b>Trong đó:</b> c1, c2, c3 là kích thước của cột. Có thể sử dụng các đơn vị đo lường như px, %, fr, auto. Có thể thêm bao nhiêu cột tùy ý.
+                    </mark>
+                    <mark class="yellow">
+                        <b>Lưu ý:</b> nếu số item lớn hơn số cột, item sẽ tự động chuyển xuống dòng mới.
+                    </mark>
+
+                    <strong>
+                        <code>grid-template-rows</code>
+                    </strong>
+                    <p><b>Cú pháp</b>:
+                        <code>grid-template-rows: r1, r2, r3 ...;</code>
+                    </p>
+                    <mark class="yellow">
+                        <b>Trong đó:</b> r1, r2, r3 là kích thước của dòng. Có thể sử dụng các đơn vị đo lường như px, %, fr, auto. Có thể thêm bao nhiêu dòng tùy ý.
+                    </mark>
+
+                    <strong>
+                        <code>gap</code>
+                    </strong>
+                    <p><b>Cú pháp</b>:
+                        <code>gap: x;</code>
+                    </p>
+                    <mark class="yellow">
+                        <b>Trong đó:</b> x là khoảng cách giữa các cột và dòng. Có thể sử dụng các đơn vị đo lường như px, %, em, rem.
+                    </mark>
+
+                    <strong>
+                        <code>justify-items</code>
+                    </strong>
+                    <p>
+                        justify-items dùng để căn chỉnh các phần tử con theo chiều ngang của grid container.
+                    </p>
+                    <ul>
+                        <li>start: căn chỉnh từ bên trái (mặc định)</li>
+                        <li>end: căn chỉnh từ bên phải</li>
+                        <li>center: căn chỉnh ở giữa</li>
+                        <li>stretch: căn chỉnh linh hoạt</li>
+                    </ul>
+
+                    <strong>
+                        <code>align-items</code>
+                    </strong>
+                    <p>
+                        align-items dùng để căn chỉnh các phần tử con theo chiều dọc của grid container.
+                    </p>
+                    <ul>
+                        <li>start: căn chỉnh từ trên xuống (mặc định)</li>
+                        <li>end: căn chỉnh từ dưới lên</li>
+                        <li>center: căn chỉnh ở giữa</li>
+                        <li>stretch: căn chỉnh linh hoạt</li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h4>
+                        grid item
+                    </h4>
+                    <p>
+                        Trong CSS, phần tử con của grid container được gọi là grid item.
+                    </p>
+                    <strong>
+                        Các thuộc tính của grid item bao gồm
+                    </strong>
+
+                    <ul>
+                        <li>grid-column-start: xác định cột bắt đầu của phần tử con</li>
+                        <li>grid-column-end: xác định cột kết thúc của phần tử con</li>
+                        <li>grid-row-start: xác định dòng bắt đầu của phần tử con</li>
+                        <li>grid-row-end: xác định dòng kết thúc của phần tử con</li>
+                        <li>grid-column: rút gọn của grid-column-start và grid-column-end</li>
+                        <li>grid-row: rút gọn của grid-row-start và grid-row-end</li>
+                        <li>grid-area: rút gọn của grid-column-start, grid-column-end, grid-row-start và grid-row-end</li>
+                        <li>justify-self: xác định căn chỉnh theo chiều ngang của phần tử con</li>
+                        <li>align-self: xác định căn chỉnh theo chiều dọc của phần tử con</li>
+                    </ul>
+
+                    <strong>
+                        <code>grid-column-start</code>
+                    </strong>
+
+                    <p><b>Cú pháp</b>:
+                        <code>grid-column-start: x;</code>
+                    </p>
+
+                    <mark class="yellow">
+                        <b>Trong đó:</b> x là cột bắt đầu của phần tử con.
+                    </mark>
+
+                    <strong>
+                        <code>grid-column-end</code>
+                    </strong>
+
+                    <p><b>Cú pháp</b>:
+                        <code>grid-column-end: x;</code>
+                    </p>
+
+                    <mark class="yellow">
+                        <b>Trong đó:</b> x là cột kết thúc của phần tử con.
+                    </mark>
+
+                    <strong>
+                        <code>grid-row-start</code>
+                    </strong>
+
+                    <p><b>Cú pháp</b>:
+                        <code>grid-row-start: x;</code>
+                    </p>
+
+                    <mark class="yellow">
+                        <b>Trong đó:</b> x là dòng bắt đầu của phần tử con.
+                    </mark>
+
+                    <strong>
+                        <code>grid-row-end</code>
+                    </strong>
+
+                    <p><b>Cú pháp</b>:
+                        <code>grid-row-end: x;</code>
+                    </p>
+
+                    <mark class="yellow">
+                        <b>Trong đó:</b> x là dòng kết thúc của phần tử con.
+                    </mark>
+
+                    <strong>
+                        <code>grid-column</code>
+                    </strong>
+
+                    <p><b>Cú pháp</b>:
+                        <code>grid-column: x / y;</code>
+                    </p>
+
+                    <mark class="yellow">
+                        <b>Trong đó:</b> x là cột bắt đầu và y là cột kết thúc của phần tử con.
+                    </mark>
+
+                    <strong>
+                        <code>grid-row</code>
+                    </strong>
+
+
+                    <p><b>Cú pháp</b>:
+                        <code>grid-row: x / y;</code>
+                    </p>
+
+                    <mark class="yellow">
+                        <b>Trong đó:</b> x là dòng bắt đầu và y là dòng kết thúc của phần tử con.
+                    </mark>
+
+                    <strong>
+                        <code>grid-area</code>
+                    </strong>
+
+
+                    <p><b>Cú pháp</b>:
+                        <code>grid-area: x / y / z / t;</code>
+                    </p>
+
+                    <mark class="yellow">
+                        <b>Trong đó:</b> x là cột bắt đầu, y là dòng bắt đầu, z là cột kết thúc và t là dòng kết thúc của phần tử con.
+                    </mark>
+
+                    <strong>
+                        <code>justify-self</code>
+                    </strong>
+
+                    <p>
+                        justify-self dùng để căn chỉnh phần tử con theo chiều ngang của grid container.
+                    </p>
+
+                    <ul>
+                        <li>start: căn chỉnh từ bên trái</li>
+                        <li>end: căn chỉnh từ bên phải</li>
+                        <li>center: căn chỉnh ở giữa</li>
+                        <li>stretch: căn chỉnh linh hoạt</li>
+                    </ul>
+
+                    <strong>
+                        <code>align-self</code>
+                    </strong>
+
+                    <p>
+                        align-self dùng để căn chỉnh phần tử con theo chiều dọc của grid container.
+                    </p>
+
+                    <ul>
+                        <li>start: căn chỉnh từ trên xuống</li>
+                        <li>end: căn chỉnh từ dưới lên</li>
+                        <li>center: căn chỉnh ở giữa</li>
+                        <li>stretch: căn chỉnh linh hoạt</li>
+                    </ul>
+
+
+                </section>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <nav class="navigator">
+            <a href="./index2.html" class="btn" id="prev">Bài trước</a>
+            <a href="./index4.html" class="btn" id="next">Bài tiếp</a>
+        </nav>
+    </footer>
+</body>
+<script src="./assets/js/main.js"></script>
+
+</html>

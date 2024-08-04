@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example 151</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            border: 1px solid black;
+            height: 200px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clearfix">
+        <div class="column" style="background-color: #444; ">
+            <h2>Column 1</h2>
+            <p>Lorem short</p>
+        </div>
+        <div class="column" style="background-color: #666; ">
+            <h2>Column 2</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni ad, provident quia aliquid, debitis nihil
+                saepe iusto, deleniti esse quas fugiat commodi aperiam corrupti dolorum! Earum explicabo exercitationem
+                deleniti amet!</p>
+        </div>
+    </div>
+</body>
+
+</html>

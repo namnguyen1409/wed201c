@@ -1,0 +1,4007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Giới thiệu về HTML - CSS - JavaScript</title>
+    <link href="./assets/css/prism.min.css" rel="stylesheet" />
+    <script src="./assets/js/prism.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Thêm thư viện Normalize.css -->
+    <link class="icon" rel="icon" href="./assets/img/null.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <h1>giới thiệu về html - css - javaScript (Phần 6)</h1>
+    </header>
+
+    <div class="forPhone">
+        Trang web này không hỗ trợ hiển thị trên điện thoại. Vui lòng truy cập trên máy tính hoặc máy tính bảng.
+    </div>
+
+    <main class="main">
+        <section id="intro">
+            <h2>Giới thiệu về javaScript</h2>
+            <p>javaScript là một ngôn ngữ lập trình thông dịch, đa mô hình và độc lập với trình duyệt. Ngôn ngữ này được tạo ra để thêm các chức năng tương tác cho trang web. javaScript là một ngôn ngữ lập trình phía client, nghĩa là chạy trên máy tính của người dùng cuối, không phải chạy trên máy chủ.</p>
+            <p>javaScript được tạo ra bởi Brendan Eich của hãng Netscape vào năm 1995. Ngôn ngữ này được thiết kế để tương tác với các phần tử của trang web thông qua DOM (Document Object Model).</p>
+        </section>
+        <section>
+            <h2>
+                Làm sao để thêm javaScript vào trang web?
+            </h2>
+            <p>
+                Có 3 cách để thêm javaScript vào trang web:
+            </p>
+            <ul>
+                <li>
+                    <strong>Thêm javaScript vào trang web thông qua thẻ script:</strong> Cách này là cách phổ biến nhất để thêm javaScript vào trang web. Bạn có thể thêm javaScript vào trang web thông qua thẻ script ở bất kỳ vị trí nào trong trang web.
+                </li>
+                <li>
+                    <strong>Thêm javaScript vào trang web thông qua file ngoài:</strong> Bạn cũng có thể thêm javaScript vào trang web thông qua file ngoài. Điều này giúp tách biệt javaScript ra khỏi HTML, giúp mã nguồn trở nên dễ quản lý hơn.
+                </li>
+            </ul>
+            <section>
+                <h3>
+                    Sử dụng thẻ <code class="language-html">&lt;script&gt;</code>
+                </h3>
+                <p>
+                    Để thêm javaScript vào trang web thông qua thẻ script, bạn cần sử dụng thẻ <code class="language-html">&lt;script&gt;</code> và đặt mã javaScript vào bên trong thẻ này.
+                </p>
+                <p>
+                    Thẻ <code class="language-html">&lt;script&gt;</code> thể đặt ở bất kỳ vị trí nào trong trang web. Tuy nhiên, thường thì thẻ <code class="language-html">&lt;script&gt;</code> được đặt ở cuối trang web, trước thẻ <code class="language-html">&lt;/body&gt;</code>.
+                </p>
+                <p>
+                    Nếu đặt thẻ <code class="language-html">&lt;script&gt;</code> ở đầu trang web, trình duyệt sẽ phải tải hết mã javaScript trước khi hiển thị nội dung của trang web. Điều này có thể làm chậm tốc độ tải trang web.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    Dùng file bên ngài
+                </h3>
+                <p>
+                    Để thêm javaScript vào trang web thông qua file ngoài, bạn cần tạo một file javaScript với phần mở rộng là <code class="language-html">.js</code> và đặt mã javaScript vào file này.
+                </p>
+                <p>
+                    Sau đó, bạn cần thêm file javaScript vào trang web thông qua thẻ <code class="language-html">&lt;script&gt;</code> với thuộc tính <code class="language-html">src</code> trỏ đến file javaScript.
+                </p>
+                <p>
+                    Một vài lợi ích khi sử dụng file javaScript bên ngoài:
+                    <ul>
+                        <li>
+                            <strong>Dễ quản lý:</strong> Khi mã javaScript được tách ra thành file riêng, mã nguồn trở nên dễ quản lý hơn.
+                        </li>
+                        <li>
+                            <strong>Tiết kiệm bộ nhớ:</strong> Khi trang web có nhiều trang, việc sử dụng file javaScript bên ngoài giúp tiết kiệm bộ nhớ.
+                        </li>
+                        <li>
+                            <strong>Cache:</strong> File javaScript bên ngoài có thể được cache lại, giúp tăng tốc độ tải trang web.
+                        </li>
+                    </ul>
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <h2>
+                Đầu ra của javaScript
+            </h2>
+            <p>
+                Để hiển thị kết quả của javaScript, bạn có thể sử dụng một số phương thức sau:
+            </p>
+            <ul>
+                <li>
+                    <strong>Hiển thị kết quả trong các phần tử HTML: </strong> Bạn có thể hiển thị kết quả của javaScript trong các phần tử của HTML bằng cách sử dụng phương thức <code class="language-js">innerHTML</code>.
+                </li>
+                <li>
+                    <strong>Hiển thị kết quả trong HTML: </strong> Bạn có thể hiển thị kết quả của javaScript trong HTML bằng cách sử dụng phương thức <code class="language-js">document.write()</code>.
+                </li>
+                <li>
+                    <strong>Hiển thị kết quả trong cửa sổ alert: </strong> Bạn có thể hiển thị kết quả của javaScript trong cửa sổ alert bằng cách sử dụng phương thức <code class="language-js">alert()</code>.
+                </li>
+                <li>
+                    <strong>Hiển thị kết quả trong console: </strong> Bạn có thể hiển thị kết quả của javaScript trong console bằng cách sử dụng phương thức <code class="language-js">console.log()</code>.
+                </li>
+            </ul>
+            <section>
+                <h3>
+                    Hiển thị kết quả trong các phần tử HTML
+                </h3>
+                <p>
+                    Để hiển thị kết quả của javaScript trong các phần tử của HTML, bạn có thể sử dụng phương thức <code class="language-js">innerHTML</code>.
+                </p>
+                <p>
+                    Để truy cập đến một phần tử HTML, bạn có thể sử dụng phương thức <code class="language-js">document.getElementById()</code> hoặc <code class="language-js">document.querySelector()</code>.
+                </p>
+                <pre><code class="language-js">document.getElementById("demo").innerHTML = "Hello, World!";</code></pre>
+                <div id="demo"></div>
+                <script>
+                    document.getElementById("demo").innerHTML = "Hello, World!";
+                </script>
+                <mark class="yellow">
+                    Thay đổi thuộc tính InsideHTML của phần tử HTML là cách phổ biến để hiển thị dữ liệu trong HTML.
+                </mark>
+            </section>
+            <section>
+                <h3>
+                    Hiển thị kết quả trong HTML
+                </h3>
+                <p>
+                    Để hiển thị kết quả của javaScript trong HTML, bạn có thể sử dụng phương thức <code class="language-js">document.write()</code>.
+                </p>
+                <pre><code class="language-js">document.write("Hello, World!");</code></pre>
+                <mark class="yellow">
+                    Phương thức document.write() sẽ ghi nội dung vào tài liệu HTML.
+                </mark>
+                <script>
+                    document.write("Hello, World!");
+                </script>
+                <mark class="red">
+                    Phương thức document.write() sẽ ghi nội dung vào tài liệu HTML. Nếu bạn sử dụng phương thức này sau khi tài liệu đã được tải, nó sẽ ghi đè lên toàn bộ tài liệu HTML.
+                    <pre><code class="language-js">&lt;button type="button" onclick="document.write('Hello, World!')"&gt;Bấm vào đây để thử&lt;/button&gt;</code></pre>
+                    <button onclick="document.write('Hello, World!')">Bấm vào đây để thử</button>
+                </mark>
+            </section>
+            <section>
+                <h3>
+                    Hiển thị kết quả trong cửa sổ alert
+                </h3>
+                <p>
+                    Để hiển thị kết quả của javaScript trong cửa sổ alert, bạn có thể sử dụng phương thức <code class="language-js">alert()</code>.
+                </p>
+                <pre><code class="language-js">alert("Hello, World!");</code></pre>
+                <mark class="yellow">
+                    Cửa sổ alert sẽ hiển thị thông báo cho người dùng.
+                </mark>
+                <script>
+                    alert("Hello, World!");
+                </script>
+                <pre><code class="language-js">&lt;button type="button" onclick="alert('Hello, World!')"&gt;Bấm vào đây để thử lại&lt;/button&gt;</code></pre>
+                <button onclick="alert('Hello, World!');">Bấm vào đây để thử lại</button>
+            </section>
+            <section>
+                <h3>
+                    Hiển thị kết quả trong console
+                </h3>
+                <p>
+                    Để hiển thị kết quả của javaScript trong console, bạn có thể sử dụng phương thức <code class="language-js">console.log()</code>.
+                </p>
+                <pre><code class="language-js">console.log("Hello, World!");</code></pre>
+                <mark class="yellow">
+                    Console.log() sẽ hiển thị thông báo trong console của trình duyệt.
+                </mark>
+                <script>
+                    console.log("Hello, World!");
+                </script>
+                <mark class="yellow">
+                    Mở cửa sổ console của trình duyệt để xem kết quả.
+                    <pre><code class="language-js">&lt;button type="button" onclick="console.log('Hello, World!')"&gt;Bấm vào đây để thử lại&lt;/button&gt;</code></pre>
+                    <button onclick="console.log('Hello, World!');">Bấm vào đây để thử lại</button>
+                </mark>
+            </section>
+            <section>
+                <h3>
+                    JavaScript Print
+                </h3>
+                <p>
+                    Để in nội dung của một trang web, bạn có thể sử dụng phương thức <code class="language-js">window.print()</code>.
+                </p>
+                <pre><code class="language-js"> &lt;button type="button" onclick="window.print()"&gt;In trang web&lt;/button&gt;</code></pre>
+                <button onclick="window.print()">In trang web</button>
+                <mark class="yellow">
+                    Phương thức window.print() sẽ mở cửa sổ in của trình duyệt.
+                </mark>
+            </section>
+        </section>
+        <section>
+            <h2>
+                Các câu lệnh trong javaScript
+            </h2>
+            <pre><code class="language-js">let x, y, z;
+x = 13;
+y = 26;
+z = x - y;</code></pre>
+            <p>
+                các câu lệnh javaScript bao gồm: Giá trị, toán tử, biểu thức, từ khóa, và các lệnh.
+            </p>
+        </section>
+        <section>
+            <h2>
+                Chương trình javaScript
+            </h2>
+            <p>
+                Chương trình javaScript là tập hợp các câu lệnh javaScript được thực thi theo thứ tự nhất định.
+            </p>
+        </section>
+        <section>
+            <h2>Dấu chấm phẩy ;</h2>
+            <p>
+                Trong javaScript, dấu chấm phẩy (;) được sử dụng để phân tách các câu lệnh.
+            </p>
+            <pre><code class="language-js">let x = 5;
+let y = 10;
+let z = x + y;</code></pre>
+            <p>
+                Bạn có thể đưa các câu lệnh javaScript vào cùng một dòng:
+            </p>
+            <pre><code class="language-js">let x = 5; let y = 10; let z = x + y;</code></pre>
+            <mark class="yellow">
+                Trong javaScript dấu chấm phẩy (;) không bắt buộc, nhưng nên sử dụng để code trở nên dễ đọc hơn.
+                (Đối với nhiều câu lệnh trên 1 dòng dấu (;) là bắt buộc)
+            </mark>
+        </section>
+        <section>
+            <h2>
+                Khoảng trắng trong javaScript
+            </h2>
+            <p>
+                Trong javaScript, khoảng trắng không quan trọng. Bạn có thể sử dụng bất kỳ số lượng khoảng trắng nào giữa các từ và dấu phẩy.
+            </p>
+            <pre><code class="language-js">let x=5+6;</code></pre>
+            <p>
+                Bạn cũng có thể sử dụng dấu cách để làm cho code trở nên dễ đọc hơn:
+            </p>
+            <pre><code class="language-js">let x = 5 + 6;</code></pre>
+        </section>
+        <section>
+            <h2>
+                Khối lệnh trong javaScript
+            </h2>
+            <p>
+                Một khối lệnh là một tập hợp các câu lệnh được đặt trong dấu ngoặc nhọn: { }.
+            </p>
+            <pre><code class="language-js">{
+    let x = 5;
+    let y = 6;
+    let z = x + y;
+}</code></pre>
+            <p>
+                Khối lệnh được sử dụng để nhóm các câu lệnh lại với nhau. chúng thường dùng trong các hàm, vòng lặp, và các điều kiện.
+            </p>
+        </section>
+        <section>
+            <h2>
+                từ khóa trong javaScript
+            </h2>
+            <p>
+                từ khóa là các từ được đặt riêng biệt trong javaScript. chúng không thể được sử dụng làm tên biến hoặc hàm.
+            </p>
+            <p>Tham khảo bảng dưới đây về một vài từ khóa thông dụng</p>
+            <div class="example">
+                <table style="width: 100%;">
+                    <tr>
+                        <th>
+                            Từ khóa
+                        </th>
+                        <th>
+                            Mô tả
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>var</th>
+                        <th>Định nghĩa biến</th>
+                    </tr>
+                    <tr>
+                        <th>let</th>
+                        <th>Định nghĩa biến nằm trong một khối lệnh</th>
+                    </tr>
+                    <tr>
+                        <th>const</th>
+                        <th>Định nghĩa một hằng số</th>
+                    </tr>
+                    <tr>
+                        <th>if</th>
+                        <th>Định nghĩa một điều kiện</th>
+                    </tr>
+                    <tr>
+                        <th>switch</th>
+                        <th>Định nghĩa một khối lệnh thực thi tùy thuộc vào case</th>
+                    </tr>
+                    <tr>
+                        <th>for</th>
+                        <th>Định nghĩa một vòng lặp</th>
+                    </tr>
+                    <tr>
+                        <th>function</th>
+                        <th>Định nghĩa một hàm</th>
+                    </tr>
+                    <tr>
+                        <th>return</th>
+                        <th>Trả về giá trị từ một hàm</th>
+                    </tr>
+                    <tr>
+                        <th>try</th>
+                        <th>Định nghĩa một khối lệnh với xử lý lỗi</th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2>
+                Cú pháp trong javaScript
+            </h2>
+            <section>
+                <h3>
+                    giá trị trong javaScript
+                </h3>
+                <p>
+                    Có 2 kiểu giá trị trong javaScript: kiểu dữ liệu không đổi và kiểu dữ liệu có thể thay đổi.
+                </p>
+                <p>
+                    Kiểu dữ liệu không đổi: số, chuỗi, .... (là những dữ liệu bạn không thể gán lại giá trị mới cho nó)
+                    ví dụ: <code class="language-js">let 5 = 6;</code> (là không hợp lệ)
+                </p>
+                <p>
+                    Kiểu dữ liệu có thể thay đổi hay còn gọi là biến (là những dữ liệu bạn có thể gán lại giá trị mới cho nó)
+                    ví dụ: <code class="language-js">let x = {name: "???", age: 20}; let y = "hello";</code> (là hợp lệ)
+                </p>
+
+            </section>
+            <section>
+                <h3>Toán tử trong javaScript</h3>
+                <p>javaScript sử dụng các toán tử để thực hiện các phép tính.</p>
+                <p>
+                    Toán tử số học(dùng để tính toán): +, -, *, /,
+                </p>
+                <p>
+                    Toán tử gán(dùng để gán giá trị cho biến): =
+                </p>
+            </section>
+            <section>
+                <h3>
+                    Comment trong javaScript
+                </h3>
+                <p>
+                    Comment trong javaScript được sử dụng để giải thích code và làm cho code dễ đọc hơn.
+                </p>
+                <p>
+                    Comment trong javaScript bắt đầu bằng // hoặc /* và kết thúc bằng */ (tương tự trong java)
+                </p>
+            </section>
+            <section>
+                <h3>
+                    Đặt tên trong javaScript
+                </h3>
+                <p>
+                    Khi đặt tên biến trong javaScript, bạn cần tuân thủ một số quy tắc sau:
+                </p>
+                <ul>
+                    <li>
+                        Tên biến có thể chứa chữ cái, số, dấu gạch dưới (_) hoặc dấu $
+                    </li>
+                    <li>
+                        Tên biến không được bắt đầu bằng số
+                    </li>
+                    <li>
+                        Tên biến không được chứa các ký tự đặc biệt như !, @, #, %, ...
+                    </li>
+                    <li>
+                        Tên biến phân biệt chữ hoa và chữ thường
+                    </li>
+                </ul>
+
+            </section>
+            <section>
+                <h3>
+                    Quy tắc lạc đà (camel case)
+                </h3>
+                <p>
+                    Trong lịch sử, các lập trình viên sử dụng nhiều phương pháp đặt tên biến như:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Dấu gạch ngang: </strong> first-name, last-name... (được sử dụng trong CSS nhưng không được sử dụng trong javaScript)
+                    </li>
+                    <li>
+                        <strong>Dấu gạch dưới: </strong> first_name, last_name... (có thể dùng trong javaScript, nhưng không phổ biến; dùng trong python)
+                    </li>
+                    <li>
+                        <strong>Pascal case: </strong> FirstName, LastName... (được sử dụng trong javaScript, nhưng không phổ biến)
+                    </li>
+                    <li>
+                        <strong>Camel case: </strong> firstName, lastName... (được sử dụng trong javaScript, phổ biến nhất)
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <h2>
+                Biến trong javaScript
+            </h2>
+            <p>
+                Trong javaScript, biến được sử dụng để lưu trữ dữ liệu.
+            </p>
+            <p>
+                Để tạo một biến trong javaScript, bạn cần sử dụng từ khóa <code class="language-js">var</code>, <code class="language-js">let</code> hoặc <code class="language-js">const</code>.
+            </p>
+            <mark class="yellow">
+                Nên khai báo biến trước khi sử dụng.
+            </mark>
+            <mark class="green">
+                Từ khóa <code class="language-js">var</code> được dùng nhiều trong những phiên bản cũ.
+                <br>Hiện nay nên sử dụng <code class="language-js">let</code> hoặc <code class="language-js">const</code> thay thế.
+                <br>Chỉ dùng <code class="language-js">var</code> khi sử dụng trên những phiên bản cũ.
+            </mark>
+            <mark class="red">
+                <strong>Khi dùng var, let và const</strong>
+                <ul>
+                    <li>Luôn khai báo biến</li>
+                    <li>
+                        Dùng <code class="language-js">const</code> khi biết rằng giá trị của biến sẽ không thay đổi 
+                    </li>
+                    <li>
+                        Dùng <code class="language-js">const</code> cho kiểu dữ liệu không đổi (chuỗi hoặc đối tượng)
+                    </li>
+                    <li>
+                        Dùng <code class="language-js">let</code> khi không thể dùng <code class="language-js">const</code>
+                    </li>
+                    <li>
+                        Dùng <code class="language-js">var</code> khi bạn <b>PHẢI</b> hỗ trợ trình duyệt cũ
+                    </li>
+                </ul>
+
+            </mark>
+        </section>
+
+        <section>
+            <h2>
+                kiểu dữ liệu trong javaScript
+            </h2>
+            <p>
+                Trong javaScript, có 8 kiểu dữ liệu:
+            </p>
+            <ul>
+                <li>
+                    <strong>String: </strong> kiểu dữ liệu chuỗi
+                </li>
+                <li>
+                    <strong>Number: </strong> kiểu dữ liệu số
+                </li>
+                <li>
+                    <strong>Bigint: </strong> kiểu dữ liệu số lớn
+                </li>
+                <li>
+                    <strong>Boolean: </strong> kiểu dữ liệu logic
+                </li>
+                <li>
+                    <strong>undefined: </strong> kiểu dữ liệu không xác định
+                </li>
+                <li>
+                    <strong>null: </strong> kiểu dữ liệu rỗng
+                </li>
+                <li>
+                    <strong>Symbol: </strong> kiểu dữ liệu ký hiệu
+                </li>
+                <li>
+                    <strong>Object: </strong> kiểu dữ liệu đối tượng
+                </li>
+            </ul>
+            <p>
+                Kiểu dữ liệu Object có 2 loại: built-in object và user-defined object.
+            </p>
+            <p>
+                Built-in object: là các đối tượng được xây dựng sẵn trong javaScript như: String, Number, Boolean, Array, Object, Function, Date, Math, RegExp, ...
+            </p>
+            <strong>Ví dụ</strong>
+            <pre><code class="language-js">// kiểu dữ liệu Số
+let length = 5;
+let weight = 10.5;
+
+// kiểu dữ liệu Chuỗi
+let name = "John";
+let address = '123 ABC';
+
+// kiểu dữ liệu Logic
+let isStudent = true;
+let isTeacher = false;
+
+// kiểu dữ liệu Object
+let person = {name: "John", age: 20};
+
+// array object
+let fruits = ["Apple", "Banana", "Orange"];
+
+//date object
+let today = new Date("2022-01-01");
+</code></pre>
+            <mark class="yellow">
+                Biến trong javaScript có thể lưu trữ bất kỳ kiểu dữ liệu nào. Bạn không cần khai báo kiểu dữ liệu cho biến.
+            </mark>
+
+            <strong>
+                Dữ liệu trong javaScript có thể thay đổi kiểu dữ liệu.
+            </strong>
+            <pre><code class="language-js">let x = 5; // x là số
+x = "Hello"; // x là chuỗi</code></pre>
+            <strong>
+                Tất cả các số trong javaScript đều là kiểu dữ liệu Number, bao gồm cả số nguyên và số thực.
+            </strong>
+
+            <strong>
+                kí hiệu exponent (mũ) trong javaScript
+            </strong>
+            <pre><code class="language-js">let x = 123e5; // 12300000
+let y = 123e-5; // 0.00123</code></pre>
+                <strong>
+                    Empty Value là dữ liệu không chứa nội dung, vẫn có thể xác định kiểu dữ liệu. 
+                </strong>
+                <strong>
+                    undefined là kiểu dữ liệu không xác định, khi khai báo biến mà không gán giá trị.
+                </strong>
+                <strong>
+                    Để biết kiểu dữ liệu của một biến, bạn có thể sử dụng phương thức typeof.
+                </strong>
+                <pre><code class="language-js">let x = 5;
+let y = "Hello";
+let z = null;
+console.log(typeof x); // number</code></pre>
+        </section>
+        <section>
+            <h2>
+                Function trong javaScript
+            </h2>
+            <p>
+                Function trong javaScript là một khối lệnh được thiết kế để thực hiện một nhiệm vụ cụ thể.
+            </p>
+            <p>Cú pháp</p>
+            <pre><code class="language-js">function functionName(parameter1, parameter2, parameter3...) {
+    // các câu lệnh xử lý
+    return result;
+}</code></pre>
+        </section>
+        <section>
+            <h2>
+                Object trong javaScript
+            </h2>
+            <p>
+                object là một biến chứa nhiều giá trị giúp lưu trữ và quản lý đối tượng.
+            </p>
+            <p>
+                object trong javaScript được tạo ra bằng cách sử dụng cặp dấu ngoặc nhọn: { }.
+            </p>
+            <p>
+                Object nên được khai báo bằng từ khóa <code class="language-js">const</code>.
+            </p>
+            <p>Ví dụ</p>
+            <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    isStudent: true
+};</code></pre>
+            <p>
+                Bạn cũng có thể tạo mới một object bằng từ khóa <code class="language-js">new</code>.
+            </p>
+            <p>Ví dụ</p>
+            <pre><code class="language-js">const person = new Object();
+person.name = "John";
+person.age = 20;
+person.isStudent = true;</code></pre>
+            <p>
+                Object trong javaScript tương tự như: dictionary trong python, hash trong ruby, hash table trong C++, hash map trong Java...
+            </p>
+
+            <p>
+                Truy cập đến các thuộc tính của object bằng cách sử dụng dấu chấm (.) hoặc dấu ngoặc vuông [ ].
+            </p>
+
+            <p>
+                Method trong object là một thuộc tính chứa một hàm.
+            </p>
+            <p>Ví dụ</p>
+            <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    isStudent: true,
+    toString: function() {
+        return this.name + " is " + this.age + " years old.";
+    }
+};</code></pre>
+            <p>
+                Trong method, từ khóa <code class="language-js">this</code> tham chiếu đến object hiện tại.
+            </p>
+
+            <h3>
+                TRONG JavaScript OBJECT LÀ KING
+            </h3>
+            <p>
+                Trong javaScript, mọi thứ đều là object.
+            </p>
+            <ul>
+                <li>
+                    Object là object
+                </li>
+                <li>
+                    Maths là object
+                </li>
+                <li>
+                    Function là object
+                </li>
+                <li>
+                    Array là object
+                </li>
+                <li>
+                    Date là object
+                </li>
+                <li>
+                    String là object
+                </li>
+                <li>
+                    Sets là object
+                </li>
+                <li>
+                    Maps là object
+                </li>
+            </ul>
+            <p>
+                Tất cả các dữ liệu trong javaScript ngoại trừ kiểu dữ liệu nguyên thủy (primitive data types) đều là object.
+            </p>
+            <strong>Kiểu dữ liệu nguyên thủy</strong>
+            <ul>
+                <li>
+                    String
+                </li>
+                <li>
+                    Number
+                </li>
+                <li>
+                    Boolean
+                </li>
+                <li>
+                    Undefined
+                </li>
+                <li>
+                    Null
+                </li>
+                <li>
+                    Symbol
+                </li>
+                <li>
+                    BigInt
+                </li>
+            </ul>
+            <p>Kiểu dữ liệu nguyên thủy là bất biến. Điều này có nghĩa là chúng không thể thêm thuộc tính hoặc phương thức mới.</p>
+            <p>
+                Khi khai báo biến bằng giá trị nguyên thủy, biến sẽ lưu trữ giá trị thực sự của nó. Bạn có thể thay đổi giá trị của biến nhưng không thể thay đổi giá trị nguyên thủy.
+                Tức là khi bạn khai báo let x = 15; khi bạn thay đổi x = 20; thì x sẽ copy giá trị 20 chứ không thể làm 15 đổi thành 20.
+            </p>
+
+            <p>Với kiểu dữ liệu object, khi bạn thay đổi giá trị của biến gán với object, thì object đó sẽ thay đổi giá trị.</p>
+
+
+
+        </section>
+        <section>
+            <h2>
+                thuộc tính của object
+            </h2>
+            <p>
+                Trong javaScript, object có thể chứa nhiều thuộc tính.
+            </p>
+            <p>
+                Mỗi thuộc tính của object được định nghĩa bằng cặp key-value.
+            </p>
+            <p>
+                Key là tên của thuộc tính, value là giá trị của thuộc tính.
+            </p>
+            <section>
+                <h3>
+                    Truy cập đến thuộc tính của object
+                </h3>
+                <p>
+                    Để truy cập đến thuộc tính của object, bạn có thể sử dụng dấu chấm (.) hoặc dấu ngoặc vuông [ ].
+                </p>
+                <p>Ví dụ</p>
+                <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    isStudent: true
+};
+
+console.log(person.name); // John
+console.log(person["age"]); // 20</code></pre>
+
+            </section>
+            <section>
+                <h3>
+                    Thêm mới một thuộc tính
+                </h3>
+                <p>
+                    Bạn có thể thêm mới một thuộc tính vào object bằng cách gán giá trị cho thuộc tính đó.
+                </p>
+                <p>Ví dụ</p>
+                <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    isStudent: true
+};
+
+person.address = "123 ABC";
+console.log(person.address); // 123 ABC</code></pre>
+                <mark class="yellow">
+                    Bạn cũng có thể thêm mới một thuộc tính vào object bằng cách sử dụng dấu chấm (.) hoặc dấu ngoặc vuông [ ].
+                    <br>person["address"] = "123 ABC";
+                    <br>Nếu thuộc tính đã tồn tại, giá trị của thuộc tính sẽ được thay đổi.
+                </mark>
+            </section>
+            <section>
+                <h3>
+                    Xóa một thuộc tính
+                </h3>
+                <p>
+                    Bạn có thể xóa một thuộc tính của object bằng cách sử dụng từ khóa <code class="language-js">delete</code>.
+                </p>
+                <p>Ví dụ</p>
+                <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    isStudent: true
+};
+
+delete person.age;
+console.log(person.age); // undefined</code></pre>
+            </section>
+
+            <section>
+                <h3>
+                    Object lồng nhau
+                </h3>
+                <p>
+                    Trong javaScript, object có thể chứa object khác.
+                </p>
+                <p>Ví dụ</p>
+                <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    address: {
+        street: "123 ABC",
+        city: "New York"
+    }
+};
+
+console.log(person.address.city); // New York</code></pre>
+            </section>
+        </section>
+        <section>
+            <h2>
+                Object method
+            </h2>
+            <p>
+                Trong javaScript, method là một thuộc tính của object chứa một hàm.
+            </p>
+            <p>
+                Method trong object được sử dụng để thực hiện một hành động cụ thể.
+            </p>
+            <p>Ví dụ</p>
+            <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    isStudent: true,
+    fullName: function() {
+        return this.name + " Doe";
+    }
+};
+
+console.log(person.fullName()); // John Doe</code></pre>
+            <p>
+                Trong method, từ khóa <code class="language-js">this</code> tham chiếu đến object hiện tại.
+            </p>
+            <p>
+                Để truy cập đến method của object, bạn cần sử dụng dấu chấm (.)
+                Ví dụ: <code class="language-js">person.fullName();</code>
+            </p>
+            <p>
+                Nếu bạn sử dụng dấu ngoặc đơn () sau tên method, method sẽ được gọi và trả về giá trị của nó.
+                <br>Ví dụ: <code class="language-js">person.fullName;</code> sẽ trả về hàm fullName.
+            </p>
+            <section>
+                <h3>
+                    Thêm mới một method
+                </h3>
+                <p>
+                    Bạn có thể thêm mới một method vào object bằng cách gán một hàm cho thuộc tính đó.
+                </p>
+                <p>Ví dụ</p>
+                <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    isStudent: true
+};
+
+person.fullName = function() {
+    return this.name + " Doe";
+};
+
+console.log(person.fullName()); // John Doe</code></pre>
+            </section>
+            <section>
+                <h3>
+                    Hiển thị tất cả các thuộc tính và method của object
+                </h3>
+                <p>
+                    Nếu bạn dùng document.getElementById("demo").innerHTML = person; để hiển thị object, bạn sẽ nhận được kết quả là [object Object].
+                </p>
+                <p>
+                    Để hiển thị object có thể dùng các cách sau:
+                </p>
+                <ul>
+                    <li>
+                        Truy cập từng thuộc tính của object và hiển thị nó.
+                    </li>
+                    <li>
+                        Sử dụng vòng lặp for...in để hiển thị tất cả các thuộc tính của object.
+                    </li>
+                    <li>
+                        Sử dụng Object.values() để hiển thị tất cả các giá trị của object.
+                    </li>
+                    <li>
+                        Sử dụng Object.entries() để hiển thị tất cả các giá trị của object.
+                    </li>
+                    <li>
+                        Sử dụng JSON.stringify() để hiển thị object dưới dạng chuỗi JSON.
+                    </li>
+                </ul>
+                <strong>Truy cập từng thuộc tính của object và hiển thị nó.</strong>
+                <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    isStudent: true
+};
+
+document.getElementById("demo2").innerHTML = person.name + " is " + person.age + " years old.";</code></pre>
+                <div id="demo2"></div>
+                <script>
+                    const person = {
+                        name: "John",
+                        age: 20,
+                        isStudent: true
+                    };
+                    document.getElementById("demo2").innerHTML = person.name + " is " + person.age + " years old.";
+                </script>
+                <strong>Sử dụng vòng lặp for...in để hiển thị tất cả các thuộc tính của object.</strong>
+                <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    isStudent: true
+};
+
+let text = "";
+for (let x in person) {
+    text += person[x] + " ";
+}
+
+document.getElementById("demo3").innerHTML = text;</code></pre>
+                <div id="demo3"></div>
+                <script>
+                    let text = "";
+                    for (let x in person) {
+                        text += person[x] + " ";
+                    }
+                    document.getElementById("demo3").innerHTML = text;
+                </script>
+                <strong>Sử dụng Object.values() để hiển thị tất cả các giá trị của object.</strong>
+                <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    isStudent: true
+};
+
+document.getElementById("demo4").innerHTML = Object.values(person);</code></pre>
+                <div id="demo4"></div>
+                <script>
+                    document.getElementById("demo4").innerHTML = Object.values(person);
+                </script>
+
+                <strong>
+                    Sử dụng Object.entries() để hiển thị tất cả các giá trị của object.
+                </strong>
+                <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    isStudent: true
+};
+
+let text = "";
+for (let [key, value] of Object.entries(person)) {
+    text += key + ": " + value + "&lt;br&gt;";
+}
+
+document.getElementById("demo5").innerHTML = text;</code></pre>
+                <div id="demo5"></div>
+                <script>
+                    let text2 = "";
+                    for (let [key, value] of Object.entries(person)) {
+                        text2 += key + ": " + value + "<br>";
+                    }
+                    document.getElementById("demo5").innerHTML = text2;
+                </script>
+
+
+                <strong>Sử dụng JSON.stringify() để hiển thị object dưới dạng chuỗi JSON.</strong>
+                <pre><code class="language-js">const person = {
+    name: "John",
+    age: 20,
+    isStudent: true
+};
+
+document.getElementById("demo6").innerHTML = JSON.stringify(person);</code></pre>
+                <div id="demo6"></div>
+                <script>
+                    document.getElementById("demo6").innerHTML = JSON.stringify(person);
+                </script>
+
+            </section>
+        </section>
+        <section>
+            <h2>
+                Contructor trong object
+            </h2>
+            <p>
+                Trong javaScript, constructor là một hàm được sử dụng để tạo ra một object.
+            </p>
+            <p>
+                Constructor trong javaScript giống như hàm khởi tạo trong các ngôn ngữ lập trình khác.
+            </p>
+            <p>
+                Constructor trong javaScript được gọi khi bạn tạo một object mới từ một class.
+            </p>
+            <p>
+                Cú pháp:
+            </p>
+            <pre><code class="language-js">function ClassName(parameter1, parameter2, parameter3...) {
+    this.property1 = parameter1;
+    this.property2 = parameter2;
+    this.property3 = parameter3;
+    ...
+}</code></pre>
+            <p>
+                Trong constructor, từ khóa <code class="language-js">this</code> tham chiếu đến object hiện tại.
+            </p>
+            <p>
+                Để tạo một object từ constructor, bạn cần sử dụng từ khóa <code class="language-js">new</code>.
+            </p>
+            <p>Ví dụ</p>
+            <pre><code class="language-js">function Person(name, age, isStudent) {
+    this.name = name;
+    this.age = age;
+    this.isStudent = isStudent;
+}
+
+const person1 = new Person("John", 20, true);
+const person2 = new Person("Jane", 22, false);</code></pre>
+            <p>
+                Trong ví dụ trên, <code class="language-js">Person</code> là constructor, <code class="language-js">person1</code> và <code class="language-js">person2</code> là các object được tạo ra từ constructor <code class="language-js">Person</code>.
+            </p>
+            <section>
+                <h3>
+                    Giá trị mặc định trong constructor
+                </h3>
+                <p>
+                    Bạn có thể đặt giá trị mặc định cho các thuộc tính trong constructor.
+                </p>
+                <p>Ví dụ</p>
+                <pre><code class="language-js">function Person(name, age, isStudent) {
+    this.name = name;
+    this.age = age;
+    this.isStudent = isStudent;
+    this.other = "Other";
+}</code></pre>
+
+            </section>
+            <section>
+                <h3>
+                    Thêm thuộc tính vào constructor
+                </h3>
+                <p>
+                    Bạn có thể thêm mới một thuộc tính vào constructor bằng cách truy cập đến prototype của constructor.
+                </p>
+                <p>Ví dụ</p>
+                <pre><code class="language-js">function Person(name, age, isStudent) {
+    this.name = name;
+    this.age = age;
+    this.isStudent = isStudent;
+}
+
+Person.prototype.address = "123 ABC";
+
+const person1 = new Person("John", 20, true);
+const person2 = new Person("Jane", 22, false);
+
+console.log(person1.address); // 123 ABC
+console.log(person2.address); // 123 ABC</code></pre>
+                <mark class="yellow">
+                    Bạn cũng có thể thêm mới một method vào constructor bằng cách truy cập đến prototype của constructor.
+                </mark>
+            </section>
+
+            <section>
+                <h3>
+                    Một số constructor built-in
+                </h3>
+                <p>
+                    Trong javaScript, có một số constructor built-in được sử dụng để tạo ra các object.
+                </p>
+                <ul>
+                    <li>
+                        <strong>new String(): </strong> tạo ra một object chuỗi
+                    </li>
+                    <li>
+                        <strong>new Number(): </strong> tạo ra một object số
+                    </li>
+                    <li>
+                        <strong>new Boolean(): </strong> tạo ra một object logic
+                    </li>
+                    <li>
+                        <strong>new Array(): </strong> tạo ra một object mảng
+                    </li>
+                    <li>
+                        <strong>new Date(): </strong> tạo ra một object ngày tháng
+                    </li>
+                    <li>
+                        <strong>new RegExp(): </strong> tạo ra một object biểu thức chính quy
+                    </li>
+                    <li>
+                        <strong>new Function(): </strong> tạo ra một object hàm
+                    </li>
+                    <li>
+                        <strong>new Object(): </strong> tạo ra một object
+                    </li>
+                    <li>
+                        <strong>new Map(): </strong> tạo ra một object map 
+                    </li>
+                    <li>
+                        <strong>new Set(): </strong> tạo ra một object set
+                    </li>
+                </ul>
+                <mark class="yellow">
+                    <b>Chú ý:</b> Math() không có trong danh sách vì Math là một object toàn cục. new không cần thiết.
+                </mark>
+            </section>
+
+        </section>
+        <section>
+            <h2>
+                Event trong javaScript
+            </h2>
+            <p>
+                Trong javaScript, event là một hành động mà trình duyệt thực hiện khi một hành động nào đó xảy ra.
+            </p>
+            <p>Một số sự kiện có thể sảy ra như</p>
+            <ul>
+                <li>
+                    Trang web đã được tải hoàn toàn
+                </li>
+                <li>
+                    Người dùng click vào một nút
+                </li>
+                <li>
+                    Người dùng nhập dữ liệu vào một trường input
+                </li>
+            </ul>
+            <p>HTML cho phép thêm các thuộc tính xử lý sự kiện với mã javaScript nằm trong đó</p>
+            <p>Cú pháp</p>
+            <pre><code class="language-html">&lt;element event='javaScript code'&gt;</code></pre>
+            <p>Ví dụ</p>
+            <pre><code class="language-html">&lt;button onclick="document.getElementById('demo7').innerHTML = Date()"&gt;Click me!&lt;/button&gt;</code></pre>
+            <button onclick="document.getElementById('demo7').innerHTML = Date()">Click me!</button>
+            <div id="demo7"></div>
+            <p>
+                Trong ví dụ trên, khi người dùng click vào nút, hàm <code class="language-js">document.getElementById('demo7').innerHTML = Date()</code> sẽ được thực thi.
+            </p>
+            <p>Bạn có thể thay đổi nội dung của chính nó với `this`</p>
+            <p>Ví dụ</p>
+            <pre><code class="language-html">&lt;button onclick="this.innerHTML = Date()"&gt;Click me!&lt;/button&gt;</code></pre>
+            <button onclick="this.innerHTML = Date()">Click me!</button>
+            <p>
+                Với mã javaScript dài, bạn nên tạo một hàm riêng và gọi hàm đó trong thuộc tính xử lý sự kiện.
+            </p>
+            <p>Ví dụ</p>
+            <pre><code class="language-html">&lt;button onclick="displayDate()"&gt;Click me!&lt;/button&gt;</code></pre>
+            <pre><code class="language-js">function displayDate() {
+    document.getElementById('demo8').innerHTML = Date();
+}</code></pre>
+            <button onclick="displayDate()">Click me!</button>
+            <div id="demo8"></div>
+            <script>
+                function displayDate() {
+                    document.getElementById('demo8').innerHTML = Date();
+                }
+            </script>
+
+            <strong>
+                Các sự kiện trong javaScript thường dùng
+            </strong>
+            <div class="example">
+                <table>
+                    <tr>
+                        <th>Sự kiện</th>
+                        <th>Đối tượng sử dụng</th>
+                        <th>Mô tả</th>
+                    </tr>
+                    <tr>
+                        <td>onchange</td>
+                        <td>Input, Select, Textarea</td>
+                        <td>Sự kiện xảy ra khi giá trị của một phần tử thay đổi</td>
+                    </tr>
+                    <tr>
+                        <td>onclick</td>
+                        <td>Button, Checkbox, Radio</td>
+                        <td>Sự kiện xảy ra khi người dùng click vào một phần tử</td>
+                    </tr>
+                    <tr>
+                        <td>onmouseover</td>
+                        <td>Element</td>
+                        <td>Sự kiện xảy ra khi con trỏ chuột di chuyển vào phần tử</td>
+                    </tr>
+                    <tr>
+                        <td>onmouseout</td>
+                        <td>Element</td>
+                        <td>Sự kiện xảy ra khi con trỏ chuột di chuyển ra khỏi phần tử</td>
+                    </tr>
+                    <tr>
+                        <td>onkeydown</td>
+                        <td>Input, Textarea</td>
+                        <td>Sự kiện xảy ra khi người dùng nhấn phím</td>
+                    </tr>
+                    <tr>
+                        <td>onload</td>
+                        <td>Body</td>
+                        <td>Sự kiện xảy ra khi trang web đã được tải hoàn toàn</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>
+                String trong javaScript
+            </h2>
+            <p>
+                Trong javaScript, chuỗi là một kiểu dữ liệu dùng để lưu trữ văn bản.
+            </p>
+            <p>
+                Chuỗi trong javaScript được đặt trong dấu nháy đơn (' '), dấu nháy kép (" ") hoặc dấu backtick (` `).
+            </p>
+            <p>
+                Dấu nháy đơn và dấu nháy kép đều giống nhau, bạn có thể sử dụng bất kỳ dấu nào.
+            </p>
+            <p>
+                Dấu backtick (` `) được sử dụng để tạo template string.
+            </p>
+            <p>
+                String có thể được tạo trực tiếp hoặc thông qua constructor <code class="language-js">new String()</code>.
+            </p>
+            <p>Ví dụ</p>
+            <pre><code class="language-js">let name = "John";
+let newString = new String("John");
+let address = '123 ABC';
+let text = `Hello ${name}`;
+</code></pre>
+            <p>
+                Trong ví dụ trên, <code class="language-js">name</code>, <code class="language-js">newString</code> và <code class="language-js">address</code> là chuỗi, <code class="language-js">text</code> là template string.
+            </p>
+            <p>
+                Trong template string, bạn có thể sử dụng biến bằng cách sử dụng dấu ${ }.
+            </p>
+           <mark class="yellow">
+                Trong mã trên, khi so sánh <code class="language-js">name === newString</code> sẽ trả về false vì <code class="language-js">name</code> là kiểu dữ liệu chuỗi, <code class="language-js">newString</code> là kiểu dữ liệu object.
+                <br>Trong javaScript việc so sánh (===) dữ liệu object với dữ liệu nguyên thủy hoặc các object với nhau luôn trả về false.
+           </mark>
+
+        </section>
+        <section>
+            <h2>
+                String method
+            </h2>
+            <p>
+                Trong javaScript, chuỗi có nhiều method giúp xử lý chuỗi dễ dàng hơn.
+            </p>
+            <div class="example">
+                <table style="width: 100%;">
+                    <tr>
+                        <th>Phương thức</th>
+                        <th>Mô tả</th>
+                        <th>Ví dụ</th>
+                        <th>Kết quả</th>
+                    </tr>
+                    <tr>
+                        <td>length</td>
+                        <td>Trả về độ dài của chuỗi</td>
+                        <td>
+                            <pre><code class="language-js">let str = "Hello";
+console.log(str.length)</code></pre></td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>CharAt()</td>
+                        <td>Trả về ký tự tại vị trí chỉ định trong chuỗi (nếu ko thấy trả về chuỗi rỗng)</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.charAt(0))</code></pre></td>
+                        <td>H</td>
+                    </tr>
+                    <tr>
+                        <td>CharCodeAt()</td>
+                        <td>Trả về mã Unicode của ký tự tại vị trí chỉ định trong chuỗi</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.charCodeAt(0))</code></pre></td>
+                        <td>72</td>
+                    </tr>
+                    <tr>
+                        <td>[]</td>
+                        <td>Trả về ký tự tại vị trí chỉ định trong chuỗi (nếu không tìm thấy trả về undefined)</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str[0])</code></pre></td>
+                        <td>H</td>
+                    </tr>
+                    <tr>
+                        <td>slice(start, end)</td>
+                        <td>Trả về một phần của chuỗi từ vị trí start đến vị trí end - 1</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.slice(0, 3))</code></pre></td>
+                        <td>Hel</td>
+                    </tr>
+                    <tr>
+                        <td>substring()</td>
+                        <td>Trả về một phần của chuỗi từ vị trí start đến vị trí end - 1</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.substring(0, 3))</code></pre></td>
+                        <td>Hel</td>
+                    </tr>
+                    <tr>
+                        <td>substr()</td>
+                        <td>Trả về một phần của chuỗi từ vị trí start với độ dài chỉ định</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.substr(0, 3))</code></pre></td>
+                        <td>Hel</td>
+                    </tr>
+                    <tr>
+                        <td>toUpperCase</td>
+                        <td>Chuyển đổi chuỗi thành chữ in hoa</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.toUpperCase())</code></pre></td>
+                        <td>HELLO</td>
+                    </tr>
+                    <tr>
+                        <td>toLowerCase</td>
+                        <td>Chuyển đổi chuỗi thành chữ in thường</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.toLowerCase())</code></pre></td>
+                        <td>hello</td>
+                    </tr>
+                    <tr>
+                        <td>concat()</td>
+                        <td>Nối chuỗi</td>
+                        <td><pre><code class="language-js">let str1 = "Hello";
+let str2 = "World";
+console.log(str1.concat(" ", str2))</code></pre></td>
+                        <td>Hello World</td>
+                    </tr>
+                    <tr>
+                        <td>trim()</td>
+                        <td>Loại bỏ khoảng trắng ở đầu và cuối chuỗi</td>
+                        <td><pre><code class="language-js">let str = " Hello ";
+console.log(str.trim())</code></pre></td>
+                        <td>Hello</td>
+                    </tr>
+                    <tr>
+                        <td>trimStart()</td>
+                        <td>Loại bỏ khoảng trắng ở đầu chuỗi</td>
+                        <td><pre><code class="language-js">let str = " Hello ";
+console.log(str.trimStart())</code></pre></td>
+                        <td>Hello </td>
+                    </tr>
+                    <tr>
+                        <td>trimEnd()</td>
+                        <td>Loại bỏ khoảng trắng ở cuối chuỗi</td>
+                        <td><pre><code class="language-js">let str = " Hello ";
+console.log(str.trimEnd())</code></pre></td>
+                        <td> Hello</td>
+                    </tr>
+                    <tr>
+                        <td>padStart()</td>
+                        <td>Thêm ký tự vào đầu chuỗi cho đến khi đạt độ dài chỉ định</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.padStart(10, "."))</code></pre></td>
+                        <td>.....Hello</td>
+                    </tr>
+                    <tr>
+                        <td>padEnd()</td>
+                        <td>Thêm ký tự vào cuối chuỗi cho đến khi đạt độ dài chỉ định</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.padEnd(10, "."))</code></pre></td>
+                        <td>Hello.....</td>
+                    </tr>
+                    <tr>
+                        <td>repeat()</td>
+                        <td>Lặp lại chuỗi</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.repeat(3))</code></pre></td>
+                        <td>HelloHelloHello</td>
+                    </tr>
+                    <tr>
+                        <td>replace()</td>
+                        <td>Thay thế chuỗi con trong chuỗi</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.replace("He", "Hi"))</code></pre></td>
+                        <td>Hillo</td>
+                    </tr>
+                    <tr>
+                        <td>replaceAll()</td>
+                        <td>Thay thế tất cả chuỗi con trong chuỗi</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.replaceAll("l", "L"))</code></pre></td>
+                        <td>HeLLo</td>
+                    </tr>
+                    <tr>
+                        <td>split()</td>
+                        <td>Tách chuỗi thành mảng</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.split(""))</code></pre></td>
+                        <td>["H", "e", "l", "l", "o"]</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2>
+                String search
+            </h2>
+            <p>
+                Có khá nhiều phương thức giúp bạn tìm kiếm chuỗi con trong chuỗi.
+            </p>
+            <div class="example">
+                <table style="width: 100%;">
+                    <tr>
+                        <th>Phương thức</th>
+                        <th>Mô tả</th>
+                        <th>Ví dụ</th>
+                        <th>Kết quả</th>
+                    </tr>
+                    <tr>
+                        <td>indexOf()</td>
+                        <td>Tìm kiếm chuỗi con trong chuỗi và trả về vị trí đầu tiên của chuỗi con đó (nếu không tìm thấy trả về -1)</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.indexOf("l"))</code></pre></td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>lastIndexOf()</td>
+                        <td>Tìm kiếm chuỗi con trong chuỗi và trả về vị trí cuối cùng của chuỗi con đó (nếu không tìm thấy trả về -1)</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.lastIndexOf("l"))</code></pre></td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>includes()</td>
+                        <td>Trả về true nếu chuỗi chứa chuỗi con, ngược lại trả về false</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.includes("l"))</code></pre></td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>startsWith()</td>
+                        <td>Trả về true nếu chuỗi bắt đầu bằng chuỗi con, ngược lại trả về false</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.startsWith("H"))</code></pre></td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>endsWith()</td>
+                        <td>Trả về true nếu chuỗi kết thúc bằng chuỗi con, ngược lại trả về false</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.endsWith("o"))</code></pre></td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>match()</td>
+                        <td>Tìm kiếm chuỗi con trong chuỗi và trả về mảng chứa chuỗi con đó (nếu không tìm thấy trả về null)</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.match("l"))</code></pre></td>
+                        <td>["l"]</td>
+                    </tr>
+                    <tr>
+                        <td>search()</td>
+                        <td>Tìm kiếm chuỗi con trong chuỗi và trả về vị trí đầu tiên của chuỗi con đó (nếu không tìm thấy trả về -1)</td>
+                        <td><pre><code class="language-js">let str = "Hello";
+console.log(str.search("l"))</code></pre></td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>matchAll()</td>
+                        <td>Tìm kiếm chuỗi con trong chuỗi và trả về mảng chứa tất cả chuỗi con đó (nếu không tìm thấy trả về null)</td>
+                        <td><pre><code class="language-js">let str = "Hello World! Hello World!"; 
+console.log(str.matchAll("Hello"))</code></pre></td>
+                        <td>["Hello", "Hello"]</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2>
+                Mảng trong javaScript
+            </h2>
+            <p>
+                Trong javaScript, mảng là một kiểu dữ liệu dùng để lưu trữ nhiều giá trị trong một biến.
+            </p>
+            <p>
+                Mảng trong javaScript được đặt trong dấu ngoặc vuông [ ].
+            </p>
+            <p>
+                Mảng trong javaScript có thể chứa nhiều kiểu dữ liệu khác nhau.
+            </p>
+
+            <strong>Khai báo mảng</strong>
+            <pre><code class="language-js">const tên_mảng = ["phần_tử_1", "phần_tử_2", "phần_tử_3"...];</code></pre>
+
+            <p>Ví dụ</p>
+            <pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];</code></pre>
+            <p>
+                Trong ví dụ trên, <code class="language-js">fruits</code> là mảng chứa các loại trái cây.
+            </p>
+            <b>
+                Bạn cũng có thể khai báo mảng rỗng. Ví dụ: <code class="language-js">const fruits = [];</code>
+                <br>Sau đó thêm các phần tử vào mảng:
+                <br><code class="language-js">fruits[0] = "Apple";</code>
+                <br><code class="language-js">fruits[1] = "Banana";</code>
+                <br><code class="language-js">fruits[2] = "Orange";</code>
+            </b>
+            <b>
+                Để truy cập đến một phần tử trong mảng, bạn cần sử dụng chỉ số của phần tử đó.
+                <br>Ví dụ: <code class="language-js">fruits[0]</code> sẽ trả về "Apple".
+            </b>
+            <b>
+                Để thay đổi giá trị của một phần tử trong mảng, bạn cần truy cập đến phần tử đó và gán giá trị mới cho nó.
+                <br>Ví dụ: <code class="language-js">fruits[0] = "Mango";</code>
+            </b>
+            <b>
+                Để chuyển từ mảng thành chuỗi dùng phương thức <code class="language-js">toString()</code>.
+            </b>
+            <b>
+                Thêm phần tử mới vào mảng dùng phương thức <code class="language-js">push()</code>.
+                <br>Ví dụ: <code class="language-js">fruits.push("Mango");</code>
+                <br>Hoặc dùng chỉ số của phần tử cuối cùng + 1: <code class="language-js">fruits[fruits.length] = "Mango";</code>
+            </b>
+            <mark class="red">
+                <b>
+                    Thêm phần tử bằng chỉ số có thể tạo ra lỗ hổng trong mảng.
+                </b>
+            </mark>
+        </section>
+
+        <section>
+            <h2>
+                Các phương thức của mảng
+            </h2>
+
+            <div class="example">
+                <table style="width: 100%;">
+                    <tr>
+                        <th>Phương thức</th>
+                        <th>Mô tả</th>
+                        <th>Ví dụ</th>
+                        <th>Kết quả</th>
+                    </tr>
+                    <tr>
+                        <td>length</td>
+                        <td>Trả về độ dài của mảng</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+let length = fruits.length;
+console.log(length);</code></pre></td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>push()</td>
+                        <td>Thêm phần tử vào cuối mảng</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+fruits.push("Mango");
+console.log(fruits);</code></pre></td>
+                        <td>["Apple", "Banana", "Orange", "Mango"]</td>
+                    </tr>
+                    <tr>
+                        <td>pop()</td>
+                        <td>Xóa phần tử cuối cùng của mảng</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+fruits.pop();
+console.log(fruits);</code></pre></td>
+                        <td>["Apple", "Banana"]</td>
+                    </tr>
+                    <tr>
+                        <td>shift()</td>
+                        <td>Xóa phần tử đầu tiên của mảng</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+fruits.shift();
+console.log(fruits);</code></pre></td>
+                        <td>["Banana", "Orange"]</td>
+                    </tr>
+                    <tr>
+                        <td>unshift()</td>
+                        <td>Thêm phần tử vào đầu mảng</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+fruits.unshift("Mango");
+console.log(fruits);</code></pre></td>
+                        <td>["Mango", "Apple", "Banana", "Orange"]</td>
+                    </tr>
+                    <tr>
+                        <td>spliced() - Thêm phần tử</td>
+                        <td>Thêm phần tử vào vị trí chỉ định trong mảng với giá trị lần lượt là `vị trí cần chèn`, `số phần tử xóa đi`, `danh sách các phần tử`</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+fruits.splice(1, 0, "Mango");
+console.log(fruits);</code></pre></td>
+                        <td>["Apple", "Mango", "Banana", "Orange"]</td>
+                    </tr>
+                    <tr>
+                        <td>spliced() - Xóa phần tử</td>
+                        <td>Xóa phần tử từ vị trí chỉ định trong mảng với giá trị lần lượt là `vị trí cần xóa`, `số phần tử cần xóa`</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+fruits.splice(1, 1);
+console.log(fruits);</code></pre></td>
+                        <td>["Apple", "Orange"]</td>
+                    </tr>
+                    <tr>
+                        <td>slice()</td>
+                        <td>Trả về một phần của mảng từ vị trí start đến vị trí end - 1</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+let newFruits = fruits.slice(1, 2);
+console.log(newFruits);</code></pre></td>
+                        <td>["Banana"]</td>
+                    </tr>
+                    <tr>
+                        <td>concat()</td>
+                        <td>Nối mảng</td>
+                        <td><pre><code class="language-js">const fruits1 = ["Apple", "Banana"];
+const fruits2 = ["Orange", "Mango"];
+let newFruits = fruits1.concat(fruits2);
+console.log(newFruits);</code></pre></td>
+                        <td>["Apple", "Banana", "Orange", "Mango"]</td>
+                    </tr>
+                    <tr>
+                        <td>reverse()</td>
+                        <td>Đảo ngược mảng</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+fruits.reverse();
+console.log(fruits);</code></pre></td>
+                        <td>["Orange", "Banana", "Apple"]</td>
+                    </tr>
+                    <tr>
+                        <td>sort()</td>
+                        <td>Sắp xếp mảng</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+fruits.sort();
+console.log(fruits);</code></pre></td>
+                        <td>["Apple", "Banana", "Orange"]</td>
+                    </tr>
+                    <tr>
+                        <td>join()</td>
+                        <td>Chuyển mảng thành chuỗi</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+let str = fruits.join(", ");
+console.log(str);</code></pre></td>
+                        <td>Apple, Banana, Orange</td>
+                    </tr>
+                    <tr>
+                        <td>toString()</td>
+                        <td>Chuyển mảng thành chuỗi</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+let str = fruits.toString();
+console.log(str);</code></pre></td>
+                        <td>Apple, Banana, Orange</td>
+                    </tr>
+                    <tr>
+                        <td>indexOf()</td>
+                        <td>Tìm kiếm phần tử trong mảng và trả về vị trí đầu tiên của phần tử đó (nếu không tìm thấy trả về -1)</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+let index = fruits.indexOf("Banana");
+console.log(index);</code></pre></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>lastIndexOf()</td>
+                        <td>Tìm kiếm phần tử trong mảng và trả về vị trí cuối cùng của phần tử đó (nếu không tìm thấy trả về -1)</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange", "Banana"];
+let index = fruits.lastIndexOf("Banana");
+console.log(index);</code></pre></td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>includes()</td>
+                        <td>Trả về true nếu mảng chứa phần tử, ngược lại trả về false</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+let isExist = fruits.includes("Banana");
+console.log(isExist);</code></pre></td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>forEach()</td>
+                        <td>Thực thi một hàm cho mỗi phần tử trong mảng</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+fruits.forEach(function(fruit) {
+    console.log(fruit);
+});</code></pre></td>
+                        <td>Apple
+                            <br>Banana
+                            <br>Orange</td>
+                    </tr>
+                    <tr>
+                        <td>map()</td>
+                        <td>Tạo một mảng mới từ kết quả của việc thực thi một hàm cho mỗi phần tử trong mảng</td>
+                        <td><pre><code class="language-js">const fruits = ["Apple", "Banana", "Orange"];
+let newFruits = fruits.map(function(fruit) {
+    return fruit + "!";
+});
+console.log(newFruits);</code></pre></td>
+                        <td>["Apple!", "Banana!", "Orange!"]</td>
+                    </tr>
+                    <tr>
+                        <td>filter()</td>
+                        <td>Tạo một mảng mới từ các phần tử thỏa mãn điều kiện của hàm</td>
+                        <td><pre><code class="language-js">const numbers = [1, 2, 3, 4, 5];
+let newNumbers = numbers.filter(function(number) {
+    return number > 3;
+});
+console.log(newNumbers);</code></pre></td>
+                        <td>[4, 5]</td>
+                    </tr>
+                    <tr>
+                        <td>reduce()</td>
+                        <td>Thực thi một hàm trên từng phần tử của mảng để tạo ra một giá trị duy nhất</td>
+                        <td><pre><code class="language-js">const numbers = [1, 2, 3, 4, 5];
+let sum = numbers.reduce(function(total, number) {
+    return total + number;
+});
+console.log(sum);</code></pre></td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>every()</td>
+                        <td>Trả về true nếu tất cả phần tử trong mảng thỏa mãn điều kiện của hàm, ngược lại trả về false</td>
+                        <td><pre><code class="language-js">const numbers = [1, 2, 3, 4, 5];
+let isAll = numbers.every(function(number) {
+    return number > 0;
+});
+console.log(isAll);</code></pre></td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>some()</td>
+                        <td>Trả về true nếu một phần tử trong mảng thỏa mãn điều kiện của hàm, ngược lại trả về false</td>
+                        <td><pre><code class="language-js">const numbers = [1, 2, 3, 4, 5];
+let isSome = numbers.some(function(number) {
+    return number > 3;
+});
+console.log(isSome);</code></pre></td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>find()</td>
+                        <td>Trả về giá trị của phần tử đầu tiên trong mảng thỏa mãn điều kiện của hàm (nếu không tìm thấy trả về undefined)</td>
+                        <td><pre><code class="language-js">const numbers = [1, 2, 3, 4, 5];
+let number = numbers.find(function(number) {
+    return number > 3;
+});
+console.log(number);</code></pre></td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>findIndex()</td>
+                        <td>Trả về vị trí của phần tử đầu tiên trong mảng thỏa mãn điều kiện của hàm (nếu không tìm thấy trả về -1)</td>
+                        <td><pre><code class="language-js">const numbers = [1, 2, 3, 4, 5];
+let index = numbers.findIndex(function(number) {
+    return number > 3;
+});
+console.log(index);</code></pre></td>
+                        <td>3</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2>
+                Date trong javaScript
+            </h2>
+
+            <p>
+                Trong javaScript, đối tượng Date được sử dụng để làm việc với ngày tháng.
+            </p>
+            <p>
+                Để tạo một đối tượng Date, bạn có thể sử dụng constructor <code class="language-js">new Date()</code>.
+            </p>
+            <p>
+                Đối tượng Date sẽ lấy thời gian hiện tại của máy tính.
+            </p>
+            <p>
+                Đối tượng Date cũng có thể lấy thời gian từ một chuỗi ngày tháng hoặc từ các tham số ngày tháng.
+            </p>
+            <p>
+                Đối tượng Date lưu trữ thời gian dưới dạng số mili giây kể từ 1/1/1970.
+            </p>
+            <p>
+                Để lấy thời gian hiện tại, bạn có thể sử dụng phương thức <code class="language-js">Date()</code>.
+            </p>
+            <p>Ví dụ</p>
+            <pre><code class="language-js">let date = new Date();
+console.log(date);</code></pre>
+            <p>
+                Trong ví dụ trên, <code class="language-js">date</code> là một đối tượng Date chứa thời gian hiện tại.
+            </p>
+            <p>
+                Để lấy thời gian từ một chuỗi ngày tháng, bạn cần truyền chuỗi ngày tháng đó vào constructor <code class="language-js">new Date()</code>.
+            </p>
+            <p>Ví dụ</p>
+            <pre><code class="language-js">let date = new Date("2021-01-01");
+console.log(date);</code></pre>
+            <p>
+                Trong ví dụ trên, <code class="language-js">date</code> là một đối tượng Date chứa thời gian từ chuỗi "2021-01-01".
+            </p>
+            <p>
+                Để lấy thời gian từ các tham số ngày tháng, bạn cần truyền các tham số ngày, tháng, năm vào constructor <code class="language-js">new Date()</code>.
+            </p>
+            <p>Ví dụ</p>
+            <pre><code class="language-js">let date = new Date(2021, 0, 1);
+console.log(date);</code></pre>
+            <p>
+                Trong ví dụ trên, <code class="language-js">date</code> là một đối tượng Date chứa thời gian từ các tham số ngày 1, tháng 0 (tháng 1), năm 2021.
+            </p>
+            
+        </section>
+        <section>
+            <h2>
+                Date format
+            </h2>
+            <strong>
+                ISO Date
+            </strong>
+            <p>
+                ISO Date là một chuẩn quốc tế để hiển thị ngày tháng.
+            </p>
+            <p>
+                ISO Date có định dạng: YYYY-MM-DDTHH:MM:SSZ.
+            </p>
+            <p>
+                Trong đó:
+                <br>YYYY: Năm (4 chữ số)
+                <br>MM: Tháng (2 chữ số)
+                <br>DD: Ngày (2 chữ số)
+                <br>T: Ký tự "T" phân tách ngày và giờ
+                <br>HH: Giờ (2 chữ số)
+                <br>MM: Phút (2 chữ số)
+                <br>SS: Giây (2 chữ số)
+                <br>Z: Ký tự "Z" (giờ UTC)
+            </p>
+            <p>
+                Ví dụ: 2021-01-01T12:00:00Z
+            </p>
+
+            <strong>
+                Short Date
+            </strong>
+            <p>
+                Short Date có định dạng: MM/DD/YYYY.
+            </p>
+            <p>
+                Ví dụ: 01/01/2021
+            </p>
+            <strong>
+                Long Date
+            </strong>
+            <p>
+                Long Date có định dạng: MMM DD YYYY.
+            </p>
+            <p>
+                Ví dụ: Jan 01 2021
+            </p>
+        </section>
+        <section>
+            <h2>
+                Các phương thức của Date
+            </h2>
+            <div class="example">
+                <table style="width: 100%;">
+                    <tr>
+                        <th>Phương thức</th>
+                        <th>Mô tả</th>
+                        <th>Ví dụ</th>
+                        <th>Kết quả</th>
+                    </tr>
+                    <tr>
+                        <td>getFullYear()</td>
+                        <td>Trả về năm</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let year = date.getFullYear();
+console.log(year);</code></pre></td>
+                        <td>2024</td>
+                    </tr>
+                    <tr>
+                        <td>getMonth()</td>
+                        <td>Trả về tháng (0-11)</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let month = date.getMonth();
+console.log(month);</code></pre></td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>getDate()</td>
+                        <td>Trả về ngày</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let day = date.getDate();
+console.log(day);</code></pre></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>getDay()</td>
+                        <td>Trả về ngày trong tuần (0-6)</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let day = date.getDay();
+console.log(day);</code></pre></td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>getHours()</td>
+                        <td>Trả về giờ</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let hours = date.getHours();
+console.log(hours);</code></pre></td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>getMinutes()</td>
+                        <td>Trả về phút</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let minutes = date.getMinutes();
+console.log(minutes);</code></pre></td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>getSeconds()</td>
+                        <td>Trả về giây</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let seconds = date.getSeconds();
+console.log(seconds);</code></pre></td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>getMilliseconds()</td>
+                        <td>Trả về mili giây</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let milliseconds = date.getMilliseconds();
+console.log(milliseconds);</code></pre></td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>getTime()</td>
+                        <td>Trả về thời gian dưới dạng số mili giây kể từ 1/1/1970</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let time = date.getTime();
+console.log(time);</code></pre></td>
+                        <td>1640995200000</td>
+                    </tr>
+                    <tr>
+                        <td>setFullYear()</td>
+                        <td>Đặt năm</td>
+                        <td><pre><code class="language-js">let date = new Date();
+date.setFullYear(2024);
+console.log(date);</code></pre></td>
+                        <td>Thu Jan 01 2024 12:00:00 GMT+0700 (Indochina Time)</td>
+                    </tr>
+                    <tr>
+                        <td>setMonth()</td>
+                        <td>Đặt tháng</td>
+                        <td><pre><code class="language-js">let date = new Date();
+date.setMonth(0);
+console.log(date);</code></pre></td>
+                        <td>Wed Jan 01 2020 12:00:00 GMT+0700 (Indochina Time)</td>
+                    </tr>
+                    <tr>
+                        <td>setDate()</td>
+                        <td>Đặt ngày</td>
+                        <td><pre><code class="language-js">let date = new Date();
+date.setDate(1);
+console.log(date);</code></pre></td>
+                        <td>Wed Jan 01 2020 12:00:00 GMT+0700 (Indochina Time)</td>
+                    </tr>
+                    <tr>
+                        <td>setHours()</td>
+                        <td>Đặt giờ</td>
+                        <td><pre><code class="language-js">let date = new Date();
+date.setHours(12);
+console.log(date);</code></pre></td>
+                        <td>Wed Jan 01 2020 12:00:00 GMT+0700 (Indochina Time)</td>
+                    </tr>
+                    <tr>
+                        <td>setMinutes()</td>
+                        <td>Đặt phút</td>
+                        <td><pre><code class="language-js">let date = new Date();
+date.setMinutes(0);
+console.log(date);</code></pre></td>
+                        <td>Wed Jan 01 2020 12:00:00 GMT+0700 (Indochina Time)</td>
+                    </tr>
+                    <tr>
+                        <td>setSeconds()</td>
+                        <td>Đặt giây</td>
+                        <td><pre><code class="language-js">let date = new Date();
+date.setSeconds(0);
+console.log(date);</code></pre></td>
+                        <td>Wed Jan 01 2020 12:00:00 GMT+0700 (Indochina Time)</td>
+                    </tr>
+                    <tr>
+                        <td>setMilliseconds()</td>
+                        <td>Đặt mili giây</td>
+                        <td><pre><code class="language-js">let date = new Date();
+date.setMilliseconds(0);
+console.log(date);</code></pre></td>
+                        <td>Wed Jan 01 2020 12:00:00 GMT+0700 (Indochina Time)</td>
+                    </tr>
+                    <tr>
+                        <td>toString()</td>
+                        <td>Chuyển đối tượng Date thành chuỗi</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let str = date.toString();
+console.log(str);</code></pre></td>
+                        <td>Wed Jan 01 2020 12:00:00 GMT+0700 (Indochina Time)</td>
+                    </tr>
+                    <tr>
+                        <td>toDateString()</td>
+                        <td>Chuyển đối tượng Date thành chuỗi ngày tháng</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let str = date.toDateString();
+console.log(str);</code></pre></td>
+                        <td>Wed Jan 01 2020</td>
+                    </tr>
+                    <tr>
+                        <td>toTimeString()</td>
+                        <td>Chuyển đối tượng Date thành chuỗi giờ phút giây</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let str = date.toTimeString();
+console.log(str);</code></pre></td>
+                        <td>12:00:00 GMT+0700 (Indochina Time)</td>
+                    </tr>
+                    <tr>
+                        <td>toISOString()</td>
+                        <td>Chuyển đối tượng Date thành chuỗi ISO</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let str = date.toISOString();
+console.log(str);</code></pre></td>
+                        <td>2020-01-01T05:00:00.000Z</td>
+                    </tr>
+                    <tr>
+                        <td>toLocaleString()</td>
+                        <td>Chuyển đối tượng Date thành chuỗi ngày tháng giờ phút giây</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let str = date.toLocaleString();
+console.log(str);</code></pre></td>
+                        <td>1/1/2020, 12:00:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>toLocaleDateString()</td>
+                        <td>Chuyển đối tượng Date thành chuỗi ngày tháng</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let str = date.toLocaleDateString();
+console.log(str);</code></pre></td>
+                        <td>1/1/2020</td>
+                    </tr>
+                    <tr>
+                        <td>toLocaleTimeString()</td>
+                        <td>Chuyển đối tượng Date thành chuỗi giờ phút giây</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let str = date.toLocaleTimeString();
+console.log(str);</code></pre></td>
+                        <td>12:00:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>UTC()</td>
+                        <td>Trả về thời gian theo múi giờ UTC</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let utc = date.toUTCString();
+console.log(utc);</code></pre></td>
+                        <td>Wed, 01 Jan 2020 05:00:00 GMT</td>
+                    </tr>
+                    <tr>
+                        <td>valueOf()</td>
+                        <td>Trả về thời gian dưới dạng số mili giây kể từ 1/1/1970</td>
+                        <td><pre><code class="language-js">let date = new Date();
+let value = date.valueOf();
+console.log(value);</code></pre></td>
+                        <td>1577851200000</td>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>
+                Math trong javaScript
+            </h2>
+            <section>
+                <h3>
+                    Math properties
+                </h3>
+                <div class="example">
+                    <table>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Giá trị</th>
+                            <th>Mô tả</th>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.E</code></td>
+                            <td>2.718281828459045</td>
+                            <td>Định nghĩa số e</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.PI</code></td>
+                            <td>3.141592653589793</td>
+                            <td>Định nghĩa số pi</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.SQRT2</code></td>
+                            <td>1.4142135623730951</td>
+                            <td>Định nghĩa căn bậc 2 của 2</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.SQRT1_2</code></td>
+                            <td>0.7071067811865476</td>
+                            <td>Định nghĩa căn bậc 2 của 1/2</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.LN2</code></td>
+                            <td>0.6931471805599453</td>
+                            <td>Định nghĩa logarit tự nhiên của 2</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.LN10</code></td>
+                            <td>2.302585092994046</td>
+                            <td>Định nghĩa logarit tự nhiên của 10</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.LOG2E</code></td>
+                            <td>1.4426950408889634</td>
+                            <td>Định nghĩa logarit cơ số 2 của e</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.LOG10E</code></td>
+                            <td>0.4342944819032518</td>
+                            <td>Định nghĩa logarit cơ số 10 của e</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section>
+                <h3>
+                    Math methods
+                </h3>
+                <div class="example">
+                    <table>
+                        <tr>
+                            <th>Phương thức</th>
+                            <th>Mô tả</th>
+                            <th>Ví dụ</th>
+                            <th>Kết quả</th>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.abs()</code></td>
+                            <td>Trả về giá trị tuyệt đối</td>
+                            <td><pre><code class="language-js">let abs = Math.abs(-5);
+console.log(abs);</code></pre></td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.ceil()</code></td>
+                            <td>Làm tròn lên</td>
+                            <td><pre><code class="language-js">let ceil = Math.ceil(4.2);
+console.log(ceil);</code></pre></td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.floor()</code></td>
+                            <td>Làm tròn xuống</td>
+                            <td><pre><code class="language-js">let floor = Math.floor(4.7);
+console.log(floor);</code></pre></td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.round()</code></td>
+                            <td>Làm tròn</td>
+                            <td><pre><code class="language-js">let round = Math.round(4.5);
+console.log(round);</code></pre></td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.max()</code></td>
+                            <td>Trả về giá trị lớn nhất</td>
+                            <td><pre><code class="language-js">let max = Math.max(1, 2, 3, 4, 5);
+console.log(max);</code></pre></td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.min()</code></td>
+                            <td>Trả về giá trị nhỏ nhất</td>
+                            <td><pre><code class="language-js">let min = Math.min(1, 2, 3, 4, 5);
+console.log(min);</code></pre></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.pow()</code></td>
+                            <td>Trả về giá trị của số mũ</td>
+                            <td><pre><code class="language-js">let pow = Math.pow(2, 3);
+console.log(pow);</code></pre></td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.sqrt()</code></td>
+                            <td>Trả về căn bậc 2</td>
+                            <td><pre><code class="language-js">let sqrt = Math.sqrt(9);
+console.log(sqrt);</code></pre></td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.cbrt()</code></td>
+                            <td>Trả về căn bậc 3</td>
+                            <td><pre><code class="language-js">let cbrt = Math.cbrt(27);
+console.log(cbrt);</code></pre></td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.exp()</code></td>
+                            <td>Trả về giá trị của e mũ</td>
+                            <td><pre><code class="language-js">let exp = Math.exp(1);
+console.log(exp);</code></pre></td>
+                            <td>2.718281828459045</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.log()</code></td>
+                            <td>Trả về logarit tự nhiên</td>
+                            <td><pre><code class="language-js">let log = Math.log(2);
+console.log(log);</code></pre></td>
+                            <td>0.6931471805599453</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.log10()</code></td>
+                            <td>Trả về logarit cơ số 10</td>
+                            <td><pre><code class="language-js">let log10 = Math.log10(10);
+console.log(log10);</code></pre></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.log2()</code></td>
+                            <td>Trả về logarit cơ số 2</td>
+                            <td><pre><code class="language-js">let log2 = Math.log2(2);
+console.log(log2);</code></pre></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.sin()</code></td>
+                            <td>Trả về sin</td>
+                            <td><pre><code class="language-js">let sin = Math.sin(Math.PI / 2);
+console.log(sin);</code></pre></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.cos()</code></td>
+                            <td>Trả về cos</td>
+                            <td><pre><code class="language-js">let cos = Math.cos(0);
+console.log(cos);</code></pre></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.tan()</code></td>
+                            <td>Trả về tan</td>
+                            <td><pre><code class="language-js">let tan = Math.tan(0);
+console.log(tan);</code></pre></td> 
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.asin()</code></td>
+                            <td>Trả về arcsin</td>
+                            <td><pre><code class="language-js">let asin = Math.asin(1);
+console.log(asin);</code></pre></td>
+                            <td>1.5707963267948966</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.acos()</code></td>
+                            <td>Trả về arccos</td>
+                            <td><pre><code class="language-js">let acos = Math.acos(1);
+console.log(acos);</code></pre></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.atan()</code></td>
+                            <td>Trả về arctan</td>
+                            <td><pre><code class="language-js">let atan = Math.atan(0);
+console.log(atan);</code></pre></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.atan2()</code></td>
+                            <td>Trả về arctan của hai số</td>
+                            <td><pre><code class="language-js">let atan2 = Math.atan2(0, 1);
+console.log(atan2);</code></pre></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.sinh()</code></td>
+                            <td>Trả về sinh</td>
+                            <td><pre><code class="language-js">let sinh = Math.sinh(0);
+console.log(sinh);</code></pre></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.cosh()</code></td>
+                            <td>Trả về cosh</td>
+                            <td><pre><code class="language-js">let cosh = Math.cosh(0);
+console.log(cosh);</code></pre></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.tanh()</code></td>
+                            <td>Trả về tanh</td>
+                            <td><pre><code class="language-js">let tanh = Math.tanh(0);
+console.log(tanh);</code></pre></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.asinh()</code></td>
+                            <td>Trả về arsinh</td>
+                            <td><pre><code class="language-js">let asinh = Math.asinh(0);
+console.log(asinh);</code></pre></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.acosh()</code></td>
+                            <td>Trả về arcosh</td>
+                            <td><pre><code class="language-js">let acosh = Math.acosh(1);
+console.log(acosh);</code></pre></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.atanh()</code></td>
+                            <td>Trả về artanh</td>
+                            <td><pre><code class="language-js">let atanh = Math.atanh(0);
+console.log(atanh);</code></pre></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><code class="language-js">Math.random()</code></td>
+                            <td>Trả về số ngẫu nhiên từ 0 đến 1</td>
+                            <td><pre><code class="language-js">let random = Math.random();
+console.log(random);</code></pre></td>
+                            <td>0.123456789</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h3>
+                    Ứng dụng của Math.random()
+                </h3>
+                <p>
+                    Phương thức <code class="language-js">Math.random()</code> được sử dụng để tạo số ngẫu nhiên từ 0 đến 1.
+                </p>
+                <p>
+                    Để tạo số ngẫu nhiên trong một khoảng cụ thể, bạn có thể sử dụng công thức sau:
+                </p>
+                <pre><code class="language-js">let random = Math.floor(Math.random() * (max - min + 1)) + min;</code></pre>4
+                <p>
+                    Trong đó:
+                    <br><code class="language-js">max</code>: Giá trị lớn nhất
+                    <br><code class="language-js">min</code>: Giá trị nhỏ nhất
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>
+                if - else và else if trong javaScript
+            </h2>
+            <p>
+                Trong javaScript, câu lệnh <code class="language-js">if</code> được sử dụng để kiểm tra một điều kiện.
+            </p>
+            <p>
+                Nếu điều kiện đúng, câu lệnh bên trong <code class="language-js">if</code> sẽ được thực thi.
+            </p>
+            <p>
+                Nếu điều kiện sai, câu lệnh bên trong <code class="language-js">else</code> sẽ được thực thi.
+            </p>
+            <strong>Cú pháp</strong>
+            <pre><code class="language-js">if (condition) {
+    // code
+} else {
+    // code
+}</code></pre>
+            <p>
+                Trong trường hợp có nhiều điều kiện, bạn có thể sử dụng câu lệnh <code class="language-js">else if</code>.
+            </p>
+            <strong>Cú pháp</strong>
+            <pre><code class="language-js">if (condition1) {
+    // code
+} else if (condition2) {
+    // code
+} else {
+    // code
+}</code></pre>
+            <p>
+                Trong trường hợp có nhiều điều kiện, chỉ có một điều kiện được thực thi.
+            </p>
+            <p>
+                Nếu điều kiện đầu tiên đúng, câu lệnh bên trong <code class="language-js">if</code> sẽ được thực thi.
+            </p>
+            <p>
+                Nếu điều kiện thứ hai đúng, câu lệnh bên trong <code class="language-js">else if</code> sẽ được thực thi.
+            </p>
+            <p>
+                Nếu cả hai điều kiện đều sai, câu lệnh bên trong <code class="language-js">else</code> sẽ được thực thi.
+            </p>
+        </section>
+        <section>
+            <h2>
+                switch case trong javaScript
+            </h2>
+            <p>
+                Trong javaScript, câu lệnh <code class="language-js">switch</code> được sử dụng để kiểm tra một biến hoặc một biểu thức.
+            </p>
+            <p>
+                Câu lệnh <code class="language-js">switch</code> sẽ kiểm tra giá trị của biến hoặc biểu thức với các trường hợp (case) đã được xác định.
+            </p>
+            <p>
+                Nếu giá trị của biến hoặc biểu thức trùng với một trường hợp, câu lệnh bên trong trường hợp đó sẽ được thực thi.
+            </p>
+            <p>
+                Nếu không trùng với bất kỳ trường hợp nào, câu lệnh bên trong trường hợp mặc định (default) sẽ được thực thi.
+            </p>
+
+            <strong>Cú pháp</strong>
+            <pre><code class="language-js">switch (expression) {
+    case value1:
+        // code
+        break;
+    case value2:
+        // code
+        break;
+    default:
+        // code
+}</code></pre>
+            <p>
+                Trong trường hợp giá trị của biến hoặc biểu thức trùng với một trường hợp, câu lệnh bên trong trường hợp đó sẽ được thực thi.
+            </p>
+            <p>
+                Để kết thúc một trường hợp, bạn cần sử dụng câu lệnh <code class="language-js">break</code>.
+            </p>
+            <p>
+                Nếu không sử dụng câu lệnh <code class="language-js">break</code>, các trường hợp phía sau trường hợp đó cũng sẽ được thực thi.
+            </p>
+            <p>
+                Trường hợp mặc định (default) không bắt buộc.
+            </p>
+
+        </section>
+        <section>
+            <h2>
+                Vòng lặp trong javaScript
+            </h2>
+            <section>
+                <h3>
+                    For loop
+                </h3>
+                <p>
+                    Vòng lặp <code class="language-js">for</code> được sử dụng để lặp qua một chuỗi giá trị.
+                </p>
+                <strong>Cú pháp</strong>
+                <pre><code class="language-js">for (initialization; condition; increment) {
+    // code
+}</code></pre>
+                <p>
+                    Trong đó:
+                    <br><code class="language-js">initialization</code>: Khởi tạo giá trị ban đầu
+                    <br><code class="language-js">condition</code>: Điều kiện lặp
+                    <br><code class="language-js">increment</code>: Tăng giá trị
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">for (let i = 0; i < 5; i++) {
+    console.log(i);
+}</code></pre>
+                <p>
+                    Trong ví dụ trên, vòng lặp sẽ lặp qua các giá trị từ 0 đến 4.
+                </p>
+
+            </section>
+            <section>
+                <h3>
+                    for in loop
+                </h3>
+                <p>
+                    Vòng lặp <code class="language-js">for in</code> được sử dụng để lặp qua các thuộc tính của một đối tượng.
+                </p>
+                <strong>Cú pháp</strong>
+                <pre><code class="language-js">for (variable in object) {
+    // code
+}</code></pre>
+                <p>
+                    Trong đó:
+                    <br><code class="language-js">variable</code>: Tên biến
+                    <br><code class="language-js">object</code>: Đối tượng
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let person = {
+    name: 'John',
+    age: 30
+};
+
+for (let key in person) {
+    console.log(key + ': ' + person[key]);
+}</code></pre>
+                <p>
+                    Trong ví dụ trên, vòng lặp sẽ lặp qua các thuộc tính của đối tượng <code class="language-js">person</code>.
+                </p>
+
+                <mark class="yellow">
+                    Lưu ý: Vòng lặp <code class="language-js">for in</code> không nên được sử dụng để lặp qua mảng. 
+                    <br>Để lặp qua mảng có thể dùng <code class="language-js">.forEach</code> hoặc <code class="language-js">for of</code>.
+                </mark>
+            </section>
+            <section>
+                <h3>
+                    for of loop
+                </h3>
+                <p>
+                    Vòng lặp <code class="language-js">for of</code> được sử dụng để lặp qua các phần tử của một mảng.
+                </p>
+                <strong>Cú pháp</strong>
+                <pre><code class="language-js">for (variable of array) {
+    // code
+}</code></pre>
+                <p>
+                    Trong đó:
+                    <br><code class="language-js">variable</code>: Tên biến
+                    <br><code class="language-js">array</code>: Mảng
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let fruits = ['apple', 'banana', 'cherry'];
+for (let fruit of fruits) {
+    console.log(fruit);
+}</code></pre>
+                <p>
+                    Trong ví dụ trên, vòng lặp sẽ lặp qua các phần tử của mảng <code class="language-js">fruits</code>.
+                </p>
+                <mark class="yellow">
+                    Bạn có thể dùng vòng lặp <code class="language-js">for of</code> để lặp qua các phần tử của một chuỗi, Maps, Sets, NodeList, ...
+                </mark>
+            </section>
+            <section>
+                <h3>
+                    while loop
+                </h3>
+                <p>
+                    Vòng lặp <code class="language-js">while</code> được sử dụng để lặp qua một chuỗi giá trị.
+                </p>
+                <strong>Cú pháp</strong>
+                <pre><code class="language-js">while (condition) {
+    // code
+}</code></pre>
+                <p>
+                    Trong đó:
+                    <br><code class="language-js">condition</code>: Điều kiện lặp
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}</code></pre>
+                <p>
+                    Trong ví dụ trên, vòng lặp sẽ lặp qua các giá trị từ 0 đến 4.
+                </p>
+
+            </section>
+            <section>
+                <h3>
+                    do while loop
+                </h3>
+                <p>
+                    Vòng lặp <code class="language-js">do while</code> được sử dụng để lặp qua một chuỗi giá trị.
+                </p>
+                <strong>Cú pháp</strong>
+                <pre><code class="language-js">do {
+    // code
+} while (condition);</code></pre>
+                <p>
+                    Trong đó:
+                    <br><code class="language-js">condition</code>: Điều kiện lặp
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 5);</code></pre>
+                <p>
+                    Trong ví dụ trên, vòng lặp sẽ lặp qua các giá trị từ 0 đến 4.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>
+                Xử lý lỗi trong javaScript
+            </h2>
+            <p>
+                Trong javaScript, bạn có thể sử dụng câu lệnh <code class="language-js">try</code> để thử một khối mã.
+            </p>
+            <p>
+                Nếu có lỗi xảy ra, câu lệnh <code class="language-js">catch</code> sẽ được thực thi.
+            </p>
+            <p>
+                Nếu không có lỗi xảy ra, câu lệnh <code class="language-js">finally</code> sẽ được thực thi.
+            </p>
+            <strong>Cú pháp</strong>
+            <pre><code class="language-js">try {
+    // code
+} catch (error) {
+    // code
+} finally {
+    // code
+}</code></pre>
+            <p>
+                Trong đó:
+                <br><code class="language-js">error</code>: Lỗi
+            </p>
+            <p>
+                Ví dụ
+            </p>
+            <pre><code class="language-js">try {
+    let x = y;
+} catch (error) {
+    console.log(error);
+} finally {
+    console.log('Done');
+}</code></pre>
+            <p>
+                Trong ví dụ trên, biến <code class="language-js">y</code> không được xác định, nên sẽ có lỗi xảy ra.
+            </p>
+            <p>
+                Câu lệnh <code class="language-js">catch</code> sẽ được thực thi và in ra lỗi.
+            </p>
+            <p>
+                Câu lệnh <code class="language-js">finally</code> sẽ được thực thi và in ra 'Done'.
+            </p>
+            <section>
+                <h3>
+                    Câu lệnh throw
+                </h3>
+                <p>
+                    Trong javaScript, câu lệnh <code class="language-js">throw</code> được sử dụng để tạo ra một lỗi.
+                </p>
+                <p>
+                    Bạn có thể sử dụng câu lệnh <code class="language-js">throw</code> để tạo ra một lỗi trong một hàm.
+                </p>
+                <p>
+                    Nếu có lỗi xảy ra, câu lệnh <code class="language-js">catch</code> sẽ được thực thi.
+                </p>
+                <p>
+                    Nếu không có lỗi xảy ra, câu lệnh <code class="language-js">finally</code> sẽ được thực thi.
+                </p>
+                <strong>Cú pháp</strong>
+                <pre><code class="language-js">try {
+    throw 'Error';
+} catch (error) {
+    console.log(error);
+} finally {
+    console.log('Done');
+}</code></pre>
+                <p>
+                    Trong ví dụ trên, câu lệnh <code class="language-js">throw</code> sẽ tạo ra một lỗi.
+                </p>
+                <p>
+                    Câu lệnh <code class="language-js">catch</code> sẽ được thực thi và in ra lỗi.
+                </p>
+                <p>
+                    Câu lệnh <code class="language-js">finally</code> sẽ được thực thi và in ra 'Done'.
+                </p>
+            </section>
+
+            <section>
+                <h3>
+                    Ứng dụng trong kiểm tra giá trị người dùng nhập vào
+                </h3>
+
+                <pre><code class="language-html"> &lt;input type="text" id="inputNumber" placeholder="Nhập số từ 1 - 100"&gt;
+&lt;button onclick="checkNumber()"&gt;Kiểm tra&lt;/button&gt;
+&lt;p id="result"&gt;&lt;/p&gt;</code></pre>
+                <pre><code class="language-js">function checkNumber() {
+    let number = document.getElementById('inputNumber').value;
+    try {
+        if (number === '') throw 'Vui lòng nhập số';
+        if (isNaN(number)) throw 'Vui lòng nhập số';
+        if (number < 1 || number > 100) throw 'Vui lòng nhập số từ 1 - 100';
+        document.getElementById('result').innerHTML = 'Số bạn vừa nhập là: ' + number;
+    } catch (error) {
+        document.getElementById('result').innerHTML = error;
+    }
+}</code></pre>
+                <p>
+                    Trong ví dụ trên, hàm <code class="language-js">checkNumber()</code> sẽ kiểm tra giá trị người dùng nhập vào.
+                </p>
+                <p>
+                    Nếu giá trị người dùng nhập vào không phải là số hoặc không nằm trong khoảng từ 1 - 100, sẽ có lỗi xảy ra.
+                </p>
+                <p>
+                    Câu lệnh <code class="language-js">catch</code> sẽ được thực thi và in ra lỗi.
+                </p>
+                <input type="text" id="inputNumber" placeholder="Nhập số từ 1 - 100">
+                <button onclick="checkNumber()">Kiểm tra</button>
+                <p id="result"></p>
+                <script>
+                    function checkNumber() {
+                        let number = document.getElementById('inputNumber').value;
+                        try {
+                            if (number === '') throw 'Vui lòng nhập số';
+                            if (isNaN(number)) throw 'Vui lòng nhập số';
+                            if (number < 1 || number > 100) throw 'Vui lòng nhập số từ 1 - 100';
+                            document.getElementById('result').innerHTML = 'Số bạn vừa nhập là: ' + number;
+                        } catch (error) {
+                            document.getElementById('result').innerHTML = error;
+                        }
+                    }
+                </script>
+            </section>
+        </section>
+        <section>
+            <h2>
+                JavaScript Hoisting
+            </h2>
+            <p>
+                Trong javaScript, biến có thể được sử dụng trước khi nó được khai báo.
+            </p>
+            <p>
+                Điều này được gọi là hoisting.
+            </p>
+            <p>
+                Hoisting là quá trình di chuyển các khai báo lên trên cùng của phạm vi.
+            </p>
+            <p>
+                Trong javaScript, biến có thể được sử dụng trước khi nó được khai báo.
+            </p>
+            <p>
+                Tuy nhiên, chỉ khai báo được di chuyển lên trên cùng, giá trị của biến không thể.
+            </p>
+        </section>
+
+        <section>
+            <h2>
+                "use strict" trong javaScript
+            </h2>
+            <p>
+                "use strict" là một cách để khai báo rằng mã hoặc chương trình phải được xử lý theo một tập hợp nghiêm ngặt các quy tắc.
+            </p>
+            <p>
+                "use strict" không phải là một câu lệnh, mà là một biểu thức.
+            </p>
+            <p>
+                "use strict" được thêm vào đầu của một chương trình hoặc một hàm.
+            </p>
+            <p>
+                Khi "use strict" được sử dụng, chương trình sẽ chạy ở chế độ nghiêm ngặt.
+            </p>
+            <p>
+                Một số lợi ích khi sử dụng "use strict":
+                <ul>
+                    <li>
+                        Không thể sử dụng biến mà không khai báo
+                    </li>
+                    <li>
+                        Không thể khai báo biến hai lần
+                    </li>
+                    <li>
+                        Không thể xóa biến
+                    </li>
+                    <li>
+                        Không thể sử dụng từ khóa dành riêng
+                    </li>
+                    <li>
+                        Không thể sử dụng "this" ở ngoài hàm
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Ví dụ
+            </p>
+            <pre><code class="language-js">"use strict";
+x = 10;
+console.log(x);</code></pre>
+            <p>
+                Trong ví dụ trên, biến <code class="language-js">x</code> không được khai báo, nên sẽ có lỗi xảy ra.
+            </p>
+            <mark class="red">
+                Lưu ý: "use strict" không cho phép đặt tên biến bằng những từ khóa có khả năng xuất hiện trong tương lai.
+                <ul>
+                    <li>
+                        implements
+                    </li>
+                    <li>
+                        interface
+                    </li>
+                    <li>
+                        let
+                    </li>
+                    <li>
+                        package
+                    </li>
+                    <li>
+                        private
+                    </li>
+                    <li>
+                        protected
+                    </li>
+                    <li>
+                        public
+                    </li>
+                    <li>
+                        static
+                    </li>
+                    <li>
+                        yield
+                    </li>
+                </ul>
+            </mark>
+        </section>
+
+        <section>
+            <h2>
+                Arrow function trong javaScript
+            </h2>
+            <p>
+                Arrow function là một cách viết hàm ngắn gọn hơn so với hàm thông thường.
+            </p>
+            <p>
+                Arrow function không có từ khóa <code class="language-js">function</code>.
+            </p>
+            <p>
+                Arrow function không có <code class="language-js">this</code>, <code class="language-js">arguments</code>, <code class="language-js">super</code>, <code class="language-js">new.target</code>.
+            </p>
+            <p>
+                Arrow function không thể sử dụng <code class="language-js">new</code> để tạo đối tượng.
+            </p>
+            <p>
+                Arrow function không thể sử dụng <code class="language-js">yield</code> trong hàm generator.
+            </p>
+            <p>
+                Arrow function không thể sử dụng <code class="language-js">call()</code>, <code class="language-js">apply()</code>, <code class="language-js">bind()</code>.
+            </p>
+
+            <strong>Cú pháp</strong>
+            <pre><code class="language-js">let functionName = (parameters) => {
+    // code
+}</code></pre>
+            <p>
+                Ví dụ
+            </p>
+            <pre><code class="language-js">let sum = (a, b) => {
+    return a + b;
+}
+console.log(sum(5, 10));</code></pre>
+            <p>
+                Trong ví dụ trên, hàm <code class="language-js">sum</code> sẽ trả về tổng của hai số.
+            </p>
+            <p>
+                Bạn cũng có thể viết hàm ngắn gọn hơn như sau:
+            </p>
+            <pre><code class="language-js">let sum = (a, b) => a + b;
+console.log(sum(5, 10));</code></pre>
+
+        </section>
+        
+        <section>
+            <h2>
+                Class trong javaScript
+            </h2>
+            <p>
+                Trong javaScript, class là một cách để tạo đối tượng.
+            </p>
+            <p>
+                Class giống như một bản thiết kế để tạo ra các đối tượng.
+            </p>
+            <p>
+                Class được khai báo bằng từ khóa <code class="language-js">class</code>.
+            </p>
+            <p>
+                Class có thể chứa các thuộc tính và phương thức.
+            </p>
+            <p>
+                Phương thức trong class không cần từ khóa <code class="language-js">function</code>.
+            </p>
+            <p>
+                Để tạo một đối tượng từ class, bạn cần sử dụng từ khóa <code class="language-js">new</code>.
+            </p>
+
+            <strong>Cú pháp</strong>
+            <pre><code class="language-js">class className {
+    constructor(parameters) {
+        // code
+    }
+    methodName() {
+        // code
+    }
+}</code></pre>
+            <p>
+                Ví dụ
+            </p>
+            <pre><code class="language-js">class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    greeting() {
+        return 'Hello, my name is ' + this.name + ' and I am ' + this.age + ' years old.';
+    }
+}
+
+let person = new Person('John', 30);
+
+console.log(person.greeting());</code></pre>
+            <p>
+                Trong ví dụ trên, class <code class="language-js">Person</code> có hai thuộc tính là <code class="language-js">name</code> và <code class="language-js">age</code>.
+            </p>
+            <p>
+                Class <code class="language-js">Person</code> cũng có một phương thức là <code class="language-js">greeting()</code>.
+            </p>
+        </section>
+
+        <section>
+            <h2>
+                Module trong javaScript
+            </h2>
+            <p>
+                Trong javaScript, module là một cách để chia nhỏ mã thành các phần nhỏ.
+            </p>
+            <p>
+                Module giúp mã trở nên dễ quản lý hơn.
+            </p>
+
+            <strong>Cú pháp</strong>
+            <pre><code class="language-js">// file1.js
+export function functionName() {
+    // code
+}
+
+// file2.js
+import { functionName } from './file1.js';</code></pre>
+            <p>
+                Trong đó:
+                <br><code class="language-js">export</code>: Dùng để xuất một hàm hoặc một biến
+                <br><code class="language-js">import</code>: Dùng để nhập một hàm hoặc một biến
+            </p>
+            <p>
+                Ví dụ
+            </p>
+            <pre><code class="language-js">// file1.js
+export function sum(a, b) {
+    return a + b;
+}
+
+// file2.js
+import { sum } from './file1.js';
+console.log(sum(5, 10));</code></pre>
+            <p>
+                Trong ví dụ trên, hàm <code class="language-js">sum</code> được xuất từ file1.js và được nhập vào file2.js.
+            </p>
+        </section>
+
+        <section>
+            <h2>
+                Tip viết code trong javaScript
+            </h2>
+            <p>
+                Dưới đây là một số tip giúp bạn viết code hiệu quả hơn trong javaScript.
+            </p>
+            <section>
+                <h3>
+                    Tránh tạo những biến toàn cục (global variables)
+                </h3>
+                <ul>
+                    <li>
+                        Giảm thiểu việc sử dụng biến toàn cục
+                    </li>
+                    <li>
+                        Các biến toàn cục có thể bị ghi đè bởi các biến khác
+                    </li>
+                    <li>
+                        Sử dụng biến cục bộ (local variables) thay vì biến toàn cục
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>
+                    Luôn luôn khai báo biến
+                </h3>
+                <ul>
+                    <li>
+                        Tất cả biến dùng trong hàm phải được khai báo là biến cục bộ
+                    </li>
+                    <li>
+                        nếu không khai báo biến, biến đó sẽ trở thành biến toàn cục
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>
+                    khai báo biến ở trên cùng
+                </h3>
+                <ul>
+                    <li>
+                        Khai báo tất cả biến ở đầu hàm hoặc đầu phạm vi
+                    </li>
+                    <li>
+                        Giúp dễ dàng quản lý biến
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>
+                    Khởi tạo biến với giá trị mặc định
+                </h3>
+                <ul>
+                    <li>
+                        Khởi tạo biến với giá trị mặc định
+                    </li>
+                    <li>
+                        Giúp tránh lỗi khi sử dụng biến
+                    </li>
+                    <li>
+                        Khởi tạo array và object bằng const
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>
+                    Đừng dùng new Object khi không cần thiết
+                </h3>
+                <ul>
+                    <li>
+                        Dùng "" thay vì new String()
+                    </li>
+                    <li>
+                        Dùng 0 thay vì new Number()
+                    </li>
+                    <li>
+                        Dùng false thay vì new Boolean()
+                    </li>
+                    <li>
+                        Dùng [] thay vì new Array()
+                    </li>
+                    <li>
+                        Dùng {} thay vì new Object()
+                    </li>
+                    <li>
+                        dùng /()/ thay vì new RegExp()
+                    </li>
+                    <li>
+                        Dùng function(){} thay vì new Function()
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>
+                    Dùng === thay vì ==
+                </h3>
+                <ul>
+                    <li>
+                        Dùng === để so sánh giá trị và kiểu dữ liệu
+                    </li>
+                    <li>
+                        Dùng == để so sánh giá trị
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>
+                    Kết thúc switch bằng default
+                </h3>
+                <ul>
+                    <li>
+                        Kết thúc switch bằng default
+                    </li>
+                    <li>
+                        Tránh trường hợp không xác định
+                    </li>
+            </section>
+        </section>
+        <section>
+            <h2>
+                javaScript HTML DOM
+            </h2>
+            <p>
+                Trong javaScript, DOM (Document Object Model) là một cách để truy cập, thay đổi, thêm hoặc xóa các phần tử HTML.
+            </p>
+            <p>
+                DOM là một biểu diễn của trang web dưới dạng một cây.
+            </p>
+            <p>
+                Mỗi phần tử HTML được coi là một đối tượng trong DOM.
+            </p>
+            <p>
+                Để truy cập một phần tử HTML, bạn cần sử dụng các phương thức sau:
+                <ul>
+                    <li>
+                        <code class="language-js">document.getElementById(id)</code>: Trả về một phần tử theo id
+                    </li>
+                    <li>
+                        <code class="language-js">document.getElementsByTagName(name)</code>: Trả về một mảng các phần tử theo tên thẻ
+                    </li>
+                    <li>
+                        <code class="language-js">document.getElementsByClassName(name)</code>: Trả về một mảng các phần tử theo tên class
+                    </li>
+                    <li>
+                        <code class="language-js">document.querySelector(selector)</code>: Trả về phần tử đầu tiên theo selector
+                    </li>
+                    <li>
+                        <code class="language-js">document.querySelectorAll(selector)</code>: Trả về một mảng các phần tử theo selector
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <h2>
+                DOM method
+            </h2>
+            <section>
+                <h3>
+                    innerHTML
+                </h3>
+                <p>
+                    Phương thức <code class="language-js">innerHTML</code> được sử dụng để lấy hoặc thay đổi nội dung của một phần tử HTML.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+element.innerHTML = 'Hello, world!';</code></pre>
+                <p>
+                    Trong ví dụ trên, nội dung của phần tử có id là <code class="language-js">demo</code> sẽ được thay đổi thành 'Hello, world!'.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    innerText
+                </h3>
+                <p>
+                    Phương thức <code class="language-js">innerText</code> được sử dụng để lấy hoặc thay đổi nội dung văn bản của một phần tử HTML.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+element.innerText = 'Hello, world!';</code></pre>
+                <p>
+                    Trong ví dụ trên, nội dung văn bản của phần tử có id là <code class="language-js">demo</code> sẽ được thay đổi thành 'Hello, world!'.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    setAttribute
+                </h3>
+                <p>
+                    Phương thức <code class="language-js">setAttribute</code> được sử dụng để thêm một thuộc tính mới hoặc thay đổi giá trị của một thuộc tính của một phần tử HTML.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+element.setAttribute('class', 'new-class');</code></pre>
+                <p>
+                    Trong ví dụ trên, một thuộc tính mới có tên là <code class="language-js">class</code> và giá trị là <code class="language-js">new-class</code> sẽ được thêm vào phần tử có id là <code class="language-js">demo</code>.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    getAttribute
+                </h3>
+                <p>
+                    Phương thức <code class="language-js">getAttribute</code> được sử dụng để lấy giá trị của một thuộc tính của một phần tử HTML.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+let value = element.getAttribute('class');
+console.log(value);</code></pre>
+                <p>
+                    Trong ví dụ trên, giá trị của thuộc tính <code class="language-js">class</code> của phần tử có id là <code class="language-js">demo</code> sẽ được lấy ra và in ra màn hình.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    removeAttribute
+                </h3>
+                <p>
+                    Phương thức <code class="language-js">removeAttribute</code> được sử dụng để xóa một thuộc tính của một phần tử HTML.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+element.removeAttribute('class');</code></pre>
+                <p>
+                    Trong ví dụ trên, thuộc tính <code class="language-js">class</code> của phần tử có id là <code class="language-js">demo</code> sẽ bị xóa.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    style
+                </h3>
+                <p>
+                    Thuộc tính <code class="language-js">style</code> được sử dụng để thay đổi kiểu CSS của một phần tử HTML.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+element.style.color = 'red';</code></pre>
+            </section>
+            <section>
+                <h3>
+                    classList
+                </h3>
+                <p>
+                    Thuộc tính <code class="language-js">classList</code> được sử dụng để thêm, xóa hoặc kiểm tra một class của một phần tử HTML.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+element.classList.add('new-class');
+element.classList.remove('old-class');
+element.classList.toggle('active');
+element.classList.contains('new-class');</code></pre>
+            </section>
+            <section>
+                <h3>
+                    addEventListener
+                </h3>
+                <p>
+                    Phương thức <code class="language-js">addEventListener</code> được sử dụng để thêm một sự kiện cho một phần tử HTML.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+element.addEventListener('click', function() {
+    alert('Hello, world!');
+});</code></pre>
+            </section>
+        </section>
+        <section>
+            <h2>
+                Thêm và xóa phần tử trong javaScript
+            </h2>
+            <section>
+                <h3>
+                    Thêm phần tử
+                </h3>
+                <p>
+                    Để thêm một phần tử vào một phần tử khác, bạn có thể sử dụng các phương thức sau:
+                    <ul>
+                        <li>
+                            <code class="language-js">appendChild()</code>: Thêm một phần tử vào cuối một phần tử
+                        </li>
+                        <li>
+                            <code class="language-js">insertBefore()</code>: Thêm một phần tử vào trước một phần tử
+                        </li>
+                        <li>
+                            <code class="language-js">innerHTML</code>: Thêm nội dung vào một phần tử
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.createElement('div');
+element.innerHTML = 'Hello, world!';
+document.body.appendChild(element);</code></pre>
+                <p>
+                    Trong ví dụ trên, một phần tử <code class="language-js">div</code> sẽ được tạo ra và thêm vào cuối phần tử <code class="language-js">body</code>.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    Xóa phần tử
+                </h3>
+                <p>
+                    Để xóa một phần tử, bạn có thể sử dụng phương thức <code class="language-js">removeChild()</code>.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+element.parentNode.removeChild(element);</code></pre>
+                <p>
+                    Trong ví dụ trên, phần tử có id là <code class="language-js">demo</code> sẽ bị xóa.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    Thay thế phần tử
+                </h3>
+                <p>
+                    Để thay thế một phần tử, bạn có thể sử dụng phương thức <code class="language-js">replaceChild()</code>.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.createElement('div');
+element.innerHTML = 'Hello, world!';
+document.body.replaceChild(element, document.getElementById('demo'));</code></pre>
+                <p>
+                    Trong ví dụ trên, phần tử có id là <code class="language-js">demo</code> sẽ bị thay thế bằng phần tử <code class="language-js">div</code> mới.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>
+                Tìm objects HTML trong javaScript
+            </h2>
+            <div class="example">
+                <table>
+                    <tr>
+                        <th>
+                            Phương thức
+                        </th>
+                        <th>
+                            Mô tả
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.anchors
+                        </th>
+                        <td>
+                            Trả về một mảng các phần tử <code class="language-js">&lt;a&gt;</code> có thuộc tính <code class="language-js">name</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.body
+                        </th>
+                        <td>
+                            Trả về phần tử <code class="language-js">body</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.baseURL
+                        </th>
+                        <td>
+                            Trả về URL cơ sở của trang
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.cookie
+                        </th>
+                        <td>
+                            Trả về tất cả cookie của trang
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.doctype
+                        </th>
+                        <td>
+                            Trả về loại tài liệu của trang
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.documentElement
+                        </th>
+                        <td>
+                            Trả về phần tử <code class="language-js">html</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.documentMode
+                        </th>
+                        <td>
+                            Trả về chế độ tài liệu của trang
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.documentURI
+                        </th>
+                        <td>
+                            Trả về URI của tài liệu
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.domain
+                        </th>
+                        <td>
+                            Trả về tên miền của tài liệu
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.forms
+                        </th>
+                        <td>
+                            Trả về mảng các phần tử <code class="language-js">&lt;form&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.head
+                        </th>
+                        <td>
+                            Trả về phần tử <code class="language-js">head</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.images
+                        </th>
+                        <td>
+                            Trả về mảng các phần tử <code class="language-js">&lt;img&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.links
+                        </th>
+                        <td>
+                            Trả về mảng các phần tử <code class="language-js">&lt;a&gt;</code> có thuộc tính <code class="language-js">href</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.readyState
+                        </th>
+                        <td>
+                            Trả về trạng thái tải của tài liệu
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.referrer
+                        </th>
+                        <td>
+                            Trả về URL của trang web mà đã chuyển hướng đến trang hiện tại
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.scripts
+                        </th>
+                        <td>
+                            Trả về mảng các phần tử <code class="language-js">&lt;script&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.title
+                        </th>
+                        <td>
+                            Trả về tiêu đề của tài liệu
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            document.URL
+                        </th>
+                        <td>
+                            Trả về URL của tài liệu
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>
+                JavaScript - form
+            </h2>
+            <p>
+                Trong javaScript, form là một cách để lấy dữ liệu từ người dùng.
+            </p>
+            <p>
+                Để lấy dữ liệu từ form, bạn có thể sử dụng các phương thức sau:
+                <ul>
+                    <li>
+                        <code class="language-js">document.forms</code>: Trả về mảng các form trong trang
+                    </li>
+                    <li>
+                        <code class="language-js">document.forms[index]</code>: Trả về form theo index
+                    </li>
+                    <li>
+                        <code class="language-js">document.forms[name]</code>: Trả về form theo name
+                    </li>
+                    <li>
+                        <code class="language-js">document.forms.id</code>: Trả về form theo id
+                    </li>
+                    <li>
+                        <code class="language-js">document.forms[index].elements</code>: Trả về mảng các phần tử trong form
+                    </li>
+                    <li>
+                        <code class="language-js">document.forms[index].elements[index]</code>: Trả về phần tử trong form theo index
+                    </li>
+                    <li>
+                        <code class="language-js">document.forms[index].elements[name]</code>: Trả về phần tử trong form theo name
+                    </li>
+                    <li>
+                        <code class="language-js">document.forms[index].elements.id</code>: Trả về phần tử trong form theo id
+                    </li>
+                    <li>
+                        <code class="language-js">document.forms[index].elements[index].value</code>: Trả về giá trị của phần tử trong form theo index
+                    </li>
+                    <li>
+                        <code class="language-js">document.forms[index].elements[name].value</code>: Trả về giá trị của phần tử trong form theo name
+                    </li>
+                    <li>
+                        <code class="language-js">document.forms[index].elements.id.value</code>: Trả về giá trị của phần tử trong form theo id
+                    </li>
+                </ul>
+            </p>
+            <section>
+                <h3>
+                    javascript form validation
+                </h3>
+                <p>
+                    Trong javaScript, form validation là một cách để kiểm tra dữ liệu người dùng nhập vào form.
+                </p>
+                
+                <p>
+                    Ví dụ   
+                </p>
+                <pre><code class="language-html"> &lt;form id="myForm" onsubmit="return validateForm()"&gt;
+    &lt;input type="text" id="name" placeholder="Nhập tên"&gt;
+    &lt;input type="email" id="email" placeholder="Nhập email"&gt;
+    &lt;button type="submit"&gt;Gửi&lt;/button&gt;
+&lt;/form&gt;
+&lt;p id="result"&gt;&lt;/p&gt;</code></pre>
+                <pre><code class="language-js">function validateForm() {
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    if (name === '') {
+        alert('Vui lòng nhập tên');
+        return false;
+    }
+    if (email === '') {
+        alert('Vui lòng nhập email');
+        return false;
+    }
+    return true;
+}</code></pre>
+                <p>
+                    Trong ví dụ trên, hàm <code class="language-js">validateForm()</code> sẽ kiểm tra xem người dùng đã nhập đủ thông tin hay chưa.
+                </p>
+                <p>
+                    Nếu người dùng không nhập đủ thông tin, sẽ có thông báo lỗi xuất hiện.
+                </p>
+                <p>
+                    Nếu người dùng đã nhập đủ thông tin, form sẽ được gửi đi.
+                </p>
+                <form id="myForm" onsubmit="return validateForm()">
+                    <input type="text" id="name" placeholder="Nhập tên">
+                    <input type="email" id="email" placeholder="Nhập email">
+                    <button type="submit">Gửi</button>
+                </form>
+                <p id="result"></p>
+                <script>
+                    function validateForm() {
+                        let name = document.getElementById('name').value;
+                        let email = document.getElementById('email').value;
+                        if (name === '') {
+                            alert('Vui lòng nhập tên');
+                            return false;
+                        }
+                        if (email === '') {
+                            alert('Vui lòng nhập email');
+                            return false;
+                        }
+                        return true;
+                    }
+                </script>
+                <mark class="yellow">
+                    Để tự động kiểm tra dữ liệu người dùng nhập vào form, bạn có thể sử dụng các thuộc tính sau:
+                    <ul>
+                        <li>
+                            <code class="language-html">required</code>: Bắt buộc người dùng nhập dữ liệu
+                        </li>
+                        <li>
+                            <code class="language-html">minlength</code>: Số ký tự tối thiểu
+                        </li>
+                        <li>
+                            <code class="language-html">maxlength</code>: Số ký tự tối đa
+                        </li>
+                        <li>
+                            <code class="language-html">pattern</code>: Một biểu thức chính quy
+                        </li>
+                    </ul>
+                    Đối với nội dung là số, bạn có thể sử dụng các thuộc tính sau:
+                    <ul>
+                        <li>
+                            <code class="language-html">min</code>: Giá trị tối thiểu
+                        </li>
+                        <li>
+                            <code class="language-html">max</code>: Giá trị tối đa
+                        </li>
+                    </ul>
+                    Đồng thời nhớ thêm thuộc tính <code class="language-html">type</code> cho phần tử input.
+                </mark>
+            </section>
+        </section>
+        <section>
+            <h2>
+                DOM - CSS
+            </h2>
+            <p>
+                CSS là một cách để thay đổi kiểu CSS của một phần tử HTML.
+            </p>
+            <p>
+                Để thay đổi kiểu CSS của một phần tử HTML, bạn có thể sử dụng các phương thức sau:
+                <ul>
+                    <li>
+                        <code class="language-js">style</code>: Thay đổi kiểu CSS của một phần tử
+                    </li>
+                    <li>
+                        <code class="language-js">classList</code>: Thêm, xóa hoặc kiểm tra một class của một phần tử
+                    </li>
+                </ul>
+            </p>
+            <section>
+                <h3>
+                    Thay đổi kiểu CSS
+                </h3>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+element.style.color = 'red';</code></pre>
+                <p>
+                    Trong ví dụ trên, màu chữ của phần tử có id là <code class="language-js">demo</code> sẽ được thay đổi thành màu đỏ.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    Thêm, xóa hoặc kiểm tra một class
+                </h3>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+element.classList.add('new-class');
+element.classList.remove('old-class');
+element.classList.toggle('active');
+element.classList.contains('new-class');</code></pre>
+                    <mark class="yellow">
+                        <b>Trong đó:</b> add thêm một class, remove xóa một class, toggle thêm hoặc xóa một class, contains kiểm tra một class.
+                    </mark>
+            </section>
+        </section>
+        <section>
+            <h2>
+                DOM - ANIMATION
+            </h2>
+            <p>
+                animation là một cách để tạo hiệu ứng chuyển động cho phần tử HTML.
+            </p>
+            <p>
+                Để tạo hiệu ứng chuyển động cho phần tử HTML, bạn có thể sử dụng các phương thức sau:
+                <ul>
+                    <li>
+                        <code class="language-js">setInterval()</code>: Thực thi một hàm sau một khoảng thời gian nhất định
+                    </li>
+                    <li>
+                        <code class="language-js">setTimeout()</code>: Thực thi một hàm sau một khoảng thời gian nhất định
+                    </li>
+                </ul>
+            </p>
+            <section>
+                <h3>
+                    setInterval()
+                </h3>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+let pos = 0;
+let id = setInterval(frame, 5);
+function frame() {
+    if (pos === 350) {
+        clearInterval(id);
+    } else {
+        pos++;
+        element.style.top = pos + 'px';
+        element.style.left = pos + 'px';
+    }
+}</code></pre>
+                <p>
+                    Trong ví dụ trên, phần tử có id là <code class="language-js">demo</code> sẽ di chuyển từ vị trí ban đầu đến vị trí mới.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    setTimeout()
+                </h3>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+setTimeout(function() {
+    element.style.color = 'red';
+}, 3000);</code></pre>
+                <p>
+                    Trong ví dụ trên, màu chữ của phần tử có id là <code class="language-js">demo</code> sẽ được thay đổi thành màu đỏ sau 3 giây.
+                </p>
+            </section>
+
+        </section>
+        <section>
+            <h2>
+                DOM - EVENTS
+            </h2>
+            <p>
+                Trong javaScript, events là một cách để tương tác với người dùng.
+            </p>
+            <p>
+                Để tạo sự kiện cho một phần tử HTML, bạn có thể sử dụng các phương thức sau:
+                <ul>
+                    <li>
+                        <code class="language-js">addEventListener()</code>: Thêm một sự kiện cho một phần tử
+                    </li>
+                    <li>
+                        <code class="language-js">removeEventListener()</code>: Xóa một sự kiện cho một phần tử
+                    </li>
+                </ul>
+            </p>
+            <section>
+                <h3>
+                    addEventListener()
+                </h3>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+element.addEventListener('click', function() {
+    alert('Hello, world!');
+});</code></pre>
+                <p>
+                    Trong ví dụ trên, khi click vào phần tử có id là <code class="language-js">demo</code>, sẽ có thông báo 'Hello, world!' xuất hiện.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    removeEventListener()
+                </h3>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let element = document.getElementById('demo');
+element.addEventListener('click', myFunction);
+function myFunction() {
+    alert('Hello, world!');
+}
+element.removeEventListener('click', myFunction);</code></pre>
+                <p>
+                    Trong ví dụ trên, khi click vào phần tử có id là <code class="language-js">demo</code>, sẽ có thông báo 'Hello, world!' xuất hiện.
+                </p>
+                <p>
+                    Sau đó, sự kiện click sẽ bị xóa.
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <h2>
+                Điều hướng các phần tử HTML trong DOM
+            </h2>
+            <p>
+                Các phần tử trong DOM được sắp xếp theo một cấu trúc cây. với các node cha và node con.
+            </p>
+            <p>
+                Có một số phương thức để điều hướng các phần tử HTML trong DOM.
+                <ul>
+                    <li>
+                        <code class="language-js">parentNode</code>: Trả về node cha của một phần tử
+                    </li>
+                    <li>
+                        <code class="language-js">childNodes</code>: Trả về một mảng các node con của một phần tử
+                    </li>
+                    <li>
+                        <code class="language-js">firstChild</code>: Trả về node con đầu tiên của một phần tử
+                    </li>
+                    <li>
+                        <code class="language-js">lastChild</code>: Trả về node con cuối cùng của một phần tử
+                    </li>
+                    <li>
+                        <code class="language-js">nextSibling</code>: Trả về node kế tiếp của một phần tử
+                    </li>
+                    <li>
+                        <code class="language-js">previousSibling</code>: Trả về node trước đó của một phần tử
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <h2>
+                Colelction & Node list trong DOM
+            </h2>
+            <p>
+                Trong DOM, có hai loại tập hợp phần tử HTML: <code class="language-js">HTMLCollection</code> và <code class="language-js">NodeList</code>.
+            </p>
+
+            <section>
+                <h3>
+                    HTMLCollection
+                </h3>
+                <p>
+                    <code class="language-js">HTMLCollection</code> là một tập hợp các phần tử HTML.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let elements = document.getElementsByTagName('p');
+for (let i = 0; i < elements.length; i++) {
+    elements[i].style.color = 'red';
+}</code></pre>
+                <p>
+                    Trong ví dụ trên, tất cả các phần tử <code class="language-js">&lt;p&gt;</code> sẽ được thay đổi màu chữ thành màu đỏ.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    NodeList
+                </h3>
+                <p>
+                    <code class="language-js">NodeList</code> là một tập hợp các phần tử HTML.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">let elements = document.querySelectorAll('p');
+for (let i = 0; i < elements.length; i++) {
+    elements[i].style.color = 'red';
+}</code></pre>
+                <p>
+                    Trong ví dụ trên, tất cả các phần tử <code class="language-js">&lt;p&gt;</code> sẽ được thay đổi màu chữ thành màu đỏ.
+                </p>
+            </section>
+            <mark class="yellow">
+                <strong>HTMLCollection vs NodeList</strong>
+                <ul>
+                    <li>
+                        <code class="language-js">HTMLCollection</code> là một tập hợp các phần tử HTML
+                    </li>
+                    <li>
+                        <code class="language-js">NodeList</code> là một tập hợp các phần tử HTML
+                    </li>
+                    <li>
+                        <code class="language-js">HTMLCollection</code> là một tập hợp động
+                    </li>
+                    <li>
+                        <code class="language-js">NodeList</code> là một tập hợp tĩnh
+                    </li>
+                    <li>
+                        <code class="language-js">HTMLCollection</code> không hỗ trợ phương thức <code class="language-js">forEach()</code>
+                    </li>
+                    <li>
+                        <code class="language-js">NodeList</code> hỗ trợ phương thức <code class="language-js">forEach()</code>
+                    </li>
+                </ul>
+            </mark>
+        </section>
+
+        <section>
+
+            <h2>
+                javaScript - BOM
+            </h2>
+            <p>
+                Trong javaScript, BOM (Browser Object Model) là một cách để tương tác với trình duyệt.
+            </p>
+
+            <section>
+                <h3>
+                    window
+                </h3>
+                <p>
+                    <code class="language-js">window</code> là một đối tượng toàn cục trong javaScript.
+                </p>
+                <p>
+                    Ví dụ
+                </p>
+                <pre><code class="language-js">window.alert('Hello, world!');</code></pre>
+                <p>
+                    Trong ví dụ trên, sẽ có thông báo 'Hello, world!' xuất hiện.
+                </p>
+            </section>
+            <section>
+                <h3>
+                    window size
+                </h3>
+                <p>
+                    Để lấy kích thước của cửa sổ trình duyệt, bạn có thể sử dụng các thuộc tính sau:
+                    <ul>
+                        <li>
+                            <code class="language-js">window.innerHeight</code>: Chiều cao của cửa sổ trình duyệt
+                        </li>
+                        <li>
+                            <code class="language-js">window.innerWidth</code>: Chiều rộng của cửa sổ trình duyệt
+                        </li>
+                    </ul>
+                </p>
+                <mark class="yellow">
+                    <strong>Lưu ý:</strong> Kích thước của cửa sổ trình duyệt có thể thay đổi khi người dùng thay đổi kích thước cửa sổ.
+                    Kích thước không bao gồm thanh công cụ, thanh trượt và các phần khác của trình duyệt.
+                </mark>
+            </section>
+
+            <section>
+                <h3>
+                    window methods
+                </h3>
+                <p>
+                    một vài phương thức của window:
+                    <ul>
+                        <li>
+                            window.open(URL, name, specs, replace): Mở một cửa sổ mới
+                        </li>
+                        <li>
+                            window.close(): Đóng cửa sổ hiện tại
+                        </li>
+                        <li>
+                            window.moveTo(x, y): Di chuyển cửa sổ đến vị trí mới
+                        </li>
+                        <li>
+                            window.resizeTo(width, height): Thay đổi kích thước cửa sổ.
+                        </li>
+                    </ul>
+                </p>
+            </section>
+
+            <section>
+                <h3>
+                    window screen
+                </h3>
+                <p>
+                    Để lấy thông tin về màn hình, bạn có thể sử dụng các thuộc tính sau:
+                    <ul>
+                        <li>
+                            <code class="language-js">window.screen.height</code>: Chiều cao của màn hình
+                        </li>
+                        <li>
+                            <code class="language-js">window.screen.width</code>: Chiều rộng của màn hình
+                        </li>
+                        <li>
+                            <code class="language-js">window.screen.availHeight</code>: Chiều cao của màn hình không bao gồm thanh công cụ
+                        </li>
+                        <li>
+                            <code class="language-js">window.screen.availWidth</code>: Chiều rộng của màn hình không bao gồm thanh công cụ
+                        </li>
+                        <li>
+                            <code class="language-js">window.screen.colorDepth</code>: Độ sâu màu
+                        </li>
+                        <li>
+                            <code class="language-js">window.screen.pixelDepth</code>: Độ sâu pixel
+                        </li>
+                    </ul>
+            </section>
+            
+            <section>
+                <h3>
+                    window location
+                </h3>
+                <p>
+                    Để lấy thông tin về URL, bạn có thể sử dụng các thuộc tính sau:
+                    <ul>
+                        <li>
+                            <code class="language-js">window.location.href</code>: URL của trang
+                        </li>
+                        <li>
+                            <code class="language-js">window.location.hostname</code>: Tên miền của trang
+                        </li>
+                        <li>
+                            <code class="language-js">window.location.pathname</code>: Đường dẫn của trang
+                        </li>
+                        <li>
+                            <code class="language-js">window.location.protocol</code>: Giao thức của trang
+                        </li>
+                        <li>
+                            <code class="language-js">window.location.port</code>: Cổng của trang
+                        </li>
+                        <li>
+                            <code class="language-js">window.location.assign(URL)</code>: Chuyển hướng đến một URL mới
+                        </li>
+                        <li>
+                            <code class="language-js">window.location.reload()</code>: Tải lại trang
+                        </li>
+                        <li>
+                            <code class="language-js">window.location.replace(URL)</code>: Thay thế trang hiện tại bằng một URL mới
+                        </li>
+                    </ul>
+            </section>
+            <section>
+                <h3>
+                    window history
+                </h3>
+                <p>
+                    Để lấy thông tin về lịch sử trình duyệt, bạn có thể sử dụng các phương thức sau:
+                    <ul>
+                        <li>
+                            <code class="language-js">window.history.back()</code>: Quay lại trang trước
+                        </li>
+                        <li>
+                            <code class="language-js">window.history.forward()</code>: Đi đến trang tiếp theo
+                        </li>
+                        <li>
+                    </ul>
+            </section>
+            <section>
+                <h3>
+                    window navigator
+                </h3>
+                <p>
+                    Để lấy thông tin về trình duyệt, bạn có thể sử dụng các thuộc tính sau:
+                    <ul>
+                        <li>
+                            <code class="language-js">window.navigator.appCodeName</code>: Tên mã ứng dụng
+                        </li>
+                        <li>
+                            <code class="language-js">window.navigator.appName</code>: Tên ứng dụng
+                        </li>
+                        <li>
+                            <code class="language-js">window.navigator.appVersion</code>: Phiên bản ứng dụng
+                        </li>
+                        <li>
+                            <code class="language-js">window.navigator.cookieEnabled</code>: Kiểm tra cookie có được kích hoạt hay không
+                        </li>
+                        <li>
+                            <code class="language-js">window.navigator.language</code>: Ngôn ngữ trình duyệt
+                        </li>
+                        <li>
+                            <code class="language-js">window.navigator.platform</code>: Nền tảng trình duyệt
+                        </li>
+                        <li>
+                            <code class="language-js">window.navigator.userAgent</code>: Thông tin về trình duyệt
+                        </li>
+                    </ul>
+                </p>
+            </section>
+
+            <section>
+                <h3>
+                    window popup boxes
+                </h3>
+                <p>
+                    Để tạo hộp thoại popup, bạn có thể sử dụng các phương thức sau:
+                    <ul>
+                        <li>
+                            <code class="language-js">window.alert()</code>: Thông báo
+                        </li>
+                        <li>
+                            <code class="language-js">window.confirm()</code>: Xác nhận -> trả về giá trị true hoặc false
+                        </li>
+                        <li>
+                            <code class="language-js">window.prompt("Tiêu đề", "văn bản mặc định")</code>: Nhập dữ liệu -> trả về giá trị người dùng nhập
+                        </li>
+                    </ul>
+                </p>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <nav class="navigator">
+            <a href="./index5.html" class="btn" id="prev">Bài trước</a>
+        </nav>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

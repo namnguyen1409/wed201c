@@ -1,0 +1,2574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Giới thiệu về HTML - CSS - JavaScript</title>
+    <link href="./assets/css/prism.min.css" rel="stylesheet" />
+    <script src="./assets/js/prism.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Thêm thư viện Normalize.css -->
+    <link class="icon" rel="icon" href="./assets/img/null.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1>giới thiệu về html - css - javaScript (Phần 5)</h1>
+    </header>
+    <div class="forPhone">
+        Trang web này không hỗ trợ hiển thị trên điện thoại. Vui lòng truy cập trên máy tính hoặc máy tính bảng.
+    </div>
+    <main class="main">
+        <section id="intro">
+            <h2>
+                Giới thiệu về Bootstrap
+            </h2>
+            <p>
+                Bootstrap là một framework phổ biến nhất để xây dựng giao diện web. Bootstrap cung cấp một bộ các class
+                CSS và JavaScript giúp bạn xây dựng giao diện web nhanh chóng và dễ dàng hơn.
+            </p>
+            <p>
+                Bootstrap được phát triển bởi Twitter và được phát hành miễn phí dưới giấy phép MIT.
+            </p>
+            <p>
+                Bootstrap hỗ trợ responsive design, tức là giao diện web sẽ tự động thay đổi theo kích thước của màn
+                hình thiết bị.
+            </p>
+            <strong>
+                Các phiên bản Bootstrap
+            </strong>
+            <p>
+                Hiện tại, Bootstrap có 4 phiên bản chính:
+            </p>
+            <ul>
+                <li>
+                    Bootstrap 2: Phiên bản cũ nhất, không còn được hỗ trợ.
+                </li>
+                <li>
+                    Bootstrap 3: Phiên bản ổn định, được sử dụng rộng rãi.
+                </li>
+                <li>
+                    Bootstrap 4: Phiên bản mới hơn, được cải thiện về hiệu suất và tính năng.
+                </li>
+                <li>
+                    Bootstrap 5: Phiên bản mới nhất, được cải thiện về hiệu suất và tính năng.
+                </li>
+            </ul>
+
+            <strong>
+                Làm sao để sử dụng Bootstrap
+            </strong>
+            <p>
+                Để sử dụng Bootstrap, bạn có thể tải Bootstrap từ trang chủ của Bootstrap (https://getbootstrap.com/),
+                hoặc sử dụng CDN của Bootstrap.
+            </p>
+            <p>
+                Ví dụ, để sử dụng Bootstrap thông qua CDN, bạn chỉ cần thêm đoạn mã sau vào phần head của trang web:
+            </p>
+            <pre><code class="language-html">&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+            <p>
+                Sau đó, bạn có thể sử dụng các class và component của Bootstrap trong trang web của mình.
+            </p>
+
+        </section>
+        <section class="learning">
+            <section>
+                <h3>
+                    container trong Bootstrap
+                </h3>
+                <p>
+                    Trong Bootstrap, container là một class dùng để bọc nội dung trên trang web. Container giúp hiển thị nội dung trên trang web một cách chính xác trên mọi thiết bị.
+                </p>
+                <p>
+                    Bootstrap cung cấp 2 loại container chính:
+                </p>
+                <ul>
+                    <li>
+                        Container: Container thông thường, có kích thước cố định.
+                    </li>
+                    <li>
+                        Container-fluid: Container có chiều rộng 100%, sẽ căng đầy trên mọi thiết bị.
+                    </li>
+                </ul>
+                <p>
+                    Để sử dụng container trong Bootstrap, bạn chỉ cần thêm class container hoặc container-fluid vào thẻ div chứa nội dung.
+                </p>
+                <section>
+                    <h4>container</h4>
+                    <pre><code class="language-html">&lt;div class="container"&gt;
+    &lt;h1&gt;Container&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi molestias obcaecati ipsa ipsum velit blanditiis magnam dolorum reprehenderit perferendis? Corrupti soluta accusantium, veritatis ea obcaecati ipsa. Nostrum consectetur sunt iste!&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt laboriosam eos tempora quas ullam corrupti praesentium ut, qui totam reprehenderit animi. Similique itaque enim ipsa aperiam officia et facere porro?&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, corrupti, quo reprehenderit ratione totam amet aut rerum esse, nam temporibus delectus! Porro necessitatibus corrupti delectus voluptatibus doloribus iure voluptatem ut?&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            <iframe class="example" src="./templates/example222.html" frameborder="0"></iframe>
+        </section>
+
+        <section>
+            <h4>
+                container-fluid
+            </h4>
+            <pre><code class="language-html">&lt;div class="container-fluid"&gt;
+            &lt;h1&gt;Container&lt;/h1&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi molestias obcaecati ipsa ipsum velit blanditiis magnam dolorum reprehenderit perferendis? Corrupti soluta accusantium, veritatis ea obcaecati ipsa. Nostrum consectetur sunt iste!&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt laboriosam eos tempora quas ullam corrupti praesentium ut, qui totam reprehenderit animi. Similique itaque enim ipsa aperiam officia et facere porro?&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, corrupti, quo reprehenderit ratione totam amet aut rerum esse, nam temporibus delectus! Porro necessitatibus corrupti delectus voluptatibus doloribus iure voluptatem ut?&lt;/p&gt;
+        &lt;/div&gt;</code></pre>
+            <iframe class="example" src="./templates/example223.html" frameborder="0"></iframe>
+        </section>
+
+
+        <section>
+            <h4>
+                container padding
+            </h4>
+            <p>
+                Theo mặc định, vùng chứa có phần đệm trái và phải, không có phần đệm trên cùng hoặc dưới cùng.
+                Vì vậy, chúng ta thường sử dụng thuộc tính về khoảng cách, chẳng hạn như phần đệm thêm và lề để khiến
+                chúng trông đẹp hơn.
+                Ví dụ thêm class "pt-5" vào container để thêm phần đệm trên cùng.
+            </p>
+            <pre><code class="language-html">&lt;div class="container pt-5"&gt;
+            &lt;h1&gt;Container&lt;/h1&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi molestias obcaecati ipsa ipsum velit blanditiis magnam dolorum reprehenderit perferendis? Corrupti soluta accusantium, veritatis ea obcaecati ipsa. Nostrum consectetur sunt iste!&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt laboriosam eos tempora quas ullam corrupti praesentium ut, qui totam reprehenderit animi. Similique itaque enim ipsa aperiam officia et facere porro?&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, corrupti, quo reprehenderit ratione totam amet aut rerum esse, nam temporibus delectus! Porro necessitatibus corrupti delectus voluptatibus doloribus iure voluptatem ut?&lt;/p&gt;
+        &lt;/div&gt;</code></pre>
+            <iframe class="example" src="./templates/example224.html" frameborder="0"></iframe>
+
+        </section>
+
+        <section>
+            <h4>
+                container border và color
+            </h4>
+            <p>
+                Bạn cũng có thể thêm border và color cho container bằng cách sử dụng class border và color của
+                Bootstrap.
+            </p>
+
+            <pre><code class="language-html">&lt;div class="container p-5 m-5 border"&gt;
+            &lt;h1&gt;Container&lt;/h1&gt;
+            &lt;p&gt;container p-5 m-5 border&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="container p-5 m-5 bg-dark text-white"&gt;
+            &lt;h1&gt;Container&lt;/h1&gt;
+            &lt;p&gt;container p-5 m-5 border&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="container p-5 m-5 bg-primary text-white"&gt;
+            &lt;h1&gt;Container&lt;/h1&gt;
+            &lt;p&gt;container p-5 m-5 border&lt;/p&gt;
+        &lt;/div&gt; </code></pre>
+            <iframe class="example" src="./templates/example225.html" frameborder="0"></iframe>
+
+
+        </section>
+
+        <section>
+            <h4>
+                Responsive container
+            </h4>
+            <p>
+                Bootstrap hỗ trợ responsive riêng cho container. Bạn có thể sử dụng các class sau để tạo container
+                responsive:
+            </p>
+            <ul>
+                <li>
+                    container-sm: Container sẽ căng đầy trên mọi thiết bị có kích thước lớn hơn hoặc bằng 576px.
+                </li>
+                <li>
+                    container-md: Container sẽ căng đầy trên mọi thiết bị có kích thước lớn hơn hoặc bằng 768px.
+                </li>
+                <li>
+                    container-lg: Container sẽ căng đầy trên mọi thiết bị có kích thước lớn hơn hoặc bằng 992px.
+                </li>
+                <li>
+                    container-xl: Container sẽ căng đầy trên mọi thiết bị có kích thước lớn hơn hoặc bằng 1200px.
+                </li>
+                <li>
+                    container-xxl: Container sẽ căng đầy trên mọi thiết bị có kích thước lớn hơn hoặc bằng 1400px.
+                </li>
+            </ul>
+        </section>
+        </section>
+
+        <section>
+            <h3>
+                Grid trong Bootstrap
+            </h3>
+            <p>
+                Hệ thống lưới của Bootstrap được xây dựng bằng flexbox và cho phép tối đa 12 cột trên trang.
+            </p>
+            <p>
+                Nếu không muốn sử dụng riêng lẻ cả 12 cột, bạn có thể nhóm các cột lại với nhau để tạo cột rộng hơn
+            </p>
+            <p>
+                Hệ thống lưới phản hồi nhanh và các cột sẽ tự động sắp xếp lại tùy theo kích thước màn hình.
+            </p>
+            <p>
+                Đảm bảo rằng tổng cộng tối đa là 12 hoặc ít hơn (không bắt buộc bạn phải sử dụng tất cả 12 cột có sẵn).
+            </p>
+            <section>
+                <h4>
+                    Grid class trong Bootstrap
+                </h4>
+                <p>
+                    Trong Bootstrap, hệ thống lưới có 6 class chính:
+                </p>
+                <ul>
+                    <li>
+                        <code class="language-css">.col-</code>: dùng cho thiết bị có màn hình rất nhỏ (dưới 576px).
+                    </li>
+                    <li>
+                        <code class="language-css">.col-sm-</code>: dùng cho thiết bị có màn hình từ 576px trở lên.
+                    </li>
+                    <li>
+                        <code class="language-css">.col-md-</code>: dùng cho thiết bị có màn hình từ 768px trở lên.
+                    </li>
+                    <li>
+                        <code class="language-css">.col-lg-</code>: dùng cho thiết bị có màn hình từ 992px trở lên.
+                    </li>
+                    <li>
+                        <code class="language-css">.col-xl-</code>: dùng cho thiết bị có màn hình từ 1200px trở lên.
+                    </li>
+                    <li>
+                        <code class="language-css">.col-xxl-</code>: dùng cho thiết bị có màn hình từ 1400px trở lên.
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h4>
+                    Cấu trúc cơ bản của grid
+                </h4>
+                <p>
+                    Cấu trúc cơ bản của grid trong Bootstrap như sau:
+                </p>
+                <pre><code class="language-html">&lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-6 col-lg-3 border"&gt;
+        &lt;p&gt;Column 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-12 col-md-6 col-lg-3 border"&gt;
+        &lt;p&gt;Column 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-12 col-md-6 col-lg-3 border"&gt;
+        &lt;p&gt;Column 3&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-12 col-md-6 col-lg-3 border"&gt;
+        &lt;p&gt;Column 4&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example226.html" frameborder="0"></iframe>
+                <mark class="yellow">
+                    <p>
+                        Trong ví dụ trên, chúng ta đã tạo một hàng với 4 cột. Mỗi cột sẽ chiếm 12 cột trên màn hình nhỏ
+                        nhất (dưới 576px), 6 cột trên màn hình từ 576px trở lên, 3 cột trên màn hình từ 992px trở lên.
+                    </p>
+                    <p>
+                        Bạn có thể để giá trị col để cột tự động co giãn theo nội dung.
+                    </p>
+                </mark>
+            </section>
+        </section>
+
+        <section>
+            <h3>
+                Text/Typography trong Bootstrap
+            </h3>
+            <p>
+                Bootstrap cung cấp một số class để tùy chỉnh kiểu chữ và văn bản trên trang web.
+            </p>
+
+            <section>
+                <h4>
+                    h1 - h6
+                </h4>
+                <p>
+                    Bootstrap có những kiểu mặc định cho các thẻ h1 - h6 như sau:
+                </p>
+                <pre><code class="language-html">&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+                <iframe class="example" src="./templates/example227.html" frameborder="0"></iframe>
+
+                <mark class="green">
+                    Đồng thời bạn có thể dùng các class h1 - h6 cho những thẻ khác nếu bạn muốn áp dụng phong cách của
+                    các thẻ tiêu đề.
+                </mark>
+            </section>
+            <section>
+                <h4>
+                    Display heading
+                </h4>
+                <p>
+                    Bootstrap cung cấp các class display-1 đến display-6 để tạo kiểu tiêu đề lớn hơn so với các thẻ h1 -
+                    h6.
+                </p>
+                <pre><code class="language-html">&lt;h1 class="display-1"&gt;Display 1&lt;/h1&gt;
+&lt;h2 class="display-2"&gt;Display 2&lt;/h2&gt;
+&lt;h3 class="display-3"&gt;Display 3&lt;/h3&gt;
+&lt;h4 class="display-4"&gt;Display 4&lt;/h4&gt;
+&lt;h5 class="display-5"&gt;Display 5&lt;/h5&gt;
+&lt;h6 class="display-6"&gt;Display 6&lt;/h6&gt;</code></pre>
+                <iframe class="example" src="./templates/example228.html" frameborder="0"></iframe>
+            </section>
+            <section>
+                <h4>
+                    small text
+                </h4>
+                <p>
+                    trong bosstrap 5, bạn có thể dử dụng thẻ <code class="language-html">&lt;small&gt;</code> hoặc thêm
+                    class <code class="language-css">.small</code> vào thẻ để tạo kiểu chữ nhỏ.
+                </p>
+                <pre><code class="language-html">&lt;h1&gt;Heading 1 &lt;small&gt;small text&lt;/small&gt;&lt;/h1&gt;
+&lt;h1&gt;Heading 1 &lt;span class="small"&gt;small text&lt;/span&gt;&lt;/h1&gt;</code></pre>
+                <iframe class="example" src="./templates/example229.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    mark
+                </h4>
+                <p>
+                    Bạn có thể sử dụng thẻ <code class="language-html">&lt;mark&gt;</code> hoặc class <code
+                        class="language-css">.mark</code> để tạo kiểu chữ được đánh dấu.
+                </p>
+                <pre><code class="language-html">&lt;p&gt;Đây là một đoạn văn để test, &lt;mark&gt;còn đây là phần được đánh dấu&lt;/mark&gt; có màu nổi bật.&lt;/p&gt;
+&lt;p&gt;Đây là một đoạn văn để test, &lt;span class="mark"&gt;còn đây là phần được đánh dấu&lt;/span&gt; có màu nổi bật.&lt;/p&gt;</code></pre>
+                <iframe class="example" src="./templates/example230.html" frameborder="0"></iframe>
+            </section>
+            <section>
+                <h4>
+                    abbr
+                </h4>
+                <p>
+                    Bạn có thể sử dụng thẻ <code class="language-html">&lt;abbr&gt;</code> để tạo chú thích cho văn bản
+                    viết tắt với viền chấm ở dưới và có dấu chấm hỏi khi di chuột qua.
+                </p>
+                <pre><code class="language-html">&lt;p&gt;&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; không phải ngôn ngữ lập trình.&lt;/p&gt;</code></pre>
+                <iframe class="example" src="./templates/example231.html" frameborder="0"></iframe>
+
+            </section>
+            <section>
+                <h4>
+                    blockquote
+                </h4>
+                <p>
+                    Bạn có thể sử dụng thẻ <code class="language-html">&lt;blockquote&gt;</code> với class <code
+                        class="language-css">.blockquote</code> để mô tả nội dung trích dẫn. Đồng thời bạn có thể sử
+                    dụng thẻ <code class="language-html">&lt;footer&gt;</code> với class <code
+                        class="language-css">.blockquote-footer</code> để thêm thông tin về người viết.
+                </p>
+                <pre><code class="language-html">&lt;blockquote class="blockquote"&gt;
+    &lt;p&gt;Từ ấy trong tôi bừng nắng hạ.&lt;br&gt;Mặt trời chân lí chói qua tim.&lt;br&gt;Hồn tôi là một vườn hoa lá.&lt;br&gt;Rất đậm hương và rộn tiếng chim.&lt;/p&gt;
+    &lt;footer class="blockquote-footer"&gt;Tố Hữu - Từ Ấy&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+                <iframe class="example" src="./templates/example232.html" frameborder="0"></iframe>
+
+
+            </section>
+            <section>
+                <h4>
+                    dl
+                </h4>
+                <p>
+                    Bạn có thể sử dụng thẻ <code class="language-html">&lt;dl&gt;</code> để tạo danh sách định nghĩa.
+                    Trong đó, thẻ <code class="language-html">&lt;dt&gt;</code> để tạo tiêu đề cho danh sách, thẻ <code
+                        class="language-html">&lt;dd&gt;</code> để tạo nội dung cho danh sách.
+                </p>
+                <pre><code class="language-html">&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Ngôn ngữ đánh dấu siêu văn bản&lt;/dd&gt;
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Ngôn ngữ định dạng siêu văn bản&lt;/dd&gt;
+    &lt;dt&gt;JavaScript&lt;/dt&gt;
+    &lt;dd&gt;Ngôn ngữ lập trình client-side&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                <iframe class="example" src="./templates/example233.html" frameborder="0"></iframe>
+            </section>
+            <section>
+                <h4>
+                    code
+                </h4>
+                <p>
+                    Bạn có thể sử dụng thẻ <code class="language-html">&lt;code&gt;</code> để tạo kiểu chữ cho mã nguồn.
+                </p>
+                <pre><code class="language-html">&lt;p&gt;Các phần tử HTML như:&lt;code&gt;div&lt;/code&gt;, &lt;code&gt;p&lt;/code&gt; có &lt;code&gt;display: block;&lt;/code&gt;.&lt;/p&gt;</code></pre>
+                <iframe class="example" src="./templates/example234.html" frameborder="0"></iframe>
+            </section>
+            <section>
+                <h4>
+                    kbd
+                </h4>
+                <p>
+                    Bạn có thể sử dụng thẻ <code class="language-html">&lt;kbd&gt;</code> để tạo kiểu chữ cho phím bấm.
+                </p>
+                <pre><code class="language-html">&lt;p&gt;Để mở Developer Tools trong trình duyệt Chrome, bạn nhấn tổ hợp phím &lt;kbd&gt;ctrl+shift+i&lt;/kbd&gt; hoặc &lt;kbd&gt;F12&lt;/kbd&gt;.&lt;/p&gt;</code></pre>
+                <iframe class="example" src="./templates/example235.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    pre
+                </h4>
+                <p>
+                    Bạn có thể sử dụng thẻ <code class="language-html">&lt;pre&gt;</code> để giữ nguyên định dạng của mã
+                    nguồn.
+                </p>
+                <pre><code class="language-html">&lt;pre&gt;
+    Đây là một đoạn mã nguồn
+nằm trong thẻ pre
+   nó sẽ được hiển   thị bằng font
+chữ monospace và giữ nguyên định dạng
+&lt;/pre&gt;</code></pre>
+                <iframe class="example" src="./templates/example236.html" frameborder="0"></iframe>
+            </section>
+            <section>
+                <h4>
+                    các class khác
+                </h4>
+
+                <strong>Bạn có thể tham khảo thêm ở bảng sau</strong>
+                <div class="example">
+                    <table>
+                        <tr>
+                            <th>Class</th>
+                            <th>Mô tả</th>
+                        </tr>
+                        <tr>
+                            <td>.lead</td>
+                            <td>Tạo kiểu chữ lớn hơn</td>
+                        </tr>
+                        <tr>
+                            <td>.text-start</td>
+                            <td>Căn lề trái</td>
+                        </tr>
+                        <tr>
+                        <tr>.text-break</tr>
+                        <td>Xuống dòng khi vượt quá khung</td>
+                        </tr>
+                        <tr>
+                            <td>.text-center</td>
+                            <td>Căn giữa</td>
+                        </tr>
+                        <tr>
+                            <td>.text-decoration-none</td>
+                            <td>Loại bỏ gạch chân trong thẻ a</td>
+                        </tr>
+                        <tr>
+                            <td>.text-end</td>
+                            <td>Căn lề phải</td>
+                        </tr>
+                        <tr>
+                            <td>.text-nowrap</td>
+                            <td>Văn bản không ngắt dòng</td>
+                        </tr>
+                        <tr>
+                            <td>.text-lowercase</td>
+                            <td>Chuyển văn bản thành chữ thường</td>
+                        </tr>
+                        <tr>
+                            <td>.text-uppercase</td>
+                            <td>Chuyển văn bản thành chữ hoa</td>
+                        </tr>
+                        <tr>
+                            <td>.text-capitalize</td>
+                            <td>Chuyển văn bản thành chữ in hoa đầu từ</td>
+                        </tr>
+                        <tr>
+                            <td>.initialism</td>
+                            <td>Hiển thị văn bản bên trong phần tử <code
+                                    class="language-html">&lt;abbr&gt;</abbr></code> với cỡ chữ nhỏ hơn một chút</td>
+                        </tr>
+                        <tr>
+                            <td>.list-unstyled</td>
+                            <td>Loại bỏ dấu đầu dòng của danh sách</td>
+                        </tr>
+                        <tr>
+                            <td>.list-inline</td>
+                            <td>Hiển thị danh sách theo chiều ngang. Sử dụng kết hợp thêm class
+                                <code>.list-inline-item</code> vào thẻ li
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+        </section>
+
+        <section>
+            <h3>
+                bosstrap 5 - color
+            </h3>
+            <p>
+                Bootstrap 5 có một số lớp theo ngữ cảnh có thể được sử dụng để cung cấp "ý nghĩa thông qua màu sắc".
+            </p>
+
+            <section>
+                <h4>
+                    text color
+                </h4>
+                <p>
+                    Bạn có thể sử dụng các class text- để thay đổi màu chữ.
+                </p>
+                <pre><code class="language-html">&lt;p class="text-primary"&gt;Primary text.&lt;/p&gt;
+&lt;p class="text-secondary"&gt;Secondary text.&lt;/p&gt;
+&lt;p class="text-success"&gt;Success text.&lt;/p&gt;
+&lt;p class="text-danger"&gt;Danger text.&lt;/p&gt;
+&lt;p class="text-warning"&gt;Warning text.&lt;/p&gt;
+&lt;p class="text-info"&gt;Info text.&lt;/p&gt;
+&lt;p class="text-light bg-dark"&gt;Light text.&lt;/p&gt;
+&lt;p class="text-dark"&gt;Dark text.&lt;/p&gt;
+&lt;p class="text-body"&gt;Body text.&lt;/p&gt;
+&lt;p class="text-muted"&gt;Muted text.&lt;/p&gt;
+&lt;p class="text-white bg-dark"&gt;White text.&lt;/p&gt;
+&lt;p class="text-black-50"&gt;Black 50 text.&lt;/p&gt;
+&lt;p class="text-white-50 bg-dark"&gt;White 50 text.&lt;/p&gt;</code></pre>
+                <iframe class="example" src="./templates/example237.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    background color
+                </h4>
+                <p>
+                    Bạn có thể sử dụng các class bg- để thay đổi màu nền.
+                </p>
+                <pre><code class="language-html">&lt;p class="bg-primary text-white"&gt;Primary background.&lt;/p&gt;
+&lt;p class="bg-secondary text-white"&gt;Secondary background.&lt;/p&gt;
+&lt;p class="bg-success text-white"&gt;Success background.&lt;/p&gt;
+&lt;p class="bg-danger text-white"&gt;Danger background.&lt;/p&gt;
+&lt;p class="bg-warning text-white"&gt;Warning background.&lt;/p&gt;
+&lt;p class="bg-info text-white"&gt;Info background.&lt;/p&gt;
+&lt;p class="bg-light"&gt;Light background.&lt;/p&gt;
+&lt;p class="bg-dark text-white"&gt;Dark background.&lt;/p&gt;
+&lt;p class="bg-white"&gt;White background.&lt;/p&gt;</code></pre>
+                <iframe class="example" src="./templates/example238.html" frameborder="0"></iframe>
+            </section>
+
+
+        </section>
+
+
+        <section>
+            <h3>
+                bosstrap 5 - table
+            </h3>
+            <p>
+                Bootstrap 5 cung cấp một số class để tạo bảng dễ dàng và nhanh chóng.
+            </p>
+            <section>
+
+                <h4>
+                    bảng đơn giản
+                </h4>
+
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.table</code> để tạo bảng đơn giản.
+                </p>
+                <pre><code class="language-html">&lt;table class="table"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Tiêu Đề 1&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 2&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 1, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 2, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 3, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                <iframe class="example" src="./templates/example239.html" frameborder="0"></iframe>
+
+
+            </section>
+
+            <section>
+                <h4>
+                    bảng có hàng sọc
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.table-striped</code> để tạo bảng có hàng sọc.
+                </p>
+                <pre><code class="language-html">&lt;table class="table table-striped"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Tiêu Đề 1&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 2&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 1, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 2, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 3, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                <iframe class="example" src="./templates/example240.html" frameborder="0"></iframe>
+
+            </section>
+
+            <section>
+                <h4>
+                    bảng có đường viền
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.table-bordered</code> để tạo bảng có đường
+                    viền.
+                </p>
+                <pre><code class="language-html">&lt;table class="table table-bordered"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Tiêu Đề 1&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 2&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 1, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 2, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 3, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                <iframe class="example" src="./templates/example241.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    bảng có hiệu ứng hover
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.table-hover</code> để tạo bảng có hiệu ứng
+                    hover.
+                </p>
+                <pre><code class="language-html">&lt;table class="table table-hover"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Tiêu Đề 1&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 2&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 1, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 2, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 3, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                <iframe class="example" src="./templates/example242.html" frameborder="0"></iframe>
+            </section>
+
+
+            <section>
+                <h4>
+                    Bảng tối
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.table-dark</code> để tạo bảng có màu nền tối.
+                </p>
+                <pre><code class="language-html">&lt;table class="table table-dark"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Tiêu Đề 1&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 2&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 1, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 2, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 3, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                <iframe class="example" src="./templates/example243.html" frameborder="0"></iframe>
+                <mark class="yellow">
+                    Bạn cũng có thể kết hợp các class trên để tạo bảng tối theo ý muốn.
+                </mark>
+            </section>
+
+            <section>
+                <h4>
+                    Bảng không có border
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.table-borderless</code> để tạo bảng không có
+                    border.
+                </p>
+                <pre><code class="language-html">&lt;table class="table table-borderless"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Tiêu Đề 1&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 2&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 1, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 2, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 3, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                <iframe class="example" src="./templates/example244.html" frameborder="0"></iframe>
+            </section>
+
+
+            <section>
+                <h4>
+                    Bảng có màu theo ngữ cảnh
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.table-{context}</code> để tạo bảng có màu theo
+                    ngữ cảnh.
+                </p>
+                <pre><code class="language-html">&lt;table class="table"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Ngữ cảnh&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 2&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Mặc định&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="table-primary"&gt;
+            &lt;td&gt;Primary&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="table-success"&gt;
+            &lt;td&gt;Success&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="table-danger"&gt;
+            &lt;td&gt;Danger&lt;/td&gt;
+            &lt;td&gt;Dòng 4, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 4, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="table-warning"&gt;
+            &lt;td&gt;Warning&lt;/td&gt;
+            &lt;td&gt;Dòng 5, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 5, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="table-info"&gt;
+            &lt;td&gt;Info&lt;/td&gt;
+            &lt;td&gt;Dòng 6, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 6, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="table-light"&gt;
+            &lt;td&gt;Light&lt;/td&gt;
+            &lt;td&gt;Dòng 7, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 7, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="table-dark"&gt;
+            &lt;td&gt;Dark&lt;/td&gt;
+            &lt;td&gt;Dòng 8, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 8, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="table-active"&gt;
+            &lt;td&gt;Active&lt;/td&gt;
+            &lt;td&gt;Dòng 9, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 9, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="table-secondary"&gt;
+            &lt;td&gt;Secondary&lt;/td&gt;
+            &lt;td&gt;Dòng 10, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 10, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                <iframe class="example" src="./templates/example245.html" frameborder="0"></iframe>
+                <mark class="yellow">
+                    Bạn có thể thêm class vào thẻ table để thay đổi màu của toàn bảng,
+                    thêm class vào thẻ thead để thay đổi màu của tiêu đề,
+                    thêm class vào thẻ tbody để thay đổi màu của nội dung,
+                    thêm class vào thẻ tr để thay đổi màu của dòng,
+                    thêm class vào thẻ th hoặc td để thay đổi màu của từng ô.
+                </mark>
+            </section>
+
+            <section>
+                <h4>
+                    Bảng nhỏ hơn
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.table-sm</code> để tạo bảng nhỏ hơn.
+                </p>
+                <pre><code class="language-html">&lt;table class="table table-sm"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Tiêu Đề 1&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 2&lt;/th&gt;
+            &lt;th&gt;Tiêu Đề 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 1, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 1, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 2, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 2, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dòng 3, Cột 1&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 2&lt;/td&gt;
+            &lt;td&gt;Dòng 3, Cột 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                <iframe class="example" src="./templates/example246.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    responsive table
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.table-responsive</code> để tạo bảng có thể cuộn
+                    ngang khi màn hình nhỏ.
+                </p>
+                <pre><code class='language-html'>&lt;div class="container mt-3"&gt;
+
+    &lt;div class="table-responsive"&gt;
+        &lt;table class="table table-bordered"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;1&lt;/th&gt;
+                    &lt;th&gt;2&lt;/th&gt;
+                    &lt;th&gt;3&lt;/th&gt;
+                    &lt;th&gt;4&lt;/th&gt;
+                    &lt;th&gt;5&lt;/th&gt;
+                    &lt;th&gt;6&lt;/th&gt;
+                    &lt;th&gt;7&lt;/th&gt;
+                    &lt;th&gt;8&lt;/th&gt;
+                    &lt;th&gt;9&lt;/th&gt;
+                    &lt;th&gt;10&lt;/th&gt;
+                    &lt;th&gt;11&lt;/th&gt;
+                    &lt;th&gt;12&lt;/th&gt;
+                    &lt;th&gt;13&lt;/th&gt;
+                    &lt;th&gt;14&lt;/th&gt;
+                    &lt;th&gt;15&lt;/th&gt;
+                    &lt;th&gt;16&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Cột 1&lt;/td&gt;
+                    &lt;td&gt;Cột 2&lt;/td&gt;
+                    &lt;td&gt;Cột 3&lt;/td&gt;
+                    &lt;td&gt;Cột 4&lt;/td&gt;
+                    &lt;td&gt;Cột 5&lt;/td&gt;
+                    &lt;td&gt;Cột 6&lt;/td&gt;
+                    &lt;td&gt;Cột 7&lt;/td&gt;
+                    &lt;td&gt;Cột 8&lt;/td&gt;
+                    &lt;td&gt;Cột 9&lt;/td&gt;
+                    &lt;td&gt;Cột 10&lt;/td&gt;
+                    &lt;td&gt;Cột 11&lt;/td&gt;
+                    &lt;td&gt;Cột 12&lt;/td&gt;
+                    &lt;td&gt;Cột 13&lt;/td&gt;
+                    &lt;td&gt;Cột 14&lt;/td&gt;
+                    &lt;td&gt;Cột 15&lt;/td&gt;
+                    &lt;td&gt;Cột 16&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example247.html" frameborder="0"></iframe>
+
+
+
+            </section>
+
+        </section>
+
+
+        <section>
+            <h3>
+                bosstrap 5 - image
+            </h3>
+            <p>
+                Bootstrap 5 cung cấp một số class để tùy chỉnh hình ảnh dễ dàng và nhanh chóng.
+            </p>
+
+            <section>
+                <h4>
+                    hình ảnh bo góc
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.rounded</code> để tạo hình bo góc.
+                </p>
+                <pre><code class="language-html">&lt;img src="image.jpg" class="rounded" alt="Hình bo góc"&gt;</code></pre>
+                <iframe class="example" src="./templates/example248.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    hình ảnh bo tròn
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.rounded-circle</code> để tạo hình bo tròn.
+                </p>
+                <pre><code class="language-html">&lt;img src="image.jpg" class="rounded-circle" alt="Hình bo tròn"&gt;</code></pre>
+                <iframe class="example" src="./templates/example249.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    thubmnail - hình ảnh có viền
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.img-thumbnail</code> để tạo hình ảnh có viền.
+                </p>
+                <pre><code class="language-html">&lt;img src="image.jpg" class="img-thumbnail" alt="Hình ảnh có viền"&gt;</code></pre>
+                <iframe class="example" src="./templates/example250.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    căn chỉnh hình ảnh
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.float-{direction}</code> để căn chỉnh hình ảnh
+                    theo hướng.
+                </p>
+                <pre><code class="language-html">&lt;img src="image.jpg" class="float-start" alt="Hình ảnh căn trái"&gt;
+&lt;img src="image.jpg" class="float-end" alt="Hình ảnh căn phải"&gt;</code></pre>
+                <iframe class="example" src="./templates/example251.html" frameborder="0"></iframe>
+            </section>
+            <section>
+                <h4>
+                    căn giữa hình ảnh
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.mx-auto</code>(margin: auto) và <code
+                        class="language-css">.d-block</code>(display: block) để căn giữa hình ảnh.
+                </p>
+                <pre><code class="language-html">&lt;img src="image.jpg" class="mx-auto d-block" alt="Hình ảnh căn giữa"&gt;</code></pre>
+                <iframe class="example" src="./templates/example252.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    hình ảnh đáp ứng
+                </h4>
+                <p>
+                    Bạn có thể sử dụng class <code class="language-css">.img-fluid</code> để tạo hình ảnh đáp ứng.
+                </p>
+                <pre><code class='language-html'>&lt;div class="container mt-3"&gt;
+    &lt;h2&gt;Hình ảnh đáp ứng&lt;/h2&gt;
+    &lt;p&gt;.img-fluid class giúp hình ảnh có tỉ lệ phù hợp với phần tử cha:&lt;/p&gt;
+    &lt;img src="image.jpg" class="img-fluid" alt="Hình ảnh đáp ứng"&gt; 
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example253.html" frameborder="0"></iframe>
+            </section>
+
+        </section>
+
+        <section>
+            <h3>
+                Jumbotron trong Bootstrap 5
+            </h3>
+            <p>
+                Jumbotron là một thành phần quan trọng trong, nó giúp tạo ra một phần tử chứa nội dung lớn, thu hút
+                người xem.
+                Jumbotron không còn được hỗ trợ trong Bootstrap 5, nhưng bạn vẫn có thể tạo một Jumbotron bằng cách sử
+                dụng các class của Bootstrap 5.
+            </p>
+            <pre><code class="language-html">&lt;div class="container mt-3"&gt;
+    &lt;div class="mt-4 p-5 bg-primary text-white rounded"&gt;
+        &lt;h1&gt;Tiêu đề lớn&lt;/h1&gt;
+        &lt;p&gt;Nội dung lớn&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <iframe class="example" src="./templates/example254.html" frameborder="0"></iframe>
+
+
+        </section>
+
+        <section>
+            <h3>
+                Bootstrap 5 - Alert
+            </h3>
+            <p>
+                Bootstrap 5 cung cấp một số class để tạo thông báo dễ dàng và nhanh chóng.
+            </p>
+            <section>
+                <h4>
+                    Thông báo cơ bản
+                </h4>
+
+                <p>
+                    Thông báo được tạo bởi một div với class <code class="language-css">.alert</code> và một class ngữ
+                    cảnh
+                </p>
+                <pre><code class="language-html">&lt;div class="alert alert-primary" role="alert"&gt;
+    &lt;strong&gt;Primary!&lt;/strong&gt; Đây là thông báo primary.
+&lt;/div&gt;
+&lt;div class="alert alert-secondary" role="alert"&gt;
+    &lt;strong&gt;Secondary!&lt;/strong&gt; Đây là thông báo secondary.
+&lt;/div&gt;
+&lt;div class="alert alert-success" role="alert"&gt;
+    &lt;strong&gt;Success!&lt;/strong&gt; Đây là thông báo success.
+&lt;/div&gt;
+&lt;div class="alert alert-danger" role="alert"&gt;
+    &lt;strong&gt;Danger!&lt;/strong&gt; Đây là thông báo danger.
+&lt;/div&gt;
+&lt;div class="alert alert-warning" role="alert"&gt;
+    &lt;strong&gt;Warning!&lt;/strong&gt; Đây là thông báo warning.
+&lt;/div&gt;
+&lt;div class="alert alert-info" role="alert"&gt;
+    &lt;strong&gt;Info!&lt;/strong&gt; Đây là thông báo info.
+&lt;/div&gt;
+&lt;div class="alert alert-light" role="alert"&gt;
+    &lt;strong&gt;Light!&lt;/strong&gt; Đây là thông báo light.
+&lt;/div&gt;
+&lt;div class="alert alert-dark" role="alert"&gt;
+    &lt;strong&gt;Dark!&lt;/strong&gt; Đây là thông báo dark.
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example255.html" frameborder="0"></iframe>
+            </section>
+            <section>
+                <h4>
+                    Thông báo có liên kết
+                </h4>
+                <p>
+                    Bạn có thể thêm một liên kết vào thông báo bằng cách thêm một thẻ a với class
+                    <code class="language-css">.alert-link</code> vào bên trong thông báo.
+                </p>
+
+                <pre><code class="language-html">&lt;div class="alert alert-success" role="alert"&gt;
+    &lt;strong&gt;Success!&lt;/strong&gt; Đây là thông báo success với &lt;a href="#" class="alert-link"&gt;liên kết&lt;/a&gt;.
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example256.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Thông báo có nút đóng
+                </h4>
+                <p>
+                    Bạn có thể thêm một nút đóng vào thông báo bằng cách thêm một thẻ button với class
+                    <code class="language-css">.btn-close</code> vào bên trong thông báo.
+                </p>
+                <pre><code class="language-html">&lt;div class="alert alert-danger alert-dismissible" role="alert"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+    &lt;strong&gt;Danger!&lt;/strong&gt; Đây là thông báo danger với nút đóng.
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example257.html" frameborder="0"></iframe>
+
+            </section>
+            <section>
+                <h4>
+                    Thông báo với hiệu ứng
+                </h4>
+                <p>
+                    Bạn có thể thêm hiệu ứng vào thông báo bằng cách thêm class <code class="language-css">.fade</code>
+                    và
+                    <code class="language-css">.show</code> vào thông báo.
+                </p>
+                <pre><code class="language-html">&lt;div class="alert alert-success alert-dismissible fade show" role="alert"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+    &lt;strong&gt;Success!&lt;/strong&gt; Đây là thông báo success với hiệu ứng.
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example258.html" frameborder="0"></iframe>
+            </section>
+
+        </section>
+
+
+        <section>
+            <h3>
+                Bootstrap 5 - Button
+            </h3>
+
+            <section>
+                <h4>
+                    Button cơ bản
+                </h4>
+                <p>
+                    Bạn có thể tạo button cơ bản bằng cách sử dụng class <code class="language-css">.btn</code> kết hợp
+                    với class ngữ cảnh.
+                </p>
+                <pre><code class="language-html">&lt;button type="button" class="btn"&gt;Basic&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+&lt;button type="button" class="btn btn-light"&gt;Light&lt;/button&gt;
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;</code></pre>
+                <iframe class="example" src="./templates/example259.html" frameborder="0"></iframe>
+                <mark class="yellow">
+                    Bạn cũng có thể thêm class <code class="language-css">.btn-lg</code> hoặc <code
+                        class="language-css">.btn-sm</code> để tạo button lớn hoặc nhỏ.
+                </mark>
+                <mark class="green">
+                    Bạn cũng có thể dùng cho thẻ <code class="language-html">&lt;a&gt;</code>, <code
+                        class="language-html">&lt;input&gt;</code>, <code class="language-html">&lt;button&gt;</code>.
+                </mark>
+            </section>
+
+            <section>
+                <h4>
+                    Button với hiệu ứng
+                </h4>
+                <p>
+                    Bạn có thể thêm hiệu ứng vào button bằng cách sử dụng class <code class="language-css">.btn</code>
+                    và
+                    <code class="language-css">.btn-outline</code>.
+                </p>
+                <pre><code class="language-html">&lt;button type="button" class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-success"&gt;Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-info"&gt;Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-warning"&gt;Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-danger"&gt;Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-dark"&gt;Dark&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-light"&gt;Light&lt;/button&gt;</code></pre>
+                <iframe class="example" src="./templates/example260.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    full width button
+                </h4>
+                <p>
+                    Bạn có thể tạo button full width bằng cách sử dụng class <code class="language-css">.d-grid</code>
+                    cho phần tử cha chứa button.
+                </p>
+                <pre><code class="language-html">&lt;div class="d-grid"&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example261.html" frameborder="0"></iframe>
+
+                <p>Nếu bạn muốn kiểm soát khoảng cách giữa các button, có thể thêm class <code>.gap-*</code></p>
+                <pre><code class="language-html">&lt;div class="d-grid gap-2"&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example262.html" frameborder="0"></iframe>
+            </section>
+
+
+            <section>
+                <h4>
+                    button active/disable
+                </h4>
+                <p>
+                    Bạn có thể tạo button active hoặc disable bằng cách thêm class <code
+                        class="language-css">.active</code> hoặc <code class="language-css">.disabled</code>.
+                </p>
+                <pre><code class="language-html">&lt;button type="button" class="btn btn-primary active"&gt;Active&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary disabled"&gt;Disabled&lt;/button&gt;</code></pre>
+                <iframe class="example" src="./templates/example263.html" frameborder="0"></iframe>
+                <mark class="red">
+                    <b>Lưu ý:</b> class <code>.disabled</code> chỉ làm cho button trở nên mờ đi, không thể click được,
+                    nếu muốn button không thể click được, bạn cần thêm thuộc tính <code>disabled</code> vào button.
+                </mark>
+            </section>
+
+            <section>
+                <h4>
+                    spinner button
+                </h4>
+
+                <p>
+                    Bạn có thể tạo button với spinner bằng cách thêm thẻ <code class="language-html">&lt;span&gt;</code>
+                    với class <code class="language-css">.spinner-border</code> hoặc <code
+                        class="language-css">.spinner-grow</code> vào bên trong button.
+                </p>
+
+                <pre><code class="language-html">&lt;button type="button" class="btn btn-primary"&gt;
+    &lt;span class="spinner-border spinner-border-sm"&gt;&lt;/span&gt;
+    Loading...
+&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary"&gt;
+    &lt;span class="spinner-grow spinner-grow-sm"&gt;&lt;/span&gt;
+    Loading...
+&lt;/button&gt;</code></pre>
+                <iframe class="example" src="./templates/example264.html" frameborder="0"></iframe>
+            </section>
+
+        </section>
+
+
+        <section>
+            <h3>
+                Button group
+            </h3>
+            <p>
+                Bạn có thể tạo button group bằng cách sử dụng class <code class="language-css">.btn-group</code> cho
+                phần tử cha chứa button.
+            </p>
+            <pre><code class="language-html">&lt;div class="btn-group"&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Button 1&lt;/button&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Button 2&lt;/button&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Button 3&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            <iframe class="example" src="./templates/example265.html" frameborder="0"></iframe>
+            <mark class="yellow">
+                Bạn cũng có thể thêm class <code class="language-css">.btn-group-vertical</code> để tạo button group
+                dọc.
+                <pre><code class="language-html">&lt;div class="btn-group-vertical"&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Button 1&lt;/button&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Button 2&lt;/button&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Button 3&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example266.html" frameborder="0"></iframe>
+            </mark>
+
+            <section>
+                <h4>
+                    Kết hợp với dropdown
+                </h4>
+                <p>
+                    Bạn có thể kết hợp button group với dropdown bằng cách sử dụng class <code
+                        class="language-css">.dropdown-toggle</code> cho button trigger dropdown.
+                </p>
+                <pre><code class="language-html">&lt;div class="btn-group"&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Button 1&lt;/button&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Button 2&lt;/button&gt;
+    &lt;div class="btn-group"&gt;
+        &lt;button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;Button 3&lt;/button&gt;
+        &lt;div class="dropdown-menu"&gt;
+            &lt;a class="dropdown-item" href="#"&gt;Dropdown 1&lt;/a&gt;
+            &lt;a class="dropdown-item" href="#"&gt;Dropdown 2&lt;/a&gt;
+            &lt;a class="dropdown-item" href="#"&gt;Dropdown 3&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example267.html" frameborder="0"></iframe>
+
+
+
+            </section>
+        </section>
+
+        <section>
+            <h3>
+                Bootstrap 5 - Bagde
+            </h3>
+            <p>
+                Badge là một thành phần quan trọng trong Bootstrap 5, nó giúp hiển thị thông tin hoặc trạng thái của một
+                phần tử.
+            </p>
+            <section>
+                <h4>
+                    Badge cơ bản
+                </h4>
+                <p>
+                    Bạn có thể tạo badge cơ bản bằng cách sử dụng class <code class="language-css">.badge</code> kết hợp
+                    với class ngữ cảnh.
+                </p>
+                <pre><code class="language-html">&lt;span class="badge bg-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge bg-secondary"&gt;Secondary&lt;/span&gt;
+&lt;span class="badge bg-success"&gt;Success&lt;/span&gt;
+&lt;span class="badge bg-danger"&gt;Danger&lt;/span&gt;
+&lt;span class="badge bg-warning text-dark"&gt;Warning&lt;/span&gt;
+&lt;span class="badge bg-info"&gt;Info&lt;/span&gt;
+&lt;span class="badge bg-light text-dark"&gt;Light&lt;/span&gt;
+&lt;span class="badge bg-dark"&gt;Dark&lt;/span&gt;</code></pre>
+                <iframe class="example" src="./templates/example268.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    pill badge
+                </h4>
+                <p>
+                    Bạn có thể tạo pill badge bằng cách thêm class <code class="language-css">.rounded-pill</code> vào
+                    badge.
+                </p>
+                <pre><code class="language-html">&lt;span class="badge bg-primary rounded-pill"&gt;Primary&lt;/span&gt;
+&lt;span class="badge bg-secondary rounded-pill"&gt;Secondary&lt;/span&gt;
+&lt;span class="badge bg-success rounded-pill"&gt;Success&lt;/span&gt;
+&lt;span class="badge bg-danger rounded-pill"&gt;Danger&lt;/span&gt;
+&lt;span class="badge bg-warning text-dark rounded-pill"&gt;Warning&lt;/span&gt;
+&lt;span class="badge bg-info rounded-pill"&gt;Info&lt;/span&gt;
+&lt;span class="badge bg-light text-dark rounded-pill"&gt;Light&lt;/span&gt;
+&lt;span class="badge bg-dark rounded-pill"&gt;Dark&lt;/span&gt;</code></pre>
+                <iframe class="example" src="./templates/example269.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    badge bên trong một button
+                </h4>
+                <p>
+                    Bạn có thể thêm badge vào bên trong button bằng cách thêm một thẻ <code
+                        class="language-html">&lt;span&gt;</code> class <code class="language-css">.badge</code> vào bên
+                    trong button.
+                </p>
+                <pre><code class="language-html">&lt;button type="button" class="btn btn-primary"&gt;Thông báo mới &lt;span class="badge bg-warning"&gt;4&lt;/span&gt;&lt;/button&gt;</code></pre>
+                <iframe class="example" src="./templates/example270.html" frameborder="0"></iframe>
+            </section>
+        </section>
+
+        <section>
+            <h3>
+                Thanh tiến trình trong Bootstrap 5
+            </h3>
+            <p>
+                Thanh tiến trình trong Bootstrap 5 giúp hiển thị tiến trình của một công việc.
+            </p>
+            <section>
+                <h4>
+                    Thanh tiến trình cơ bản
+                </h4>
+                <p>
+                    Bạn có thể tạo thanh tiến trình cơ bản bằng cách sử dụng class <code
+                        class="language-css">.progress</code> kết hợp với class ngữ cảnh.
+                </p>
+                <pre><code class='language-html'>&lt;div class="d-grid gap-4"&gt;
+    &lt;div class="progress"&gt;
+        &lt;div class="progress-bar" style="width: 25%"&gt;25%&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="progress"&gt;
+        &lt;div class="progress-bar bg-success" style="width: 50%"&gt;50%&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="progress"&gt;
+        &lt;div class="progress-bar bg-info" style="width: 75%"&gt;75%&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="progress"&gt;
+        &lt;div class="progress-bar bg-warning" style="width: 100%"&gt;100%&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example271.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Thanh tiến trình striped
+                </h4>
+                <p>
+                    Bạn có thể tạo thanh tiến trình striped bằng cách thêm class <code
+                        class="language-css">.progress-bar-striped</code> vào thanh tiến trình.
+                </p>
+                <pre><code class='language-html'>&lt;div class="d-grid gap-4"&gt;
+    &lt;div class="progress"&gt;
+        &lt;div class="progress-bar progress-bar-striped" style="width: 25%"&gt;25%&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="progress"&gt;
+        &lt;div class="progress-bar bg-success progress-bar-striped" style="width: 50%"&gt;50%&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="progress"&gt;
+        &lt;div class="progress-bar bg-info progress-bar-striped" style="width: 75%"&gt;75%&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="progress"&gt;
+        &lt;div class="progress-bar bg-warning progress-bar-striped" style="width: 100%"&gt;100%&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example272.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Thanh tiến trình animated
+                </h4>
+                <p>
+                    Bạn có thể tạo thanh tiến trình animated bằng cách thêm class <code
+                        class="language-css">.progress-bar-animated</code> vào thanh tiến trình.
+                </p>
+                <pre><code class="language-html">&lt;div class="progress"&gt;
+    &lt;div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"&gt;75%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example273.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Thanh tiến trình multiple
+                </h4>
+                <p>
+                    Bạn có thể tạo thanh tiến trình multiple bằng cách thêm nhiều thẻ <code
+                        class="language-html">&lt;div&gt;</code> với class <code
+                        class="language-css">.progress-bar</code> vào bên trong thanh tiến trình.
+                </p>
+                <pre><code class="language-html">&lt;div style="height: 25px" class="progress"&gt;
+    &lt;div class="progress-bar bg-primary" style="width: 25%"&gt;Tập tin hệ thống&lt;/div&gt;
+    &lt;div class="progress-bar bg-success" style="width: 10%"&gt;Tập tin hình ảnh&lt;/div&gt;
+    &lt;div class="progress-bar bg-info" style="width: 15%"&gt;Tập tin video&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example274.html" frameborder="0"></iframe>
+            </section>
+
+
+        </section>
+
+        <section>
+            <h3>
+                spinner/loader trong Bootstrap 5
+            </h3>
+
+            <section>
+                <h4>
+                    spinner cơ bản
+                </h4>
+                <p>
+                    Bạn có thể tạo spinner cơ bản bằng cách sử dụng class <code
+                        class="language-css">.spinner-border</code> hoặc <code
+                        class="language-css">.spinner-grow</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="spinner-border text-muted" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-grow text-primary" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-success" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-grow text-info" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-warning" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-grow text-danger" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-dark" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-grow text-light" role="status"&gt;&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example275.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    spinner size
+                </h4>
+                <p>
+                    Bạn có thể tạo spinner với kích thước khác nhau bằng cách thêm class <code
+                        class="language-css">.spinner-border-sm</code> hoặc <code
+                        class="language-css">.spinner-grow-sm</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="spinner-border spinner-border-sm text-muted" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-grow spinner-grow-sm text-primary" role="status"&gt;&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example276.html" frameborder="0"></iframe>
+            </section>
+        </section>
+
+        <section>
+            <h3>
+                pagination trong Bootstrap 5
+            </h3>
+            <p>
+                Bạn có thể tạo pagination trong Bootstrap 5 bằng cách sử dụng class <code
+                    class="language-css">.pagination</code>.
+            </p>
+            <section>
+                <h4>
+                    pagination cơ bản
+                </h4>
+                <p>
+                    Bạn có thể tạo pagination cơ bản bằng cách sử dụng class <code
+                        class="language-css">.page-item</code> và <code class="language-css">.page-link</code>.
+                </p>
+                <pre><code class="language-html">&lt;nav&gt;
+    &lt;ul class="pagination"&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Trước&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Sau&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                <iframe class="example" src="./templates/example277.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    pagination thuộc tính active
+                </h4>
+                <p>
+                    Bạn có thể tạo pagination với thuộc tính active bằng cách thêm class <code
+                        class="language-css">.active</code> vào thẻ <code class="language-html">&lt;li&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;nav&gt;
+    &lt;ul class="pagination"&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Trước&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Sau&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                <iframe class="example" src="./templates/example278.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    pagination disabled
+                </h4>
+                <p>
+                    Bạn có thể tạo pagination disabled bằng cách thêm class <code class="language-css">.disabled</code>
+                    vào thẻ <code class="language-html">&lt;li&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;nav&gt;
+    &lt;ul class="pagination"&gt;
+        &lt;li class="page-item disabled"&gt;&lt;a class="page-link" href="#"&gt;Trước&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Sau&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                <iframe class="example" src="./templates/example279.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    pagination size
+                </h4>
+                <p>
+                    Bạn có thể tạo pagination với kích thước khác nhau bằng cách thêm class <code
+                        class="language-css">.pagination-lg</code> hoặc <code
+                        class="language-css">.pagination-sm</code>.
+                </p>
+                <pre><code class="language-html">&lt;nav&gt;
+    &lt;ul class="pagination pagination-lg"&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Trước&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Sau&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                <iframe class="example" src="./templates/example280.html" frameborder="0"></iframe>
+            </section>
+            <section>
+                <h4>
+                    pagination align
+                </h4>
+                <p>
+                    Bạn có thể tạo pagination với alignment khác nhau bằng cách thêm class <code
+                        class="language-css">.justify-content-center</code> hoặc <code
+                        class="language-css">.justify-content-end</code> vào thẻ <code
+                        class="language-html">&lt;ul&gt;</code>.
+                </p>
+                <pre><code class='language-html'>&lt;nav&gt;
+    &lt;ul class="pagination"&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Trước&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Sau&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;nav&gt;
+    &lt;ul class="pagination justify-content-center"&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Trước&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Sau&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;nav&gt;
+    &lt;ul class="pagination justify-content-end"&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Trước&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Sau&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                <iframe class="example" src="./templates/example281.html" frameborder="0"></iframe>
+            </section>
+
+
+            <section>
+                <h4>
+                    Breadcrumbs
+                </h4>
+                <p>
+                    Breadcrumbs giúp người dùng biết được vị trí của mình trong trang web.
+                </p>
+                <p>
+                    Bạn có thể tạo breadcrumbs bằng cách sử dụng class <code class="language-css">.breadcrumb</code> kết
+                    hợp với class <code class="language-css">.breadcrumb-item</code> và <code
+                        class="language-css">.breadcrumb-item.active</code>.
+                </p>
+                <pre><code class="language-html">&lt;nav aria-label="breadcrumb"&gt;
+    &lt;ol class="breadcrumb"&gt;
+        &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Trang chủ&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Danh mục&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="breadcrumb-item active" aria-current="page"&gt;Sản phẩm&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+                <iframe class="example" src="./templates/example282.html" frameborder="0"></iframe>
+            </section>
+
+        </section>
+
+        <section>
+            <h3>
+                list group trong Bootstrap 5
+            </h3>
+            <section>
+                <h4>
+                    list group cơ bản
+                </h4>
+                <p>
+                    Bạn có thể tạo list group cơ bản bằng cách sử dụng class <code
+                        class="language-css">.list-group</code> kết hợp với class <code
+                        class="language-css">.list-group-item</code>.
+                </p>
+                <pre><code class="language-html">&lt;ul class="list-group"&gt;
+    &lt;li class="list-group-item"&gt;Item 1&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Item 2&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <iframe class="example" src="./templates/example283.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    active item
+                </h4>
+                <p>
+                    Bạn có thể tạo list group với item active bằng cách thêm class <code
+                        class="language-css">.active</code> vào thẻ <code class="language-html">&lt;li&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;ul class="list-group"&gt;
+    &lt;li class="list-group-item"&gt;Item 1&lt;/li&gt;
+    &lt;li class="list-group-item active"&gt;Item 2&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <iframe class="example" src="./templates/example284.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    List group với các liên kết
+                </h4>
+                <p>
+                    Bạn có thể tạo list group với các liên kết bằng cách sử dụng thẻ <code
+                        class="language-html">&lt;a&gt;</code> thay vì thẻ <code
+                        class="language-html">&lt;li&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="list-group"&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 1&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 2&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 3&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example285.html" frameborder="0"></iframe>
+
+            </section>
+
+            <section>
+                <h4>
+                    disabled item
+                </h4>
+                <p>
+                    Bạn có thể tạo list group với item disabled bằng cách thêm class <code
+                        class="language-css">.disabled</code> vào thẻ <code class="language-html">&lt;a&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="list-group"&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 1&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action disabled"&gt;Item 2&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action disabled"&gt;Item 3&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example286.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Flush/remove border
+                </h4>
+                <p>
+                    Bạn có thể tạo list group mà không có border bằng cách thêm class <code
+                        class="language-css">.list-group-flush</code> vào thẻ <code
+                        class="language-html">&lt;div&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="list-group list-group-flush"&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 1&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 2&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 3&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example287.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Thêm số thứ tự cho list group
+                </h4>
+                <p>
+                    Bạn có thể thêm số thứ tự cho list group bằng cách thêm class <code
+                        class="language-css">&lt;.list-group-numbered&gt;</code> vào bên trong thẻ <code
+                        class="language-html">&lt;div&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="list-group list-group-numbered"&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 1&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 2&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 3&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example288.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    list group nằm ngang
+                </h4>
+                <p>
+                    Bạn có thể tạo list group nằm ngang bằng cách thêm class <code
+                        class="language-css">.list-group-horizontal</code> vào thẻ <code
+                        class="language-html">&lt;div&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="list-group list-group-horizontal"&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 1&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 2&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item 3&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example289.html" frameborder="0"></iframe>
+            </section>
+            <section>
+                <h4>
+                    list items với class ngữ cảnh
+                </h4>
+                <p>
+                    Bạn có thể tạo list group với class ngữ cảnh bằng cách thêm class <code
+                        class="language-css">.list-group-item-{contex}</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="list-group"&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Item Action&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action list-group-item-primary"&gt;Item Primary&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action list-group-item-secondary"&gt;Item Secondary&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action list-group-item-info"&gt;Item info&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action list-group-item-warning"&gt;Item warning&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action list-group-item-danger"&gt;Item danger&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action list-group-item-success"&gt;Item success&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action list-group-item-dark"&gt;Item dark&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action list-group-item-light"&gt;Item light&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example290.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    list group với badge
+                </h4>
+                <p>
+                    Bạn có thể tạo list group với badge bằng cách thêm thẻ <code
+                        class="language-html">&lt;span&gt;</code> vào bên trong thẻ <code
+                        class="language-html">&lt;a&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="list-group"&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"&gt; Hộp thư đến &lt;span class="badge bg-primary"&gt;14&lt;/span&gt&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"&gt; Quảng cáo &lt;span class="badge bg-warning"&gt;14&lt;/span&gt&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"&gt; Thư nháp &lt;span class="badge bg-info"&gt;14&lt;/span&gt&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example291.html" frameborder="0"></iframe>
+
+            </section>
+
+        </section>
+
+        <section>
+            <h3>
+                Bootstrap 5 - Card
+            </h3>
+            <section>
+                <h4>
+                    Card cơ bản
+                </h4>
+                <p>
+                    Bạn có thể tạo card cơ bản bằng cách sử dụng class <code class="language-css">.card</code> kết hợp
+                    với class <code class="language-css">.card-body</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="card"&gt;
+    &lt;div class="card-body"&gt;
+        Đây là nội dung card
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example292.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Header và footer
+                </h4>
+                <p>
+                    Bạn có thể thêm header và footer cho card bằng cách sử dụng class <code
+                        class="language-css">.card-header</code> và <code class="language-css">.card-footer</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="card"&gt;
+    &lt;div class="card-header"&gt;
+        Đây là header
+    &lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        Đây là nội dung card
+    &lt;/div&gt;
+    &lt;div class="card-footer"&gt;
+        Đây là footer
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example293.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Card với context class
+                </h4>
+                <p>
+                    Bạn có thể tạo card với class ngữ cảnh bằng cách thêm class <code
+                        class="language-css">.bg-{context}</code> vào thẻ <code
+                        class="language-html">&lt;div&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="card bg-primary"&gt;
+    &lt;div class="card-body text-white"&gt;
+        Đây là nội dung card
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example294.html" frameborder="0"></iframe>
+            </section>
+            <section>
+                <h4>
+                    Tiêu đề, văn bản và liên kết
+                </h4>
+                <p>
+                    Bạn có thể thêm tiêu đề, văn bản và liên kết vào card bằng cách sử dụng class <code
+                        class="language-css">.card-title</code>(h4), <code class="language-css">.card-text</code>(p) và
+                    <code class="language-css">.card-link</code>(a).
+                </p>
+                <pre><code class="language-html">&lt;div class="card"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h4 class="card-title"&gt;Tiêu đề card&lt;/h4&gt;
+        &lt;p class="card-text"&gt;Đây là nội dung card&lt;/p&gt;
+        &lt;a href="#" class="card-link"&gt;Liên kết&lt;/a&gt;
+        &lt;a href="#" class="card-link"&gt;Liên kết khác&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example295.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    card với hình ảnh
+                </h4>
+                <p>
+                    Bạn có thể thêm hình ảnh vào card bằng cách sử dụng class <code
+                        class="language-css">.card-img-top</code> hoặc <code class="language-css">.card-img-bottom</code>.
+                </p>
+
+                <pre><code class="language-html">&lt;div class="card" style="width: 300px;"&gt;
+    &lt;img src="image.jpg" class="card-img-top" alt="..."&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h4 class="card-title"&gt;Tiêu đề card&lt;/h4&gt;
+        &lt;p class="card-text"&gt;Đây là nội dung card&lt;/p&gt;
+        &lt;a href="#" class="card-link btn btn-primary"&gt;Liên kết&lt;/a&gt;
+        &lt;a href="#" class="card-link btn btn-outline-info"&gt;Liên kết khác&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example296.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    card image overlay
+                </h4>
+
+                <p>
+                    Bạn có thể tạo card với hình ảnh overlay bằng cách sử dụng class <code
+                        class="language-css">.card-img-overlay</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="card" style="width: 300px;"&gt;
+    &lt;img src="image.jpg" class="card-img-top" alt="..."&gt;
+    &lt;div class="card-img-overlay"&gt;
+        &lt;h4 class="card-title"&gt;Tiêu đề card&lt;/h4&gt;
+        &lt;p class="card-text"&gt;Đây là nội dung card&lt;/p&gt;
+        &lt;a href="#" class="card-link btn btn-primary"&gt;Liên kết&lt;/a&gt;
+        &lt;a href="#" class="card-link btn btn-outline-info"&gt;Liên kết khác&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example297.html" frameborder="0"></iframe>
+            </section>
+        </section>
+
+        <section>
+            <h3>
+                Bootstrap 5 - Dropdown
+            </h3>
+            <section>
+                <h4>
+                    Dropdown cơ bản
+                </h4>
+                <p>
+                    Bạn có thể tạo dropdown bằng cách sử dụng class <code class="language-css">.dropdown</code> kết hợp
+                    với class <code class="language-css">.dropdown-toggle</code> và <code class="language-css">.dropdown-menu</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="dropdown"&gt;
+    &lt;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+        Dropdown button
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example298.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Dropdown với hướng
+                </h4>
+                <p>
+                    Bạn có thể tạo dropdown với hướng bằng cách thêm class <code
+                        class="language-css">.dropup</code> hoặc <code class="language-css">.dropright</code> hoặc <code
+                        class="language-css">.dropleft</code> vào thẻ <code class="language-html">&lt;div&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="dropdown dropup" style="margin-top: 150px; "&gt;
+    &lt;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+        Dropdown button
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example299.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    dropdown-header và dropdown-divider
+                </h4>
+                <p>
+                    Bạn có thể tạo dropdown với header và divider bằng cách sử dụng class <code
+                        class="language-css">.dropdown-header</code> và <code class="language-css">.dropdown-divider</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="dropdown"&gt;
+    &lt;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+        Dropdown button
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+        &lt;li class="dropdown-header"&gt;Header&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="dropdown-divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example300.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    disabled item và active item
+                </h4>
+                <p>
+                    Bạn có thể tạo dropdown với item disabled và active bằng cách thêm class <code
+                        class="language-css">.disabled</code> và <code class="language-css">.active</code> vào thẻ <code
+                        class="language-html">&lt;a&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="dropdown"&gt;
+    &lt;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+        Dropdown button
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item disabled" href="#"&gt;Disabled link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item active" href="#"&gt;Active link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example301.html" frameborder="0"></iframe>
+            </section>
+            <section>
+                <h4>
+                    align right và left
+                </h4>
+                <p>
+                    Bạn có thể tạo dropdown với alignment khác nhau bằng cách thêm class <code
+                        class="language-css">.dropdown-menu-end</code> hoặc <code
+                        class="language-css">.dropdown-menu-start</code> vào thẻ <code
+                        class="language-html">&lt;ul&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;div class="dropdown"&gt;
+    &lt;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+        Dropdown button with right align
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton"&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example302.html" frameborder="0"></iframe>
+            </section>
+        </section>
+
+        <section>
+            <h3>
+                collapse trong Bootstrap 5
+            </h3>
+            <section>
+                <h4>
+                    collapse cơ bản
+                </h4>
+                <p>
+                    Bạn có thể tạo collapse bằng cách sử dụng button hoặc thẻ a với attribute <code
+                        class="language-css">data-bs-toggle="collapse"</code> và <code
+                        class="language-css">data-bs-target="#id_collapse"</code>.
+                </p>
+                <mark class="yellow">
+                    Lưu ý: id của collapse phải trùng với id của data-bs-target.
+                    <br>
+                    Bạn cũng có thể thêm class <code class="language-css">.collapse</code> vào thẻ <code
+                        class="language-html">&lt;div&gt;</code> để ẩn nội dung.
+                    <br>
+                    Bạn cần thêm <code class="language-css">href="#id_collapse"</code> vào thẻ <code
+                        class="language-html">&lt;a&gt;</code> nếu dùng thẻ a thay vì button.
+                </mark>
+                <pre><code class="language-html">&lt;button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"&gt;
+    Button with data-bs-target
+&lt;/button&gt;
+&lt;div class="collapse" id="collapseExample"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis veniam mollitia veritatis illum autem asperiores, culpa laborum excepturi sint recusandae! Rem et iste voluptas impedit illo magni, cumque sequi cum?
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example303.html" frameborder="0"></iframe>
+                    
+            </section>
+        </section>
+
+        <section>
+            <h3>
+                Nav trong Bootstrap 5
+            </h3>
+            <section>
+                <h4>
+                    Nav menu
+                </h4>
+                <p>
+                    Bạn có thể tạo nav menu bằng cách sử dụng class <code class="language-css">.nav</code> kết hợp với
+                    class <code class="language-css">.nav-item</code> và <code class="language-css">.nav-link</code>.
+                </p>
+<pre><code class='language-html'>&lt;ul class="nav"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link disabled" href="#"&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <iframe class="example" src="./templates/example304.html" frameborder="0"></iframe>
+
+            </section>
+
+            <section>
+                <h4>
+                    căn chỉnh vị trí
+                </h4>
+                <p>
+                    Bạn có thể căn chỉnh vị trí của nav menu bằng cách thêm class <code
+                        class="language-css">.justify-content-center</code> hoặc <code
+                        class="language-css">.justify-content-end</code> vào thẻ <code
+                        class="language-html">&lt;ul&gt;</code>.
+                </p>
+<pre><code class='language-html'>&lt;ul class="nav justify-content-center"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link disabled" href="#"&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<pre><code class='language-html'>&lt;ul class="nav justify-content-end"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link disabled" href="#"&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <iframe class="example" src="./templates/example305.html" frameborder="0"></iframe>
+
+            </section>
+
+            <section>
+                <h4>
+                    Nav nằm dọc
+                </h4>
+                <p>
+                    Bạn có thể tạo nav menu nằm dọc bằng cách thêm class <code class="language-css">.flex-column</code> vào thẻ <code class="language-html">&lt;ul&gt;</code>.
+                </p>
+<pre><code class='language-html'>&lt;ul class="nav flex-column"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link disabled" href="#"&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <iframe class="example" src="./templates/example306.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Nav tabs
+                </h4>
+                <p>
+                    Bạn có thể tạo nav tabs bằng cách thêm class <code class="language-css">.nav-tabs</code> vào thẻ <code class="language-html">&lt;ul&gt;</code>.
+                </p>
+<pre><code class='language-html'>&lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item active"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link disabled" href="#"&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <iframe class="example" src="./templates/example307.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Nav pills
+                </h4>
+                <p>
+                    Bạn có thể tạo nav pills bằng cách thêm class <code class="language-css">.nav-pills</code> vào thẻ <code class="language-html">&lt;ul&gt;</code>.
+                </p>
+                <pre><code class='language-html'>&lt;ul class="nav nav-pills"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link active" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link disabled" href="#"&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <iframe class="example" src="./templates/example308.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Nav justify tabs và pills (chiều rộng bằng nhau)
+                </h4>
+                <p>
+                    Bạn có thể tạo nav justify tabs và pills bằng cách thêm class <code class="language-css">.nav-justified</code> vào thẻ <code class="language-html">&lt;ul&gt;</code>.
+                </p>
+                <pre><code class='language-html'>&lt;ul class="nav nav-tabs nav-justified"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link active" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link disabled" href="#"&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+<pre><code class='language-html'>&lt;ul class="nav nav-pills nav-justified"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link active" href="#"&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link disabled" href="#"&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <iframe class="example" src="./templates/example309.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    toggle tabs và pills
+                </h4>
+                <p>
+                    Bạn có thể tạo toggle tabs và pills bằng cách thêm class <code class="language-css">.nav-toggle</code> vào thẻ <code class="language-html">&lt;ul&gt;</code>.
+                </p>
+                <pre><code class='language-html'>&lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link active" data-bs-toggle="tab" href="#home"&gt;NodeJS&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" data-bs-toggle="tab" href="#pros"&gt;Ưu điểm&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" data-bs-toggle="tab" href="#cons"&gt;Nhược điểm&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane container active" id="home"&gt;
+        &lt;h2&gt;Home&lt;/h2&gt;
+        &lt;p&gt;Được phát hành vào năm 2009, NodeJS, hay còn được biết với tên gọi chính thức là Node.js, là môi trường thời gian chạy (runtime environment) JavaScript đa nền tảng và mã nguồn mở. NodeJS cho phép các lập trình viên tạo cả ứng dụng front-end và back-end bằng JavaScript.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane container fade" id="pros"&gt;
+        &lt;h2&gt;Ưu điểm&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;NodeJS sử dụng JavaScript, ngôn ngữ lập trình phổ biến nhất thế giới.&lt;/li&gt;
+            &lt;li&gt;NodeJS sử dụng cơ chế bất đồng bộ (asynchronous) giúp tăng hiệu suất ứng dụng.&lt;/li&gt;
+            &lt;li&gt;NodeJS có cộng đồng lớn và phong phú.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane container fade" id="cons"&gt;
+        &lt;h2&gt;Nhược điểm&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;NodeJS không phù hợp với các ứng dụng yêu cầu xử lý đa luồng (multi-threading).&lt;/li&gt;
+            &lt;li&gt;Vấn đề về quản lý bộ nhớ (memory management) khi xử lý các tác vụ đồng thời (concurrent tasks).&lt;/li&gt;
+            &lt;li&gt;Bảo mật của NodeJS còn yếu so với các ngôn ngữ lập trình back-end khác.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example310.html" frameborder="0"></iframe>
+<pre><code class='language-html'>&lt;ul class="nav nav-pills"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link active" data-bs-toggle="tab" href="#home"&gt;Spring boot&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" data-bs-toggle="tab" href="#pros"&gt;Ưu điểm&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" data-bs-toggle="tab" href="#cons"&gt;Nhược điểm&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane container active" id="home"&gt;
+        &lt;h2&gt;Home&lt;/h2&gt;
+        &lt;p&gt;
+            Spring Boot là một dự án của Pivotal Team, một công ty con của VMware. Spring Boot là một framework giúp tạo và chạy ứng dụng Spring một cách dễ dàng hơn. Spring Boot giúp giảm thiểu cấu hình XML và Annotation cũng như giúp tạo ra các ứng dụng Spring một cách nhanh chóng.
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane container fade" id="pros"&gt;
+        &lt;h2&gt;Ưu điểm&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Spring Boot giúp giảm thiểu cấu hình XML và Annotation.&lt;/li&gt;
+            &lt;li&gt;Phổ biến&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane container fade" id="cons"&gt;
+        &lt;h2&gt;Nhược điểm&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Thiếu kiểm soát. Hệ thống tạo ra nhiều sự phụ thuộc không sử dụng, dẫn đến tệp triển khai lớn&lt;/li&gt;
+            &lt;li&gt;Không phù hợp với các dự án quy mô lớn. Nhiều nhà phát triển cho rằng công cụ này không phù hợp để xây dựng các ứng dụng đơn khối lớn. Mặc dù một số người cho rằng nó có thể xử lý tốt các dự án lớn, nhưng điều này không phải là sự đồng thuận chung&lt;/li&gt;
+            &lt;li&gt;Có thể không linh hoạt.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example311.html" frameborder="0"></iframe>
+            </section>
+        </section>
+
+        <section>
+            <h3>
+                Navbar trong Bootstrap 5
+            </h3>
+            <section>
+                <h4>
+                    Navbar cơ bản
+                </h4>
+                <p>
+                    Bạn có thể tạo navbar bằng cách sử dụng class <code class="language-css">.navbar</code> kết hợp với
+                    class <code class="language-css">.navbar-brand</code> và <code class="language-css">.navbar-nav</code>.
+                </p>
+                <pre><code class="language-html">&lt;nav class="navbar navbar-expand-sm navbar-light bg-light"&gt;
+    &lt;div class="container"&gt;
+        &lt;ul class="navbar-nav"&gt;
+            &lt;li class="nav-item"&gt;
+                &lt;a class="nav-link" href="#"&gt;Home&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+                &lt;a class="nav-link" href="#"&gt;About&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+                &lt;a class="nav-link" href="#"&gt;Contact&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+                <iframe class="example" src="./templates/example312.html" frameborder="0"></iframe>
+                <mark class="yellow">
+                    <ul>
+                        <li>
+                            Để tạo navbar dọc, xóa class <code class="language-css">.navbar-expand-*</code>.
+                        </li>
+                        <li>
+                            Để căn giữa navbar, thêm class <code class = "language-css">.justify-content-center</code> vào thẻ <code class="language-html">&lt;nav&gt;</code>.
+                        </li>
+
+                        <li>
+                            Để đổi màu nền navbar, thay class <code class="language-css">.bg-light</code> bằng <code class="language-css">.bg-primary</code> hoặc <code class="language-css">.bg-dark</code> hoặc <code class="language-css">.bg-info</code> hoặc <code class="language-css">.bg-success</code> hoặc <code class="language-css">.bg-warning</code> hoặc <code class="language-css">.bg-danger</code>.
+                        </li>
+                    </ul>
+                </mark>
+            </section>
+
+            <section>
+                <h4>
+                    Navbar với logo (hoặc tên thương hiệu)
+                </h4>
+                <p>
+                    Bạn có thể thêm logo hoặc tên thương hiệu vào navbar bằng cách thêm class <code
+                        class="language-css">.navbar-brand</code> vào thẻ <code class="language-html">&lt;a&gt;</code> nằm bên trong thẻ <code class="language-html">&lt;div&gt;</code>.
+                </p>
+                <pre><code class="language-html">&lt;nav class="navbar navbar-expand-sm navbar-light bg-light"&gt;
+    &lt;div class="container"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;Logo&lt;/a&gt;
+        &lt;ul class="navbar-nav"&gt;
+            &lt;li class="nav-item"&gt;
+                &lt;a class="nav-link" href="#"&gt;Home&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+                &lt;a class="nav-link" href="#"&gt;About&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+                &lt;a class="nav-link" href="#"&gt;Contact&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+                <iframe class="example" src="./templates/example313.html" frameborder="0"></iframe>
+                <mark class="yellow">
+                    <ul>
+                        <li>
+                            Để thêm logo, thay văn bản trong thẻ <code class="language-html">&lt;a&gt;</code> bằng thẻ <code class="language-html">&lt;img&gt;</code>.
+                        </li>
+                    </ul>
+                </mark>
+            </section>
+
+        </section>
+
+        <section>
+            <h3>
+                bosstrap 5 - carousel/slileshow
+            </h3>
+            <section>
+                <h4>
+                    Carousel cơ bản
+                </h4>
+                <p>
+                    Bạn có thể tạo carousel bằng cách sử dụng class <code class="language-css">.carousel</code> kết hợp với
+                    class <code class="language-css">.carousel-inner</code> và <code class="language-css">.carousel-item</code>.
+                </p>
+<pre><code class='language-html'>&lt;!-- Băng chuyền --&gt;
+&lt;div id="demo" class="carousel slide" data-bs-ride="carousel"&gt;
+
+    &lt;!-- Chỉ số/những dấu chấm bên dưới băng truyền --&gt;
+    &lt;div class="carousel-indicators"&gt;
+        &lt;button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"&gt;&lt;/button&gt;
+        &lt;button type="button" data-bs-target="#demo" data-bs-slide-to="1"&gt;&lt;/button&gt;
+        &lt;button type="button" data-bs-target="#demo" data-bs-slide-to="2"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Nội dung băng chuyển --&gt;
+    &lt;div class="carousel-inner"&gt;
+        &lt;div class="carousel-item active"&gt;
+            &lt;img src="hinh_anh.jpg" alt="Ảnh 1" class="d-block w-100"&gt;
+        &lt;/div&gt;
+        &lt;div class="carousel-item"&gt;
+            &lt;img src="hinh_anh1.jpg" alt="Ảnh 2" class="d-block w-100"&gt;
+        &lt;/div&gt;
+        &lt;div class="carousel-item"&gt;
+            &lt;img src="hinh_anh2.jpg" alt="Ảnh 3" class="d-block w-100"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Nút chuyển qua trái, qua phải --&gt;
+    &lt;button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev"&gt;
+        &lt;span class="carousel-control-prev-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next"&gt;
+        &lt;span class="carousel-control-next-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example314.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h4>
+                    Carousel với caption
+                </h4>
+                <p>
+                    Bạn có thể thêm caption vào carousel bằng cách thêm thẻ <code class="language-html">&lt;div&gt;</code> với class <code class="language-css">.carousel-caption</code> vào thẻ <code class="language-html">&lt;div&gt;</code> có class <code class="language-css">.carousel-item</code>.
+                </p>
+<pre><code class='language-html'>&lt;!-- Băng chuyền --&gt;
+&lt;div id="demo" class="carousel slide" data-bs-ride="carousel"&gt;
+
+    &lt;!-- Chỉ số/những dấu chấm bên dưới băng truyền --&gt;
+    &lt;div class="carousel-indicators"&gt;
+        &lt;button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"&gt;&lt;/button&gt;
+        &lt;button type="button" data-bs-target="#demo" data-bs-slide-to="1"&gt;&lt;/button&gt;
+        &lt;button type="button" data-bs-target="#demo" data-bs-slide-to="2"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Nội dung băng chuyển --&gt;
+    &lt;div class="carousel-inner"&gt;
+        &lt;div class="carousel-item active"&gt;
+            &lt;img src="hinh_anh.jpg" alt="Ảnh 1" class="d-block w-100"&gt;
+            &lt;div class="carousel-caption"&gt;
+                &lt;h3&gt;Ảnh 1&lt;/h3&gt;
+                &lt;p&gt;Đây là ảnh 1&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="carousel-item"&gt;
+            &lt;img src="hinh_anh1.jpg" alt="Ảnh 2" class="d-block w-100"&gt;
+            &lt;div class="carousel-caption"&gt;
+                &lt;h3&gt;Ảnh 2&lt;/h3&gt;
+                &lt;p&gt;Đây là ảnh 2&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="carousel-item"&gt;
+            &lt;img src="hinh_anh2.jpg" alt="Ảnh 3" class="d-block w-100"&gt;
+            &lt;div class="carousel-caption"&gt;
+                &lt;h3&gt;Ảnh 3&lt;/h3&gt;
+                &lt;p&gt;Đây là ảnh 3&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Nút chuyển qua trái, qua phải --&gt;
+    &lt;button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev"&gt;
+        &lt;span class="carousel-control-prev-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next"&gt;
+        &lt;span class="carousel-control-next-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example315.html" frameborder="0"></iframe>
+            </section>
+        </section>
+        
+
+        </section>
+
+
+    </main>
+    <footer>
+        <nav class="navigator">
+            <a href="./index4.html" class="btn" id="prev">Bài trước</a>
+            <a href="./index6.html" class="btn" id="next">Bài tiếp</a>
+        </nav>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Giới thiệu về HTML - CSS - JavaScript</title>
+    <link href="./assets/css/prism.min.css" rel="stylesheet" />
+    <script src="./assets/js/prism.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Thêm thư viện Normalize.css -->
+    <link class="icon" rel="icon" href="./assets/img/null.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1>giới thiệu về html - css - javaScript (Phần 4)</h1>
+    </header>
+    <div class="forPhone">
+        Trang web này không hỗ trợ hiển thị trên điện thoại. Vui lòng truy cập trên máy tính hoặc máy tính bảng.
+    </div>
+    <main class="main">
+        <section id="intro">
+            <h2>
+                Responsive Web Design
+            </h2>
+            <p>
+                Responsive Web Design (RWD) là một phương pháp thiết kế web giúp trang web hiển thị đẹp trên mọi thiết bị.
+            </p>
+            <p>
+                Responsive Web Design sử dụng các kỹ thuật CSS để thay đổi giao diện trang web tùy theo kích thước màn hình của thiết bị.
+            </p>
+        </section>
+        <section class="learning">
+            <section>
+                <h3>
+                    viewport 
+                </h3>
+                <p>
+                    Viewport là khu vực hiển thị nội dung trên trình duyệt.
+                </p>
+                <p>
+                    Bạn nên thêm thẻ meta viewport vào trang web để trình duyệt hiển thị đúng kích thước trên mọi thiết bị. <br>
+                    <code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+                </p>
+                <strong>Những quy tắc trong việc đặt kích thước nội dung trong khung nhìn</strong>
+                <ul>
+                    <li>
+                        <b>Không dùng các phần tử có kích thước cố định lớn </b> Nếu hình ảnh có kích thước lớn hơn chiều rộng thiết bị
+                        người dùng có thể phải cuộn ngang để xem hết hình ảnh. Đây là một trải nghiệm không tốt.
+                    </li>
+                    <li>
+                        <b>Hạn chế dùng kích thước tuyệt đối</b> Kích thước tuyệt đối không thay đổi tùy theo kích thước màn hình. Nếu bạn
+                        dùng kích thước tuyệt đối, trang web sẽ không hiển thị đẹp trên mọi thiết bị.
+                    </li>
+                    <li>
+                        <b>Sử dụng đơn vị đo linh hoạt</b> Sử dụng đơn vị đo linh hoạt như %, em, rem thay vì px.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>
+                    Grid - View
+                </h3>
+                <p>
+                    Nhiều trang web dựa trên chế độ xem dạng lưới, có nghĩa là trang được chia thành các cột.
+                </p>
+                <p>
+                    Sử dụng chế độ xem dạng lưới rất hữu ích khi thiết kế trang web. Nó làm cho việc đặt các phần tử trên trang trở nên dễ dàng hơn.
+                </p>
+                <p>
+                    Chế độ xem lưới đáp ứng thường có 12 cột và có tổng chiều rộng là 100%, đồng thời sẽ thu nhỏ và mở rộng khi bạn thay đổi kích thước cửa sổ trình duyệt.
+                </p>
+                <p>
+                    Ta có thể tính toán mỗi cột sẽ có chiều rộng bằng 100% / 12 = 8.33%.
+                </p>
+
+                <p>
+                    Từ đó ta có thể xây dựng một thư viện grid view như sau:
+                </p>
+                <pre><code class="language-css">* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid #d9d9d9;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+</code></pre>
+                <p>
+                    Ví dụ tạo một layout đơn giản 
+                </p>
+
+                <pre><code class="language-html">&lt;header class="row"&gt;
+    &lt;div class="col-12"&gt;
+        &lt;h1&gt;Header&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="col-3"&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;div class="col-9"&gt;
+        &lt;article&gt;
+            &lt;h1&gt;Article&lt;/h1&gt;
+            &lt;p&gt;Content&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;footer class="row"&gt;
+    &lt;div class="col-12"&gt;
+        &lt;p&gt;Footer&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+<iframe class="example" src="./templates/example220.html" frameborder="0"></iframe>
+            </section>
+
+            <section>
+                <h3>
+                    Responsive - media query
+                </h3>
+                <p>
+                    Media query là một công cụ mạnh mẽ giúp thiết kế trang web đáp ứng trên mọi thiết bị.
+                </p>
+
+                <section>
+                    <h4>
+                        Add a Breakpoint
+                    </h4>
+                    <p>
+                        Để thêm một điểm ngắt, bạn cần sử dụng từ khóa <code>@media</code> và <code>max-width</code> hoặc <code>min-width</code>.
+                    </p>
+                    <strong>
+                        Ví dụ ta lấy điện thoại có kích thước chiều rộng tối đa là 768px
+                    </strong>
+                    <pre><code class="language-css">@media only screen and (max-width: 768px) {
+    /* CSS cho màn hình điện thoại */
+    [class*="col-"] {
+        width: 100%;
+    }
+}</code></pre>
+                    <p>
+                        Trong ví dụ trên, nếu chiều rộng của màn hình nhỏ hơn hoặc bằng 768px, tất cả các cột sẽ có chiều rộng là 100%.
+                    </p>
+                </section>
+
+                <section>
+                    <h4>
+                        Luôn đặt thiết kế cho thiết bị nhỏ trước
+                    </h4>
+                    <p>
+                        Khi thiết kế trang web, bạn nên bắt đầu từ thiết bị nhỏ trước, sau đó mới đến thiết bị lớn.
+                        Nguyên nhân là vì thiết bị nhỏ thường có các hạn chế về kích thước và hiển thị. Đôi khi một số phần tử không cần thiết trên thiết bị lớn có thể ẩn đi trên thiết bị nhỏ. 
+                    </p>
+                    <p>
+                        Thay vì đặt max-width để định dạng cho thiết bị di động bạn có thể thêm min-width để định dạng cho thiết bị lớn.
+                        Và bỏ qua max-width.
+                    </p>
+                    <p>
+                        Như vậy chúng ta sẽ có một thư viện mới như sau:
+                    </p>
+                    <pre><code class="language-css">/*Cho thiết bị di động*/
+[class*="col-"] {
+    width: 100%;
+}
+
+/*Cho thiết bị lớn*/
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+} </code></pre>
+                <strong>
+                    Ngoài ra chúng ta cũng có thể thiết kế riêng cho tablet với min-width = 600px
+                </strong>
+                                    <pre><code class="language-css">/*Cho thiết bị di động*/
+[class*="col-"] {
+    width: 100%;
+    height: 80px;
+    background-color: red;
+    border: 2px solid black;
+    float: left;
+}
+/*Cho máy tính bảng*/
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+
+/*Cho thiết bị lớn*/
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+} </code></pre>
+
+                <strong>
+                    Ta có một ví dụ sau
+                </strong>
+                <pre><code class="language-html">&lt;div class="row"&gt;
+    &lt;div class="col-3 col-s-6"&gt;
+    &lt;/div&gt;
+    &lt;div class="col-3 col-s-6"&gt;
+    &lt;/div&gt;
+    &lt;div class="col-3 col-s-6"&gt;
+    &lt;/div&gt;
+    &lt;div class="col-3 col-s-6"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <iframe class="example" src="./templates/example221.html" frameborder="0"></iframe>
+                <mark class="yellow">
+                    Trong ví dụ trên, màn hình tablet sẽ hiển thị 2 cột, màn hình lớn sẽ hiển thị 4 cột, màn hình điện thoại sẽ hiển thị 1 cột.
+                </mark>
+                </section>
+                <section>
+                    <h4>
+                        Danh sách các điểm ngắt trong năm 2024
+                    </h4>
+                    <strong>
+                        Dùng min-width
+                    </strong>
+                    <ul>
+                        <li>
+                            576px: Màn hình điện thoại
+                        </li>
+                        <li>
+                            768px: Màn hình tablet
+                        </li>
+                        <li>
+                            992px: Màn hình máy tính
+                        </li>
+                        <li>
+                            1200px: Màn hình lớn (TV, máy chiếu...)
+                        </li>
+                    </ul>
+                    <strong>
+                        Dùng max-width
+                    </strong>
+                    <ul>
+                        <li>
+                            575.98px: Màn hình điện thoại
+                        </li>
+                        <li>
+                            767.98px: Màn hình tablet
+                        </li>
+                        <li>
+                            991.98px: Màn hình máy tính
+                        </li>
+                        <li>
+                            1199.98px: Màn hình lớn (TV, máy chiếu...)
+                        </li>
+                    </ul>
+
+                    <mark class="yellow">
+                        Lưu ý: Các điểm ngắt trên chỉ là ước lượng, bạn có thể thay đổi tùy theo thiết kế của mình.
+                        Đồng thời nên đồng nhất các điểm ngắt trong dự án của mình để tránh xung đột.
+                    </mark>
+                </section>
+
+            </section>
+
+            <section>
+                <h3>
+                    RWD - Hình ảnh
+                </h3>
+                <p>
+                    Khi thiết kế trang web đáp ứng, bạn cần chú ý đến hình ảnh.
+                </p>
+                <section>
+                    <h4>
+                        Các thuộc tính có sẵn của hình ảnh trong CSS
+                    </h4>
+                    <strong>
+                        width
+                    </strong>
+                    <p>
+                        Thuộc tính width giúp bạn thiết lập chiều rộng của hình ảnh.
+                        khi thiết lập kích thước chiều rộng cố định, chiều cao là auto -> hình ảnh sẽ tự động thay đổi chiều cao tương ứng.
+                    </p>
+                    <strong>
+                        max-width
+                    </strong>
+                    <p>
+                        Khi max-width được set là 100%, hình ảnh sẽ giảm kích thước nếu cần nhưng không vượt quá kích thước gốc.
+                    </p>
+                    
+                </section>
+
+                <section>
+                    <h4>
+                        Background image
+                    </h4>
+                    <p>
+                        Khi sử dụng background-image, bạn cần chú ý đến thuộc tính background-size.
+                    </p>
+                    <mark class="green">
+                        Thuộc tính này đã được học ở bài trước, bạn có thể xem lại tại <a href="$">đây</a>
+                    </mark>
+                </section>
+                <section>
+                    <h4>
+                        Hình ảnh khác nhau cho mỗi thiết bị
+                    </h4>
+                    <p>
+                        Bạn có thể sử dụng thẻ &lt;picture&gt; để hiển thị hình ảnh khác nhau cho mỗi thiết bị.
+                    </p>
+                    <mark class="green">
+                        Thẻ &lt;picture&gt; đã được học ở bài trước, bạn có thể xem lại tại <a href="$">đây</a>
+                    </mark>
+                    <p>
+                        Hoặc có thể dùng media query để thay đổi background-image cho mỗi thiết bị.
+                    </p>
+                </section>
+
+
+            </section>
+
+            <section>
+                <h3>
+                    RWD - FrameWork
+                </h3>
+                <p>
+                    Nếu bạn không muốn tự viết CSS cho trang web của mình, bạn có thể sử dụng các framework CSS đã có sẵn.
+                </p>
+                <p>
+                    Một số framework phổ biến như: Bootstrap, Foundation, Bulma, Materialize...
+                </p>
+                <p>
+                    Framework CSS giúp bạn xây dựng trang web nhanh chóng, dễ dàng và đẹp mắt.
+                </p>
+                <p>
+                    Tuy nhiên, bạn cần chú ý đến việc tùy chỉnh giao diện cho phù hợp với dự án của mình.
+                </p>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <nav class="navigator">
+            <a href="./index3.html" class="btn" id="prev">Bài trước</a>
+            <a href="./index5.html" class="btn" id="next">Bài tiếp</a>
+        </nav>
+    </footer>
+</body>
+<script src="./assets/js/main.js"></script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example 87</title>
+</head>
+<body>
+    <form oninput="result.value='hsl(' + hue.value + ', ' + saturation.value + '%, ' + lightness.value + '%)'; result.style.borderColor = 'hsl(' + hue.value + ', ' + saturation.value + '%, ' + lightness.value + '%)';">
+        <label for="hue">Hue</label>
+        <input type="range" id="hue" name="hue" min="0" max="360" value="0"><br>
+        <label for="saturation">Saturation</label>
+        <input type="range" id="saturation" name="saturation" min="0" max="100" value="0"><br>
+        <label for="lightness">Lightness</label>
+        <input type="range" id="lightness" name="lightness" min="0" max="100" value="0"><br>
+        <output style="border-width: 2px; border-style: solid; display:block; width: 50%; margin: auto;" name="result">hsl(0, 0%, 0%)</output>
+    </form>
+</body>
+</html>

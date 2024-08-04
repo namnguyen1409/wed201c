@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example 174</title>
+    <style>
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+figure {
+    float: left;
+    width: 33.33%;
+    margin: 0;
+}
+figure img {
+    width: 100%;
+    height: auto;
+}
+figure:first-child img {
+    opacity: 0.2;
+}
+figure:nth-child(2) img {
+    opacity: 0.5;
+}
+    </style>
+</head>
+
+<body>
+    <div class="clearfix">
+        <figure>
+            <img src="../assets/img/hinh-anh.png" alt="độ mờ 0.2">
+            <figcaption>Độ mờ 0.2</figcaption>
+        </figure>
+        <figure>
+            <img src="../assets/img/hinh-anh.png" alt="độ mờ 0.5">
+            <figcaption>Độ mờ 0.5</figcaption>
+        </figure>
+        <figure>
+            <img src="../assets/img/hinh-anh.png" alt="độ mờ 1">
+            <figcaption>Độ mờ 1</figcaption>
+        </figure>
+    </div>
+</body>
+
+</html>
