@@ -4306,11 +4306,55 @@ div.desc {
                 <p>
             </section>
 
+            <section>
+                <h3>
+                    BEM trong CSS (Block Element Modifier) - Đặt tên class chuẩn BEM
+                </h3>
+                <p>
+                    BEM là một phương pháp đặt tên class trong CSS giúp bạn tạo ra các class dễ đọc, dễ hiểu và dễ
+                    bảo trì.
+                </p>
+                <p>
+                    BEM bao gồm 3 phần chính:
+                </p>
+                <ul>
+                    <li>Block: phần tử cha</li>
+                    <li>Element: phần tử con</li>
+                    <li>Modifier: trạng thái hoặc biến thể của phần tử</li>
+                </ul>
+                <p>
+                    Ví dụ:
+                <pre><code class="language-css">.block {
+    background-color: red;
+}
+
+.block__element {
+    background-color: blue;
+}
+
+.block__element--modifier {
+    background-color: green;
+}</code></pre>
+                </p>
+                <p>
+                    Trong trường hợp này:
+                <ul>
+                    <li>.block là block</li>
+                    <li>.block__element là element</li>
+                    <li>.block__element--modifier là modifier</li>
+                </ul>
+                </p>
+                <p>
+                    BEM giúp bạn tạo ra các class dễ đọc, dễ hiểu và dễ bảo trì.
+                </p>
+                
+            </section>
+
         </section>
 
     </main>
 
-    <footer>
+    <footer class="phoneHide">
         <nav class="navigator">
             <a href="./index.html" class="btn" id="prev">Bài trước</a>
             <a href="./index3.html" class="btn" id="next">Bài tiếp</a>

@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+:root {
+    scroll-behavior: smooth
+}
 
 
 @font-face {
@@ -273,7 +275,6 @@ footer {
     color: #fff;
     font-size: 1rem;
     font-weight: 700;
-    margin-top: 20px;
     position: sticky;
     bottom: 0;
     width: 100%;
@@ -289,11 +290,12 @@ footer > nav.navigator {
 }
 
 footer > nav.navigator > a {
+    flex: 1;
     color: #fff;
     text-decoration: none;
     padding: 10px;
-    width: 50%;
     display: block;
+    border: 1px solid white;
 }
 
 footer > nav.navigator > a:hover {
@@ -301,19 +303,6 @@ footer > nav.navigator > a:hover {
     background-color: #fff;
     padding: 10px;
     position: relative;
-}
-
-
-footer > nav.navigator > a:first-child::after {
-    content: "";
-    color: #fff;
-    display: block;
-    position: absolute;
-    width: 2px;
-    background-color: rgb(255, 255, 255);
-    right: 0px;
-    top: 0px;
-    height: 53px;
 }
 
 .example > table {
@@ -350,6 +339,7 @@ h4 {
     background-color: #6bffd0;
     display: block;
     width: 50%;
+    margin: auto;
 }
 
 
@@ -359,10 +349,18 @@ h4 {
         display: block;
         width: 100%;
         height: 100%;
+        font-family: 'Courier New', Courier, monospace;
+        color: red;
+        font-size: 25px;
+        padding: 25px;
     } 
 
     .main {
         display: none;
+    }
+
+    .phoneHide {
+        display: none !important;
     }
 }
 

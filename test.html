@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./assets/css/prism.min.css" rel="stylesheet" />
+    <script src="./assets/js/prism.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .code-editor {
+            display: block;
+            position: relative;
+            font-family: monospace;
+            line-height: 1.5;
+            width: 100%;
+            min-height: 100px;
+            border: solid 1px;
+            background-color: #f5f2f0;
+        }
+
+        .code-editor textarea {
+            background-color: transparent;
+            color: transparent;
+            caret-color: black;
+            padding: 10px;
+            margin: 0;
+            font-size: inherit;
+            font-family:  Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            line-height: inherit;
+            width: 100%;
+            height: 100%;
+            border: none;
+            resize: none;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .code-editor textarea:focus {
+            outline: none;
+        }
+
+        .code-editor pre {
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            margin: 0;
+            font-size: inherit;
+            font-family: inherit;
+            line-height: inherit;
+            background-color: transparent;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="code-editor">
+        <textarea spellcheck="false" id="code" name="code" placeholder="Enter your code here">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;example1&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="background-color:powderblue;"&gt;
+    &lt;h1&gt;Đây là tiêu đề&lt;/h1&gt;
+    &lt;p&gt;Đây là đoạn văn bản.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+        <pre><code class="language-html"></code></pre>
+    </div>
+
+    <script>
+        const codeEditor = document.querySelector('.code-editor');
+        const code = document.getElementById('code');
+        const pre = document.querySelector('.code-editor pre');
+        const codeElement = document.querySelector('.code-editor code');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            codeElement.textContent = code.value;
+            Prism.highlightElement(codeElement);
+        });
+
+        code.addEventListener('input', () => {
+            codeElement.textContent = code.value;
+            Prism.highlightElement(codeElement);
+        });
+        // auto resize
+        code.addEventListener('input', () => {
+            code.style.height = 'auto';
+            code.style.height = code.scrollHeight + 'px';
+            codeEditor.style.height = code.scrollHeight + 'px';
+            pre.style.height = code.scrollHeight + 'px';
+            codeElement.style.height = code.scrollHeight + 'px';
+        });
+    </script>
+</body>
+
+</html>

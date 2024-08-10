@@ -27,8 +27,6 @@
   <meta name="twitter:title" content="Cùng học HTML">
   <meta name="twitter:description" content="Học HTML CSS JAVASCRIPT">
   <meta name="twitter:image" content="./assets/icons/HTML5.png">
-
-
 </head>
 
 <body>
@@ -36,13 +34,15 @@
         <h1>giới thiệu về html - css - javaScript</h1>
     </header>
 
-    <div class="notification">
-        <p>
-            Bạn có thể gặp phải tình trạng âm thanh tự động phát ra khi truy cập trang web này. Để tắt âm thanh, bạn
-            hãy kéo xuống cuối trang và tắt âm thanh
-        </p>
-        <a href="#videoAutoplay">Bấm vào đây để kéo xuống cuối trang</a>
-    </div>
+    <script>
+        //mute all video and audio on page load
+        document.addEventListener("DOMContentLoaded", function () {
+            var videos = document.querySelectorAll("video");
+            var audios = document.querySelectorAll("audio");
+            videos.forEach(video => video.muted = true);
+            audios.forEach(audio => audio.muted = true);
+        });
+    </script>
 
     <div class="forPhone">
         Trang web này không hỗ trợ hiển thị trên điện thoại. Vui lòng truy cập trên máy tính hoặc máy tính bảng.
@@ -5328,7 +5328,7 @@ tr:hover {
             </section>
         </section>
     </main>
-    <footer>
+    <footer class="phoneHide">
         <nav class="navigator">
             <a href="./index2.html" class="btn" id="next">Bài tiếp</a>
         </nav>
